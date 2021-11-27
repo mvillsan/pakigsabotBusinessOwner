@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">PakigsaBotBusinessOwner</string>
+    <string name="app_name">PakigsaBot</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="pakigsabot">Pakigsa-Bot</string>
+    <string name="tagline">Just relax. Reserve through us. Pakigsa-Bot will do the task.</string>
+    <string name="email">Email Address</string>
+    <string name="pass">Password</string>
+    <string name="confirmpass">Confirm Password</string>
+    <string name="forgot">Forgot your Password?</string>
+    <string name="firstN">First Name</string>
+    <string name="lastN">Last Name</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="create">Create Account</string>
 </resources>
