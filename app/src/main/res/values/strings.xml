@@ -12,4 +12,11 @@
     <string name="lastN">Last Name</string>
     <string name="mobile">Mobile Number</string>
     <string name="create">Create Account</string>
+    <string name="donthaveaccount">Don\'t have an account?</string>
+    <string name="haveaccount">Already have an account?</string>
+    <string name="email_req">Email Address is REQUIRED.</string>
+    <string name="pass_req">Password is REQUIRED.</string>
+    <string name="pass_min">Password must have at least 8 characters</string>
+    <string name="signIn_success">Sign In Success</string>
+    <string name="signUp_success">Account has been created successfully!</string>
 </resources>
