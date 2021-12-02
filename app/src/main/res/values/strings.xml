@@ -19,4 +19,12 @@
     <string name="pass_min">Password must have at least 8 characters</string>
     <string name="signIn_success">Sign In Success</string>
     <string name="signUp_success">Account has been created successfully!</string>
+    <string name="estType">Establishment Type</string>
+    <string-array name="esttype">
+        <item>Restaurant</item>
+        <item>Resort</item>
+        <item>Dental Clinic</item>
+        <item>Internet Cafe</item>
+        <item>Spa and Salon</item>
+    </string-array>
 </resources>
