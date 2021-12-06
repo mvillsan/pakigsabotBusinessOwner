@@ -17,6 +17,10 @@
     <string name="email_req">Email Address is REQUIRED.</string>
     <string name="pass_req">Password is REQUIRED.</string>
     <string name="pass_min">Password must have at least 8 characters</string>
+    <string name="est_name_req">Establishment Name is REQUIRED.</string>
+    <string name="est_type_req">Establishment Type is REQUIRED.</string>
+    <string name="phoneNum_req">Phone Number is REQUIRED.</string>
+    <string name="address_req">Address is REQUIRED.</string>
     <string name="signIn_success">Sign In Success</string>
     <string name="signUp_success">Account has been created successfully!</string>
     <string name="estType">Establishment Type</string>
