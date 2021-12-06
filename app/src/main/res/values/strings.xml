@@ -40,4 +40,5 @@
     <string name="prof">Profile</string>
     <string name="changePass">Change Password</string>
     <string name="currentDate">December 25, 2021</string>
+    <string name="address">Address</string>
 </resources>
