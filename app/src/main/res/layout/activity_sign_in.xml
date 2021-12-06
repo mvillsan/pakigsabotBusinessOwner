@@ -57,7 +57,7 @@
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/signin"
-        android:textColor="@color/lemongreen"
+        android:textColor="@color/purple"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

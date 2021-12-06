@@ -52,8 +52,17 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        //Validations
         passEditTxt.addTextChangedListener(new ValidationTextWatcher(passEditTxt));
         emailAddEditTxt.addTextChangedListener(new ValidationTextWatcher(emailAddEditTxt));
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            if(bundle.getString("signin") != null){
+                Toast.makeText(getApplicationContext(), "data: " + bundle.getString("signin"),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
     }
     public void refs(){
         prev = findViewById(R.id.backBtnSignIn);
