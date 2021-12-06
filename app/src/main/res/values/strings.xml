@@ -41,4 +41,5 @@
     <string name="changePass">Change Password</string>
     <string name="currentDate">December 25, 2021</string>
     <string name="address">Address</string>
+    <string name="reservations">Reservations</string>
 </resources>
