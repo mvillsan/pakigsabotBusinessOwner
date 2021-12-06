@@ -31,4 +31,13 @@
         <item>Internet Cafe</item>
         <item>Spa and Salon</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcomeTxt">Welcome, Owner!</string>
+    <string name="estName">Establishment Name</string>
+    <string name="upcomingR">Upcoming Reservations</string>
+    <string name="donthaversrv">There are no reservations yet</string>
+    <string name="checkRsrv">Check for any pending reservations.</string>
+    <string name="prof">Profile</string>
+    <string name="changePass">Change Password</string>
+    <string name="currentDate">December 25, 2021</string>
 </resources>
