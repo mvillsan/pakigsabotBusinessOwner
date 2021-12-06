@@ -111,8 +111,8 @@ public class SignIn extends AppCompatActivity {
 
         if(isValid){
             Toast.makeText(SignIn.this, R.string.signIn_success, Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
-            startActivity(intent);*/
+            Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
+            startActivity(intent);
         }
 
         return true;

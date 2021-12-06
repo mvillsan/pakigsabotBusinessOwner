@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".BottomNavigation"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="true" />
         <activity
