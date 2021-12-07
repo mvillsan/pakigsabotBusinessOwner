@@ -2,13 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg_customer"
-    tools:context=".ReservationsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".CancellationSuccess">
 
     <ImageView
         android:id="@+id/whiteRect"
@@ -482,5 +479,57 @@
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toBottomOf="@+id/infoJan11"
         app:layout_constraintVertical_bias="0.162" />
+
+    <ImageView
+        android:id="@+id/detail_rect"
+        android:layout_width="286dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707"
+        app:srcCompat="@drawable/peach_rect3" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="267dp"
+        android:layout_height="152dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Reservation Cancellation Successful!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toTopOf="@+id/welcomeUserTxtReservations3"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/closeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
+        app:layout_constraintEnd_toEndOf="@+id/detail_rect"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="@+id/detail_rect"
+        app:layout_constraintTop_toTopOf="@+id/detail_rect"
+        app:layout_constraintVertical_bias="0.07"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
+        app:layout_constraintEnd_toEndOf="@+id/detail_rect"
+        app:layout_constraintStart_toStartOf="@+id/detail_rect"
+        app:layout_constraintTop_toTopOf="@+id/detail_rect"
+        app:layout_constraintVertical_bias="0.309"
+        app:srcCompat="@drawable/ic_check" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
