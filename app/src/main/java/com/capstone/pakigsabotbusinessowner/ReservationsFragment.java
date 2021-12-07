@@ -1,12 +1,16 @@
 package com.capstone.pakigsabotbusinessowner;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +63,61 @@ public class ReservationsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reservations, container, false);
+        View view = inflater.inflate(R.layout.fragment_reservations, container, false);
+
+        //References:
+        ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtnReservations);
+        ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutReservationsBtn);
+        ImageView infoJan11 = (ImageView) view.findViewById(R.id.infoJan11);
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profileScreen();
+            }
+        });
+
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOutApp();
+            }
+        });
+
+        infoJan11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reservationDetails();
+                /*FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                // Create and show the dialog.
+                ReservationDetails newFragment = new ReservationDetails ();
+                newFragment.show(ft, "ReservationDetails");*/
+
+              /*  ReservationDetails dialog = new ReservationDetails();
+                dialog.show(getActivity().getSupportFragmentManager(), "ReservationDetails");*/
+            }
+        });
+        return view;
+
+
+    }
+
+    public void profileScreen(){
+        Intent in = new Intent(getActivity(), Profile.class);
+        in.putExtra("profile", "profile");
+        startActivity(in);
+    }
+
+    public void signOutApp(){
+        Intent in = new Intent(getActivity(), SignIn.class);
+        in.putExtra("signin", "signin");
+        startActivity(in);
+    }
+
+    public void reservationDetails(){
+        Intent in = new Intent(getActivity(), ReservationDetails.class);
+        in.putExtra("rd", "rd");
+        startActivity(in);
     }
 }
+
