@@ -42,4 +42,6 @@
     <string name="currentDate">December 25, 2021</string>
     <string name="address">Address</string>
     <string name="reservations">Reservations</string>
+    <string name="reservationsHist">Reservation History</string>
+    <string name="reservationsCalendar">Reservation Calendar</string>
 </resources>

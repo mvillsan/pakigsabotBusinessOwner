@@ -22,11 +22,11 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_in.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_splash_screen.xml" value="0.2598958333333333" />
-        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_calendar.xml" value="0.2782699322563835" />
-        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_history.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_calendar.xml" value="0.33" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_history.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_profile.xml" value="0.2640625" />
-        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_reservations.xml" value="0.5" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_services.xml" value="0.2640625" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/reservation_details.xml" value="0.33" />
       </map>

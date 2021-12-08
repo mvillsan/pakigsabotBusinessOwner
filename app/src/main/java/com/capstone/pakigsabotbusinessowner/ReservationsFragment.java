@@ -98,8 +98,6 @@ public class ReservationsFragment extends Fragment {
             }
         });
         return view;
-
-
     }
 
     public void profileScreen(){
