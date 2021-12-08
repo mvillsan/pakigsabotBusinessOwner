@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class ReservationDetails extends AppCompatActivity {
 
-    ImageView cancelReservation;
+    ImageView cancelReservation, profile, signout, close;
     
     private static final String tag = "ReservationDetails";
 
@@ -39,14 +39,52 @@ public class ReservationDetails extends AppCompatActivity {
                 cancelRsrvScreen();
             }
         });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profile();
+            }
+        });
+
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signout();
+            }
+        });
     }
 
     public void refs(){
         cancelReservation = findViewById(R.id.cancelReservationImageView);
+        profile = findViewById(R.id.profileBtnRDetails);
+        signout = findViewById(R.id.signoutRDetails);
+        close = findViewById(R.id.closeImageViewRDetails);
     }
 
     public void cancelRsrvScreen(){
         Intent intent = new Intent(getApplicationContext(), CancelReservation.class);
+        startActivity(intent);
+    }
+
+    public void onBackPressed(){
+        super.onBackPressed();
+    }
+
+    public void profile(){
+        Intent intent = new Intent(getApplicationContext(), Profile.class);
+        startActivity(intent);
+    }
+
+    public void signout(){
+        Intent intent = new Intent(getApplicationContext(), SignIn.class);
         startActivity(intent);
     }
 
