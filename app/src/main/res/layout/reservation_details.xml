@@ -94,17 +94,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.876"
-        app:srcCompat="@drawable/peach_rect" />
+        app:srcCompat="@drawable/white_rect_light" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="34dp"
+        android:layout_height="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="@+id/detail_rect"
         app:layout_constraintTop_toTopOf="@+id/detail_rect"
-        app:layout_constraintVertical_bias="0.24"
+        app:layout_constraintVertical_bias="0.208"
         app:srcCompat="@drawable/ic_info" />
 
     <TextView
@@ -182,10 +183,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView14"
@@ -198,10 +199,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView5"
@@ -293,22 +294,22 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="@+id/detail_rect"
         app:layout_constraintTop_toTopOf="@+id/detail_rect"
-        app:layout_constraintVertical_bias="0.252"
+        app:layout_constraintVertical_bias="0.23"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
     <ImageView
         android:id="@+id/cancelReservationImageView"
-        android:layout_width="305dp"
-        android:layout_height="51dp"
+        android:layout_width="371dp"
+        android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="@+id/detail_rect"
         app:layout_constraintTop_toBottomOf="@+id/textView19"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintVertical_bias="0.129"
         app:srcCompat="@drawable/purple_rect" />
 
     <TextView

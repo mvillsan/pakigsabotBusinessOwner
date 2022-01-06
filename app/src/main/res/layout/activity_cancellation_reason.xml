@@ -87,20 +87,20 @@
 
     <ImageView
         android:id="@+id/detail_rectCancelReason"
-        android:layout_width="314dp"
-        android:layout_height="497dp"
+        android:layout_width="343dp"
+        android:layout_height="546dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.846"
-        app:srcCompat="@drawable/peach_rect2" />
+        app:srcCompat="@drawable/white_rect_light3" />
 
     <ImageView
         android:id="@+id/submitImageView"
-        android:layout_width="238dp"
-        android:layout_height="32dp"
+        android:layout_width="299dp"
+        android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
         app:layout_constraintHorizontal_bias="0.578"
@@ -116,29 +116,29 @@
         android:fontFamily="@font/poppins_light"
         android:text="SUBMIT"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/submitImageView"
         app:layout_constraintEnd_toEndOf="@+id/submitImageView"
-        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="@+id/submitImageView"
         app:layout_constraintTop_toTopOf="@+id/submitImageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.545" />
 
     <TextView
         android:id="@+id/cancelRsrvTxtCReason"
         android:layout_width="151dp"
-        android:layout_height="15dp"
+        android:layout_height="23dp"
         android:fontFamily="@font/poppins_light"
         android:text="CANCEL RESERVATION"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/cancelActionCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/cancelActionCancelReason"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="@+id/cancelActionCancelReason"
         app:layout_constraintTop_toTopOf="@+id/detail_rectCancelReason"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <TextView
         android:id="@+id/idTxtCancelReason"
@@ -245,10 +245,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/cancelRsrvTxtCReason"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
         android:id="@+id/timeTxtCancelReason"
@@ -331,10 +331,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.361"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/idTxtCancelReason"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <ImageView
         android:id="@+id/closeImageViewCancelReason"
@@ -342,16 +342,16 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toTopOf="@+id/detail_rectCancelReason"
-        app:layout_constraintVertical_bias="0.182"
+        app:layout_constraintVertical_bias="0.178"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
     <ImageView
         android:id="@+id/cancelActionCancelReason"
-        android:layout_width="238dp"
-        android:layout_height="32dp"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
         app:layout_constraintHorizontal_bias="0.578"
@@ -367,7 +367,7 @@
         android:fontFamily="@font/poppins_light"
         android:text="CANCEL ACTION"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/cancelActionCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/cancelActionCancelReason"
@@ -377,9 +377,9 @@
 
     <EditText
         android:id="@+id/cancelReasonEditTxt"
-        android:layout_width="252dp"
-        android:layout_height="46dp"
-        android:background="@color/white"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:background="@color/lightpurple"
         android:ems="10"
         android:fontFamily="@font/poppins_light"
         android:hint="Reason/s"
@@ -389,9 +389,9 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/pleaseTxt"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
