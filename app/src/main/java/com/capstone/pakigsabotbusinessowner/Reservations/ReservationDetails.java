@@ -9,9 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.CancelReservation.CancelReservation;
-import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.SignIn;
 
 public class ReservationDetails extends AppCompatActivity {
 
@@ -47,26 +45,10 @@ public class ReservationDetails extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                profile();
-            }
-        });
-
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signout();
-            }
-        });
     }
 
     public void refs(){
         cancelReservation = findViewById(R.id.cancelReservationImageView);
-        profile = findViewById(R.id.profileBtnRDetails);
-        signout = findViewById(R.id.signoutRDetails);
         close = findViewById(R.id.closeImageViewRDetails);
     }
 
@@ -77,16 +59,6 @@ public class ReservationDetails extends AppCompatActivity {
 
     public void onBackPressed(){
         super.onBackPressed();
-    }
-
-    public void profile(){
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
-        startActivity(intent);
-    }
-
-    public void signout(){
-        Intent intent = new Intent(getApplicationContext(), SignIn.class);
-        startActivity(intent);
     }
 
 

@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg_customer"
+    android:background="@drawable/topbar_bg"
     tools:context=".NavigationFragments.ReservationsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,103 +13,26 @@
     <ImageView
         android:id="@+id/whiteRect"
         android:layout_width="323dp"
-        android:layout_height="402dp"
+        android:layout_height="175dp"
         android:background="@drawable/white_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservationsTxt"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="26dp"
-        android:layout_height="29dp"
-        android:src="@drawable/ic_info"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations19"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
-        android:id="@+id/currentDateTxtReservations"
+        android:id="@+id/backBtnAgreement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="@string/currentDate"
-        android:textColor="@color/white"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
-
-    <TextView
-        android:id="@+id/estNameTxtReservations"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="@string/estName"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentDateTxtReservations"
-        app:layout_constraintVertical_bias="0.015" />
-
-    <ImageButton
-        android:id="@+id/profileBtnReservations"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/welcomeTxt"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toEndOf="@+id/profileBtnReservations"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
-
-    <ImageButton
-        android:id="@+id/signoutReservationsBtn"
-        android:layout_width="29dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="5dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/sign_out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
-        app:layout_constraintStart_toEndOf="@+id/estNameTxtReservations"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
 
     <TextView
         android:id="@+id/reservationsTxt"
@@ -117,32 +40,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
         android:text="@string/reservations"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileBtnReservations"
-        app:layout_constraintVertical_bias="0.078" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations3"
-        android:layout_width="48dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="12:00 PM"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
-        app:layout_constraintTop_toTopOf="@+id/whiteRect"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations4"
@@ -156,7 +61,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toBottomOf="@+id/purple_round"
         app:layout_constraintVertical_bias="0.0" />
@@ -173,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations4"
         app:layout_constraintVertical_bias="0.0" />
@@ -185,10 +90,10 @@
         android:src="@drawable/purple_rect"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toTopOf="@+id/whiteRect"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.135" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations9"
@@ -214,165 +119,44 @@
         android:src="@drawable/purple_rect"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations5"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
-        android:id="@+id/welcomeUserTxtReservations15"
+        android:id="@+id/welcomeUserTxtReservations3"
         android:layout_width="48dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="02:30 PM"
+        android:text="12:00 PM"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations14"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations11"
-        app:layout_constraintVertical_bias="0.25" />
-
-    <ImageView
-        android:id="@+id/purple_round3"
-        android:layout_width="158dp"
-        android:layout_height="37dp"
-        android:src="@drawable/purple_rect"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations12"
-        app:layout_constraintVertical_bias="0.07" />
-
-    <ImageView
-        android:id="@+id/purple_round4"
-        android:layout_width="158dp"
-        android:layout_height="37dp"
-        android:src="@drawable/purple_rect"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations17"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.175" />
 
     <TextView
-        android:id="@+id/welcomeUserTxtReservations20"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Terrace, Table 3"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.193"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/purple_round4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations21"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="John Doe"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations20"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations19"
+        android:id="@+id/welcomeUserTxtReservations11"
         android:layout_width="48dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="02:30 PM"
+        android:text="03:00 PM"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations18"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations15"
-        app:layout_constraintVertical_bias="0.368" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations18"
-        android:layout_width="103dp"
-        android:layout_height="28dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="January 20, 2022"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/purple_round4"
-        app:layout_constraintEnd_toEndOf="@+id/purple_round4"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="@+id/purple_round4"
-        app:layout_constraintTop_toTopOf="@+id/purple_round4"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="26dp"
-        android:layout_height="29dp"
-        android:src="@drawable/ic_info"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.681"
-        app:layout_constraintStart_toStartOf="@+id/welcomeUserTxtReservations15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.24" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations16"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Indoor, Table 5"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/purple_round3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations17"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Robert Mondragon"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toStartOf="@+id/whiteRect"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations16"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations3"
+        app:layout_constraintVertical_bias="0.539" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations2"
@@ -392,40 +176,6 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/welcomeUserTxtReservations14"
-        android:layout_width="103dp"
-        android:layout_height="28dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="January 15, 2022"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/purple_round3"
-        app:layout_constraintEnd_toEndOf="@+id/purple_round3"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="@+id/purple_round3"
-        app:layout_constraintTop_toTopOf="@+id/purple_round3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations11"
-        android:layout_width="48dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="03:00 PM"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
-        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations3"
-        app:layout_constraintVertical_bias="0.202" />
-
-    <TextView
         android:id="@+id/welcomeUserTxtReservations10"
         android:layout_width="91dp"
         android:layout_height="16dp"
@@ -437,10 +187,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations2"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations12"
@@ -454,7 +204,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="@+id/whiteRect"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations10"
         app:layout_constraintVertical_bias="0.0" />
@@ -466,10 +216,10 @@
         android:src="@drawable/ic_info"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toTopOf="@+id/whiteRect"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -481,6 +231,59 @@
         app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toBottomOf="@+id/infoJan11"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/reservationCalendarTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/reservationsCalendar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <ImageView
+        android:id="@+id/whiteRectImageView"
+        android:layout_width="328dp"
+        android:layout_height="314dp"
+        android:src="@drawable/white_rect2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationCalendarTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="327dp"
+        android:layout_height="300dp"
+        android:minDate="12/01/2021"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRectImageView"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRectImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/whiteRectImageView"
+        app:layout_constraintTop_toBottomOf="@+id/reservationCalendarTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@color/purple"
+        android:src="@drawable/ic_reserve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/backBtnAgreement"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

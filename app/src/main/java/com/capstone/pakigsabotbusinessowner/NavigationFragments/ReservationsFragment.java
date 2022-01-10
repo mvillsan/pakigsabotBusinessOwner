@@ -70,23 +70,7 @@ public class ReservationsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reservations, container, false);
 
         //References:
-        ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtnReservations);
-        ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutReservationsBtn);
         ImageView infoJan11 = (ImageView) view.findViewById(R.id.infoJan11);
-
-        profileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                profileScreen();
-            }
-        });
-
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signOutApp();
-            }
-        });
 
         infoJan11.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,18 +86,6 @@ public class ReservationsFragment extends Fragment {
             }
         });
         return view;
-    }
-
-    public void profileScreen(){
-        Intent in = new Intent(getActivity(), Profile.class);
-        in.putExtra("profile", "profile");
-        startActivity(in);
-    }
-
-    public void signOutApp(){
-        Intent in = new Intent(getActivity(), SignIn.class);
-        in.putExtra("signin", "signin");
-        startActivity(in);
     }
 
     public void reservationDetails(){
