@@ -1,4 +1,4 @@
-package com.capstone.pakigsabotbusinessowner;
+package com.capstone.pakigsabotbusinessowner.CancelReservation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.capstone.pakigsabotbusinessowner.Profile.Profile;
+import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.SignIn;
 
 public class CancellationSuccess extends AppCompatActivity {
 

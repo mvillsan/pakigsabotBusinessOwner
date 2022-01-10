@@ -8,7 +8,7 @@
     android:layout_gravity="center"
     android:background="@drawable/homebg_customer"
     android:measureAllChildren="true"
-    tools:context=".HomeFragment">
+    tools:context=".NavigationFragments.HomeFragment">
 
     <ImageButton
         android:id="@+id/profileBtn"

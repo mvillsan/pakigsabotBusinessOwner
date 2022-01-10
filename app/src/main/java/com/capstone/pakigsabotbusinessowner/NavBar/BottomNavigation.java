@@ -1,10 +1,16 @@
-package com.capstone.pakigsabotbusinessowner;
+package com.capstone.pakigsabotbusinessowner.NavBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.CalendarFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HistoryFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HomeFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.ReservationsFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.ServicesFragment;
+import com.capstone.pakigsabotbusinessowner.R;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class BottomNavigation extends AppCompatActivity {
