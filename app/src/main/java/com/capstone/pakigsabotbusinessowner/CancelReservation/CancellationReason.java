@@ -10,13 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.capstone.pakigsabotbusinessowner.CancelReservation.CancellationSuccess;
-import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.SignIn;
 
 public class CancellationReason extends AppCompatActivity {
 
-    ImageView submit, profile,signout, close, cancelAction, detailRect;
+    ImageView submit, close, cancelAction, detailRect;
     TextView cancelRsrvTxt, dateTxtCancelRsrv,jan11TxtCancelRsrv,timeTxtCancelRsrv,pmTxtCancelRsrv,
             customerNameTxtCancelRsrv,janeTxtCancelRsrv,reservedTxtCancelRsrv,terraceTxtCancelRsrv,
             rfTxtCancelRsrv,pesosTxtCancelRsrv,rIDTxtCancelRsrv,idTxtCancelRsrv,confirmTxt,cancelTxt,pleaseTxt;
@@ -49,26 +47,10 @@ public class CancellationReason extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                profile();
-            }
-        });
-
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signout();
-            }
-        });
     }
 
     public void refs(){
         submit = findViewById(R.id.submitImageView);
-        profile = findViewById(R.id.profileBtnCancelReason);
-        signout = findViewById(R.id.signoutCancelReason);
         close = findViewById(R.id.closeImageViewCancelReason);
         cancelAction = findViewById(R.id.cancelActionCancelReason);
         detailRect = findViewById(R.id.detail_rectCancelReason);
@@ -98,16 +80,6 @@ public class CancellationReason extends AppCompatActivity {
 
     public void onBackPressed(){
         super.onBackPressed();
-    }
-
-    public void profile(){
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
-        startActivity(intent);
-    }
-
-    public void signout(){
-        Intent intent = new Intent(getApplicationContext(), SignIn.class);
-        startActivity(intent);
     }
 
     public void close(){

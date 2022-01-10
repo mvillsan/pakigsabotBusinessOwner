@@ -14,7 +14,7 @@ import com.capstone.pakigsabotbusinessowner.SignIn;
 
 public class CancelReservation extends AppCompatActivity {
 
-    ImageView confirm, profile,signout, close, cancelAction, detailRect;
+    ImageView confirm,close, cancelAction, detailRect;
     TextView cancelRsrvTxt, dateTxtCancelRsrv,jan11TxtCancelRsrv,timeTxtCancelRsrv,pmTxtCancelRsrv,
             customerNameTxtCancelRsrv,janeTxtCancelRsrv,reservedTxtCancelRsrv,terraceTxtCancelRsrv,
             rfTxtCancelRsrv,pesosTxtCancelRsrv,rIDTxtCancelRsrv,idTxtCancelRsrv,confirmTxt,cancelTxt;
@@ -46,26 +46,10 @@ public class CancelReservation extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                profile();
-            }
-        });
-
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signout();
-            }
-        });
     }
 
     public void refs(){
         confirm = findViewById(R.id.confirmImageView);
-        profile = findViewById(R.id.profileBtnCancelRsrv);
-        signout = findViewById(R.id.signoutCancelRsrv);
         close = findViewById(R.id.closeImageViewCancelRsrv);
         cancelAction = findViewById(R.id.cancelActionCancelRsrv);
         detailRect = findViewById(R.id.detail_rectCancelRsrv);
@@ -95,15 +79,6 @@ public class CancelReservation extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void profile(){
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
-        startActivity(intent);
-    }
-
-    public void signout(){
-        Intent intent = new Intent(getApplicationContext(), SignIn.class);
-        startActivity(intent);
-    }
     public void close(){
         detailRect.setVisibility(View.INVISIBLE);
         close.setVisibility(View.INVISIBLE);
