@@ -1,4 +1,4 @@
-package com.capstone.pakigsabotbusinessowner;
+package com.capstone.pakigsabotbusinessowner.Profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.capstone.pakigsabotbusinessowner.R;
 
 public class Profile extends AppCompatActivity {
 

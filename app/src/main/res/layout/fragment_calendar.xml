@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg_customer"
-    tools:context=".CalendarFragment">
+    tools:context=".NavigationFragments.CalendarFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

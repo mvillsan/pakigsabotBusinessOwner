@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -194,7 +195,9 @@ public class SignUp extends AppCompatActivity {
         }
 
         if(isValid){
-            Toast.makeText(SignUp.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUp.this, R.string.agreeTxt, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
+            startActivity(intent);
         }
         return true;
     }

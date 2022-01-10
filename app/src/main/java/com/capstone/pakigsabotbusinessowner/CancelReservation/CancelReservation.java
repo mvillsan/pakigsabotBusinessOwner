@@ -1,33 +1,35 @@
-package com.capstone.pakigsabotbusinessowner;
+package com.capstone.pakigsabotbusinessowner.CancelReservation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CancellationReason extends AppCompatActivity {
+import com.capstone.pakigsabotbusinessowner.Profile.Profile;
+import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.SignIn;
 
-    ImageView submit, profile,signout, close, cancelAction, detailRect;
+public class CancelReservation extends AppCompatActivity {
+
+    ImageView confirm, profile,signout, close, cancelAction, detailRect;
     TextView cancelRsrvTxt, dateTxtCancelRsrv,jan11TxtCancelRsrv,timeTxtCancelRsrv,pmTxtCancelRsrv,
             customerNameTxtCancelRsrv,janeTxtCancelRsrv,reservedTxtCancelRsrv,terraceTxtCancelRsrv,
-            rfTxtCancelRsrv,pesosTxtCancelRsrv,rIDTxtCancelRsrv,idTxtCancelRsrv,confirmTxt,cancelTxt,pleaseTxt;
-    EditText cancelReasonEditTxt;
+            rfTxtCancelRsrv,pesosTxtCancelRsrv,rIDTxtCancelRsrv,idTxtCancelRsrv,confirmTxt,cancelTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cancellation_reason);
+        setContentView(R.layout.activity_cancel_reservation);
 
         refs();
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cancelSuccess();
+                cancelReason();
             }
         });
 
@@ -61,33 +63,31 @@ public class CancellationReason extends AppCompatActivity {
     }
 
     public void refs(){
-        submit = findViewById(R.id.submitImageView);
-        profile = findViewById(R.id.profileBtnCancelReason);
-        signout = findViewById(R.id.signoutCancelReason);
-        close = findViewById(R.id.closeImageViewCancelReason);
-        cancelAction = findViewById(R.id.cancelActionCancelReason);
-        detailRect = findViewById(R.id.detail_rectCancelReason);
-        cancelRsrvTxt = findViewById(R.id.cancelRsrvTxtCReason);
-        dateTxtCancelRsrv = findViewById(R.id.dateTxtCancelReason);
-        jan11TxtCancelRsrv = findViewById(R.id.jan11TxtCancelReason);
-        timeTxtCancelRsrv = findViewById(R.id.timeTxtCancelReason);
-        pmTxtCancelRsrv = findViewById(R.id.pmTxtCancelReason);
-        customerNameTxtCancelRsrv = findViewById(R.id.customerNameTxtCancelReason);
-        janeTxtCancelRsrv = findViewById(R.id.janeTxtCancelReason);
-        reservedTxtCancelRsrv = findViewById(R.id.reservedTxtCancelReason);
-        terraceTxtCancelRsrv = findViewById(R.id.terraceTxtCancelReason);
-        rfTxtCancelRsrv = findViewById(R.id.rfTxtCancelReason);
-        pesosTxtCancelRsrv = findViewById(R.id.pesosTxtCancelReason);
-        rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelReason);
-        idTxtCancelRsrv = findViewById(R.id.idTxtCancelReason);
-        confirmTxt = findViewById(R.id.confirmTxtCancelReason);
-        cancelTxt = findViewById(R.id.cancelActionTxtCancelReason);
-        cancelReasonEditTxt = findViewById(R.id.cancelReasonEditTxt);
-        pleaseTxt = findViewById(R.id.pleaseTxt);
+        confirm = findViewById(R.id.confirmImageView);
+        profile = findViewById(R.id.profileBtnCancelRsrv);
+        signout = findViewById(R.id.signoutCancelRsrv);
+        close = findViewById(R.id.closeImageViewCancelRsrv);
+        cancelAction = findViewById(R.id.cancelActionCancelRsrv);
+        detailRect = findViewById(R.id.detail_rectCancelRsrv);
+        cancelRsrvTxt = findViewById(R.id.cancelRsrvTxt);
+        dateTxtCancelRsrv = findViewById(R.id.dateTxtCancelRsrv);
+        jan11TxtCancelRsrv = findViewById(R.id.jan11TxtCancelRsrv);
+        timeTxtCancelRsrv = findViewById(R.id.timeTxtCancelRsrv);
+        pmTxtCancelRsrv = findViewById(R.id.pmTxtCancelRsrv);
+        customerNameTxtCancelRsrv = findViewById(R.id.customerNameTxtCancelRsrv);
+        janeTxtCancelRsrv = findViewById(R.id.janeTxtCancelRsrv);
+        reservedTxtCancelRsrv = findViewById(R.id.reservedTxtCancelRsrv);
+        terraceTxtCancelRsrv = findViewById(R.id.terraceTxtCancelRsrv);
+        rfTxtCancelRsrv = findViewById(R.id.rfTxtCancelRsrv);
+        pesosTxtCancelRsrv = findViewById(R.id.pesosTxtCancelRsrv);
+        rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelRsrv);
+        idTxtCancelRsrv = findViewById(R.id.idTxtCancelRsrv);
+        confirmTxt = findViewById(R.id.confirmTxtCancelRsrv);
+        cancelTxt = findViewById(R.id.cancelActionTxtCancelRsrv);
     }
 
-    public void cancelSuccess(){
-        Intent intent = new Intent(getApplicationContext(), CancellationSuccess.class);
+    public void cancelReason(){
+        Intent intent = new Intent(getApplicationContext(), CancellationReason.class);
         startActivity(intent);
     }
 
@@ -104,11 +104,10 @@ public class CancellationReason extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), SignIn.class);
         startActivity(intent);
     }
-
     public void close(){
         detailRect.setVisibility(View.INVISIBLE);
         close.setVisibility(View.INVISIBLE);
-        submit.setVisibility(View.INVISIBLE);
+        confirm.setVisibility(View.INVISIBLE);
         cancelAction.setVisibility(View.INVISIBLE);
         cancelRsrvTxt.setVisibility(View.INVISIBLE);
         dateTxtCancelRsrv.setVisibility(View.INVISIBLE);
@@ -125,7 +124,5 @@ public class CancellationReason extends AppCompatActivity {
         idTxtCancelRsrv.setVisibility(View.INVISIBLE);
         confirmTxt.setVisibility(View.INVISIBLE);
         cancelTxt.setVisibility(View.INVISIBLE);
-        cancelReasonEditTxt.setVisibility(View.INVISIBLE);
-        pleaseTxt.setVisibility(View.INVISIBLE);
     }
 }

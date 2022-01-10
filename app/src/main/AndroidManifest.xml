@@ -10,22 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
-            android:name=".CancellationReason"
+            android:name=".SignUpRequirement.AgreementScreen"
             android:exported="false" />
         <activity
-            android:name=".CancellationSuccess"
+            android:name=".CancelReservation.CancellationReason"
             android:exported="false" />
         <activity
-            android:name=".CancelReservation"
+            android:name=".CancelReservation.CancellationSuccess"
             android:exported="false" />
         <activity
-            android:name=".ReservationDetails"
+            android:name=".CancelReservation.CancelReservation"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".Reservations.ReservationDetails"
             android:exported="false" />
         <activity
-            android:name=".BottomNavigation"
+            android:name=".Profile.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".NavBar.BottomNavigation"
             android:exported="false" />
         <activity
             android:name=".SignUp"

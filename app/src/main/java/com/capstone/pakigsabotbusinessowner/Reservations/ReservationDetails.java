@@ -1,16 +1,17 @@
-package com.capstone.pakigsabotbusinessowner;
+package com.capstone.pakigsabotbusinessowner.Reservations;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.capstone.pakigsabotbusinessowner.CancelReservation.CancelReservation;
+import com.capstone.pakigsabotbusinessowner.Profile.Profile;
+import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.SignIn;
 
 public class ReservationDetails extends AppCompatActivity {
 

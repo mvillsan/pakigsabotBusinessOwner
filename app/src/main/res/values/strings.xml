@@ -44,4 +44,6 @@
     <string name="reservations">Reservations</string>
     <string name="reservationsHist">Reservation History</string>
     <string name="reservationsCalendar">Reservation Calendar</string>
+    <string name="agreementTxt">"Pakigsa-Bot is a community where anyone can belong. To ensure this, we're asking you to commit to the following: Pakigsa-Bot Community Commitment - I agree to treat everyone in the Pakigsa-Bot Community regardless of their race, religion, national origin, ethnicity, skin color, disability, sex, gender identity, sexual orientation, or age - with respect, and without judgment or bias."</string>
+    <string name="agreeTxt">"Select Agree to Continue"</string>
 </resources>
