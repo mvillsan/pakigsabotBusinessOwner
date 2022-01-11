@@ -20,10 +20,13 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_details.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_wt_cancel.xml" value="0.33" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_wt_confirmed.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_in.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_splash_screen.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_calendar.xml" value="0.33" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_chatbot.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_history.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_profile.xml" value="0.2640625" />
@@ -33,7 +36,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

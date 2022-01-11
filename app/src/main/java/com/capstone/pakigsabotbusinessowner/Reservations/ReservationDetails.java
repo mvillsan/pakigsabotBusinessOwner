@@ -13,7 +13,7 @@ import com.capstone.pakigsabotbusinessowner.R;
 
 public class ReservationDetails extends AppCompatActivity {
 
-    ImageView cancelReservation, profile, signout, close;
+    ImageView cancelReservation, confirmReservation, close;
     
     private static final String tag = "ReservationDetails";
 
@@ -32,6 +32,13 @@ public class ReservationDetails extends AppCompatActivity {
 
         refs();
 
+        confirmReservation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmedReservation();
+            }
+        });
+
         cancelReservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +56,13 @@ public class ReservationDetails extends AppCompatActivity {
 
     public void refs(){
         cancelReservation = findViewById(R.id.cancelReservationImageView);
+        confirmReservation = findViewById(R.id.confirmReservationImageView);
         close = findViewById(R.id.closeImageViewRDetails);
+    }
+
+    private void confirmedReservation(){
+        Intent intent = new Intent(getApplicationContext(), ReservationWtConfirmed.class);
+        startActivity(intent);
     }
 
     public void cancelRsrvScreen(){

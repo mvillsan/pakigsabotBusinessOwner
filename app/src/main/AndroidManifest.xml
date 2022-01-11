@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".Reservations.ReservationWtConfirmed"
+            android:exported="false" />
+        <activity
+            android:name=".Reservations.ReservationWtCancel"
+            android:exported="false" />
+        <activity
             android:name=".SignUpRequirement.AgreementScreen"
             android:exported="false" />
         <activity
