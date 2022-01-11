@@ -7,83 +7,46 @@
     android:background="@drawable/reservations_details_bg"
     tools:context=".CancelReservation.CancellationSuccess">
 
-    <TextView
-        android:id="@+id/currentDateTxtReservations"
+    <ImageView
+        android:id="@+id/backBtnCR3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="@string/currentDate"
-        android:textColor="@color/white"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@color/purple"
+        android:src="@drawable/ic_reserve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/backBtnCR3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
-        android:id="@+id/estNameTxtReservations"
+        android:id="@+id/reservationsTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="@string/estName"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentDateTxtReservations"
-        app:layout_constraintVertical_bias="0.015" />
-
-    <ImageButton
-        android:id="@+id/profileBtnCancelSuccess"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
         android:fontFamily="@font/poppins_light"
-        android:text="@string/welcomeTxt"
-        android:textAlignment="center"
+        android:text="@string/reservations"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toEndOf="@+id/profileBtnCancelSuccess"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.024" />
 
-    <ImageButton
-        android:id="@+id/signoutCancelSuccess"
-        android:layout_width="29dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="5dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/sign_out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toEndOf="@+id/estNameTxtReservations"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
 
     <ImageView
         android:id="@+id/detail_rectCancelSuccess"
@@ -94,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707"
+        app:layout_constraintVertical_bias="0.322"
         app:srcCompat="@drawable/white_rect_light3" />
 
     <TextView
@@ -134,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelSuccess"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelSuccess"
         app:layout_constraintTop_toTopOf="@+id/detail_rectCancelSuccess"
-        app:layout_constraintVertical_bias="0.309"
+        app:layout_constraintVertical_bias="0.231"
         app:srcCompat="@drawable/ic_check" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

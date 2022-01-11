@@ -7,83 +7,45 @@
     android:background="@drawable/reservations_details_bg"
     tools:context=".CancelReservation.CancelReservation">
 
-    <TextView
-        android:id="@+id/currentDateTxtReservations"
+    <ImageView
+        android:id="@+id/backBtnCR1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="@string/currentDate"
-        android:textColor="@color/white"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@color/purple"
+        android:src="@drawable/ic_reserve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/backBtnCR1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
-        android:id="@+id/estNameTxtReservations"
+        android:id="@+id/reservationsTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="@string/estName"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentDateTxtReservations"
-        app:layout_constraintVertical_bias="0.015" />
-
-    <ImageButton
-        android:id="@+id/profileBtnCancelRsrv"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <TextView
-        android:id="@+id/welcomeUserTxtReservations"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
         android:fontFamily="@font/poppins_light"
-        android:text="@string/welcomeTxt"
-        android:textAlignment="center"
+        android:text="@string/reservations"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toEndOf="@+id/profileBtnCancelRsrv"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
-
-    <ImageButton
-        android:id="@+id/signoutCancelRsrv"
-        android:layout_width="29dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="5dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/sign_out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toEndOf="@+id/estNameTxtReservations"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
         android:id="@+id/detail_rectCancelRsrv"
@@ -94,8 +56,8 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.747"
-        app:srcCompat="@drawable/white_rect_light2" />
+        app:layout_constraintVertical_bias="0.239"
+        app:srcCompat="@drawable/white_rect_light3" />
 
     <ImageView
         android:id="@+id/confirmImageView"
@@ -104,15 +66,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintTop_toBottomOf="@+id/idTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.042"
+        app:layout_constraintTop_toBottomOf="@+id/questionsTxt"
+        app:layout_constraintVertical_bias="0.069"
         app:srcCompat="@drawable/purple_rect" />
 
     <TextView
         android:id="@+id/confirmTxtCancelRsrv"
         android:layout_width="86dp"
         android:layout_height="26dp"
-        android:fontFamily="@font/poppins_light"
+        android:fontFamily="@font/poppins_medium"
         android:text="CONFIRM"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -126,18 +88,19 @@
 
     <TextView
         android:id="@+id/cancelRsrvTxt"
-        android:layout_width="151dp"
-        android:layout_height="15dp"
+        android:layout_width="167dp"
+        android:layout_height="22dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_light"
+        android:fontFamily="@font/poppins_medium"
         android:text="CANCEL RESERVATION"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/cancelActionCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/cancelActionCancelRsrv"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="@+id/cancelActionCancelRsrv"
         app:layout_constraintTop_toTopOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <TextView
         android:id="@+id/idTxtCancelRsrv"
@@ -150,16 +113,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toEndOf="@+id/rIDTxtCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/pesosTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/janeTxtCancelRsrv"
-        android:layout_width="106dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="91dp"
+        android:layout_height="18dp"
         android:fontFamily="@font/poppins_light"
         android:text="Jane Dela Cruz"
         android:textColor="@color/black"
@@ -167,15 +129,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toEndOf="@+id/customerNameTxtCancelRsrv"
-        app:layout_constraintTop_toBottomOf="@+id/pmTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/pmTxtCancelRsrv"
+        app:layout_constraintVertical_bias="0.061" />
 
     <TextView
         android:id="@+id/terraceTxtCancelRsrv"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
+        android:layout_width="93dp"
+        android:layout_height="29dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
         android:text="Terrace, Table 1"
@@ -184,16 +146,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toEndOf="@+id/reservedTxtCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/janeTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/pesosTxtCancelRsrv"
         android:layout_width="91dp"
         android:layout_height="16dp"
-        android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_light"
         android:text="Php 150.00"
         android:textColor="@color/black"
@@ -201,10 +162,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toEndOf="@+id/rfTxtCancelRsrv"
-        app:layout_constraintTop_toBottomOf="@+id/terraceTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="@+id/terraceTxtCancelRsrv"
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
         android:id="@+id/pmTxtCancelRsrv"
@@ -217,10 +178,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toEndOf="@+id/timeTxtCancelRsrv"
-        app:layout_constraintTop_toBottomOf="@+id/jan11TxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintTop_toTopOf="@+id/jan11TxtCancelRsrv"
+        app:layout_constraintVertical_bias="0.069" />
 
     <TextView
         android:id="@+id/jan11TxtCancelRsrv"
@@ -233,10 +194,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toEndOf="@+id/dateTxtCancelRsrv"
-        app:layout_constraintTop_toBottomOf="@+id/closeImageViewCancelRsrv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/reservationsTxt"
+        app:layout_constraintVertical_bias="0.243" />
 
     <TextView
         android:id="@+id/dateTxtCancelRsrv"
@@ -250,7 +211,7 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/cancelRsrvTxt"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <TextView
         android:id="@+id/timeTxtCancelRsrv"
@@ -261,10 +222,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/dateTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/customerNameTxtCancelRsrv"
@@ -278,7 +239,7 @@
         app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/timeTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/reservedTxtCancelRsrv"
@@ -289,10 +250,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/customerNameTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/rfTxtCancelRsrv"
@@ -303,10 +264,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/reservedTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
         android:id="@+id/rIDTxtCancelRsrv"
@@ -317,10 +278,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toBottomOf="@+id/rfTxtCancelRsrv"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/closeImageViewCancelRsrv"
@@ -331,8 +292,25 @@
         app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
         app:layout_constraintTop_toTopOf="@+id/detail_rectCancelRsrv"
-        app:layout_constraintVertical_bias="0.232"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <TextView
+        android:id="@+id/questionsTxt"
+        android:layout_width="201dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="ARE YOU SURE YOU WANT TO CANCEL THIS RESERVATION?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelRsrv"
+        app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelRsrv"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="@+id/detail_rectCancelRsrv"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtCancelRsrv"
+        app:layout_constraintVertical_bias="0.073" />
 
     <ImageView
         android:id="@+id/cancelActionCancelRsrv"
@@ -350,7 +328,7 @@
         android:id="@+id/cancelActionTxtCancelRsrv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
+        android:fontFamily="@font/poppins_medium"
         android:text="CANCEL ACTION"
         android:textColor="@color/black"
         android:textSize="16sp"

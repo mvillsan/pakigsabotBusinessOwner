@@ -1,6 +1,5 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,11 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-
-import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.SignIn;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,34 +63,7 @@ public class HistoryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         //References:
-        ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtnReservations);
-        ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutReservationsBtn);
 
-        profileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                profileScreen();
-            }
-        });
-
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signOutApp();
-            }
-        });
         return view;
-    }
-
-    public void profileScreen(){
-        Intent in = new Intent(getActivity(), Profile.class);
-        in.putExtra("profile", "profile");
-        startActivity(in);
-    }
-
-    public void signOutApp(){
-        Intent in = new Intent(getActivity(), SignIn.class);
-        in.putExtra("signin", "signin");
-        startActivity(in);
     }
 }
