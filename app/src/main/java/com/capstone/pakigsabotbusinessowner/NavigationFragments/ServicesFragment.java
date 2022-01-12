@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.Reservations.ReservationDetails;
-import com.capstone.pakigsabotbusinessowner.Services.AddServiceResort;
-import com.capstone.pakigsabotbusinessowner.Services.EditServiceResort;
+import com.capstone.pakigsabotbusinessowner.Services.AddFoodResto;
+import com.capstone.pakigsabotbusinessowner.Services.AddServiceResto;
+import com.capstone.pakigsabotbusinessowner.Services.EditFoodProdResto;
+import com.capstone.pakigsabotbusinessowner.Services.EditServiceResto;
+import com.capstone.pakigsabotbusinessowner.Services.ServicesResort;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,41 +71,77 @@ public class ServicesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_services, container, false);
 
         //References:
-        ImageView addRoomBtnServices = (ImageView) view.findViewById(R.id.addRoomBtnServices);
-        ImageView editRoomAzul = (ImageView) view.findViewById(R.id.editRoomAzul);
+        ImageView resortServices = (ImageView) view.findViewById(R.id.imageView6);
+        ImageView addRestoBtnServices = (ImageView) view.findViewById(R.id.addRestoBtnServices);
+        ImageView addRestoFoodBtnServices = (ImageView) view.findViewById(R.id.addRestoFoodBtnServices);
+        ImageView editIndoorDining = (ImageView) view.findViewById(R.id.editIndoorDining);
+        ImageView editFood1 = (ImageView) view.findViewById(R.id.editFood1);
 
-        addRoomBtnServices.setOnClickListener(new View.OnClickListener() {
+        resortServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addRoom();
-                /*FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                // Create and show the dialog.
-                ReservationDetails newFragment = new ReservationDetails ();
-                newFragment.show(ft, "ReservationDetails");*/
-
-              /*  ReservationDetails dialog = new ReservationDetails();
-                dialog.show(getActivity().getSupportFragmentManager(), "ReservationDetails");*/
+                resortServicesScreen();
             }
         });
 
-        editRoomAzul.setOnClickListener(new View.OnClickListener() {
+        addRestoBtnServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editRoom();
+                addRestoService();
             }
         });
+
+        addRestoFoodBtnServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addRestoFood();
+            }
+        });
+
+        editIndoorDining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editIndoorD();
+            }
+        });
+
+        editFood1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editFoodProd();
+            }
+        });
+
         return view;
     }
 
-    private void addRoom(){
-        Intent in = new Intent(getActivity(), AddServiceResort.class);
-        in.putExtra("addRoom", "addRoom");
+    private void resortServicesScreen(){
+        Intent in = new Intent(getActivity(), ServicesResort.class);
+        in.putExtra("resortServices", "resortServices");
         startActivity(in);
     }
 
-    private void editRoom(){
-        Intent in = new Intent(getActivity(), EditServiceResort.class);
-        in.putExtra("editRoom", "editRoom");
+    private void addRestoService(){
+        Intent in = new Intent(getActivity(), AddServiceResto.class);
+        in.putExtra("addResortServices", "addResortServices");
+        startActivity(in);
+    }
+
+    private void addRestoFood(){
+        Intent in = new Intent(getActivity(), AddFoodResto.class);
+        in.putExtra("addRestoFoodBtnServices", "addRestoFoodBtnServices");
+        startActivity(in);
+    }
+
+    private void editIndoorD(){
+        Intent in = new Intent(getActivity(), EditServiceResto.class);
+        in.putExtra("editIndoorD", "editIndoorD");
+        startActivity(in);
+    }
+
+    private void editFoodProd(){
+        Intent in = new Intent(getActivity(), EditFoodProdResto.class);
+        in.putExtra("editFoodProd", "editFoodProd");
         startActivity(in);
     }
 }
