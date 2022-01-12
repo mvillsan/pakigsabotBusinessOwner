@@ -1,5 +1,6 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.Reservations.ReservationDetails;
+import com.capstone.pakigsabotbusinessowner.Services.AddServiceResort;
+import com.capstone.pakigsabotbusinessowner.Services.EditServiceResort;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +66,44 @@ public class ServicesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_services, container, false);
+        View view = inflater.inflate(R.layout.fragment_services, container, false);
+
+        //References:
+        ImageView addRoomBtnServices = (ImageView) view.findViewById(R.id.addRoomBtnServices);
+        ImageView editRoomAzul = (ImageView) view.findViewById(R.id.editRoomAzul);
+
+        addRoomBtnServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addRoom();
+                /*FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                // Create and show the dialog.
+                ReservationDetails newFragment = new ReservationDetails ();
+                newFragment.show(ft, "ReservationDetails");*/
+
+              /*  ReservationDetails dialog = new ReservationDetails();
+                dialog.show(getActivity().getSupportFragmentManager(), "ReservationDetails");*/
+            }
+        });
+
+        editRoomAzul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editRoom();
+            }
+        });
+        return view;
+    }
+
+    private void addRoom(){
+        Intent in = new Intent(getActivity(), AddServiceResort.class);
+        in.putExtra("addRoom", "addRoom");
+        startActivity(in);
+    }
+
+    private void editRoom(){
+        Intent in = new Intent(getActivity(), EditServiceResort.class);
+        in.putExtra("editRoom", "editRoom");
+        startActivity(in);
     }
 }
