@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
-            android:name=".Services.ServicesRestaurant"
+            android:name=".Services.EditFoodProdResto"
+            android:exported="false" />
+        <activity
+            android:name=".Services.EditServiceResto"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AddFoodResto"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AddServiceResto"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ServicesResort"
             android:exported="false" />
         <activity
             android:name=".Services.EditServiceResort"
