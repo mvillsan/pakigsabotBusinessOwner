@@ -12,7 +12,7 @@ import com.capstone.pakigsabotbusinessowner.R;
 
 public class ServicesResort extends AppCompatActivity {
 
-    ImageView addRoomBtnServices, editRoomAzul;
+    ImageView addRoomBtnServices, editRoomAzul, dentalClinicServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +43,19 @@ public class ServicesResort extends AppCompatActivity {
                 editRoom();
             }
         });
+
+        dentalClinicServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dentalClinicServicesScreen();
+            }
+        });
     }
 
     private void refs(){
         addRoomBtnServices = findViewById(R.id.addRoomBtnServices);
         editRoomAzul = findViewById(R.id.editRoomAzul);
+        dentalClinicServices = findViewById(R.id.imageView6);
     }
 
     private void addRoom(){
@@ -57,6 +65,11 @@ public class ServicesResort extends AppCompatActivity {
 
     private void editRoom(){
         Intent intent = new Intent(getApplicationContext(), EditServiceResort.class);
+        startActivity(intent);
+    }
+
+    private void dentalClinicServicesScreen(){
+        Intent intent = new Intent(getApplicationContext(), ServicesDentalClinic.class);
         startActivity(intent);
     }
 }
