@@ -1,5 +1,6 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.capstone.pakigsabotbusinessowner.Chatbot.ChatbotConversation2;
 import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.Services.ServicesResort;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,7 +68,21 @@ public class ChatbotFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_chatbot, container, false);
 
         //References:
+        TextView homeMenuTxt = (TextView) view.findViewById(R.id.homeMenuTxt);
+
+        homeMenuTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chatbotConversation2();
+            }
+        });
 
         return view;
+    }
+
+    private void chatbotConversation2(){
+        Intent in = new Intent(getActivity(), ChatbotConversation2.class);
+        in.putExtra("chatbotConvo2", "chatbotConvo2");
+        startActivity(in);
     }
 }

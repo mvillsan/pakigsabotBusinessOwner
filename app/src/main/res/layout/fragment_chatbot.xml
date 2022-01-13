@@ -12,7 +12,7 @@
         android:id="@+id/chatbotImage"
         android:layout_width="53dp"
         android:layout_height="40dp"
-        android:background="@color/lemongreen"
+        android:background="@color/purple"
         android:src="@drawable/ic_chatbot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <TextView
         android:id="@+id/pakigsabotSupportTxt2"
@@ -99,7 +99,7 @@
         android:layout_height="15dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/poppins_light"
-        android:text="9:08 AM"
+        android:text="10:08 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -144,48 +144,30 @@
 
     <TextView
         android:id="@+id/searchingBookingTxt"
-        android:layout_width="170dp"
+        android:layout_width="200dp"
         android:layout_height="18dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_searchbook"
+        android:drawableLeft="@drawable/ic_calendar"
         android:fontFamily="@font/poppins_light"
-        android:text="How to Search and Reserve?"
+        android:text="How about Reservations Calendar?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/message2"
-        app:layout_constraintVertical_bias="0.009" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/howAboutReservationsTxt"
-        android:layout_width="168dp"
-        android:layout_height="14dp"
+        android:layout_width="220dp"
+        android:layout_height="18dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_reservations"
+        android:drawableLeft="@drawable/ic_est"
         android:fontFamily="@font/poppins_light"
-        android:text="How about my Reservations?"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/searchingBookingTxt"
-        app:layout_constraintVertical_bias="0.010" />
-
-    <TextView
-        android:id="@+id/howAboutPaymentTxt"
-        android:layout_width="238dp"
-        android:layout_height="15dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_payment"
-        android:fontFamily="@font/poppins_light"
-        android:text="How about Payments, Pricing and Refunds?"
+        android:text="How about Managing My Establishment?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -193,31 +175,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/howAboutReservationsTxt"
-        app:layout_constraintVertical_bias="0.010" />
+        app:layout_constraintTop_toBottomOf="@+id/searchingBookingTxt"
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
-        android:id="@+id/howAboutAccountTxt"
-        android:layout_width="148dp"
-        android:layout_height="14dp"
+        android:id="@+id/howAboutPaymentTxt"
+        android:layout_width="225dp"
+        android:layout_height="18dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_accountbox"
+        android:drawableLeft="@drawable/ic_reservations"
         android:fontFamily="@font/poppins_light"
-        android:text="How about my Account?"
+        android:text="How about Establishments' Reservations?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toBottomOf="@+id/howAboutReservationsTxt"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/howAboutAccountTxt"
+        android:layout_width="148dp"
+        android:layout_height="18dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_accountbox"
+        android:fontFamily="@font/poppins_light"
+        android:text="How about My Account?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/howAboutPaymentTxt"
-        app:layout_constraintVertical_bias="0.010" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
         android:id="@+id/howAboutSafeTxt"
         android:layout_width="117dp"
-        android:layout_height="15dp"
+        android:layout_height="18dp"
         android:background="@color/white"
         android:drawableLeft="@drawable/ic_safety"
         android:fontFamily="@font/poppins_light"
@@ -227,10 +227,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/howAboutAccountTxt"
-        app:layout_constraintVertical_bias="0.010" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/aboutPakigsabotTxt"
@@ -245,10 +245,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/howAboutSafeTxt"
-        app:layout_constraintVertical_bias="0.010" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
         android:id="@+id/timeTxt5"
@@ -256,7 +256,7 @@
         android:layout_height="15dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_light"
-        android:text="9:28 AM"
+        android:text="10:28 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -269,10 +269,10 @@
 
     <TextView
         android:id="@+id/message3"
-        android:layout_width="140dp"
+        android:layout_width="175dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="How to Search and Reserve?"
+        android:text="How about Reservations Calendar?"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -280,7 +280,7 @@
         app:layout_constraintHorizontal_bias="0.682"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeTxt5"
-        app:layout_constraintVertical_bias="0.010" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <ImageView
         android:id="@+id/userImage1"
@@ -300,7 +300,7 @@
         android:layout_height="16dp"
         android:layout_marginTop="23dp"
         android:fontFamily="@font/poppins_light"
-        android:text="9:28 AM"
+        android:text="10:28 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -322,7 +322,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/message3"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
         android:id="@+id/pakigsabotSupportTxtInsert"
@@ -356,69 +356,132 @@
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
         app:layout_constraintTop_toTopOf="@+id/pakigsabotSupportTxtInsert"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <TextView
         android:id="@+id/searchingTipsTxt"
-        android:layout_width="171dp"
-        android:layout_height="16dp"
+        android:layout_width="235dp"
+        android:layout_height="18dp"
         android:layout_marginTop="5dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_searchbook"
+        android:drawableLeft="@drawable/ic_calendar"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the Searching Tips?"
+        android:text="How to Link Calendars for Multiple Listings?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
         app:layout_constraintTop_toTopOf="@+id/messageInsert"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.078" />
 
     <TextView
         android:id="@+id/bookingPlacesTxt"
-        android:layout_width="236dp"
-        android:layout_height="16dp"
+        android:layout_width="245dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_searchbook"
+        android:drawableLeft="@drawable/ic_calendar"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the Reservation Establishments?"
+        android:text="How to Update your Reservations Calendar?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
         app:layout_constraintTop_toBottomOf="@+id/searchingTipsTxt"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/reservingPakigsaBotTxt"
-        android:layout_width="288dp"
-        android:layout_height="15dp"
+        android:layout_width="160dp"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_searchbook"
+        android:drawableLeft="@drawable/ic_calendar"
         android:fontFamily="@font/poppins_light"
-        android:text="How are the Reservations in Pakigsa-Bot Experiences?"
+        android:text="How to Set Popular Dates?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
         app:layout_constraintTop_toBottomOf="@+id/bookingPlacesTxt"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/reservingPakigsaBotTxt2"
+        android:layout_width="205dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:fontFamily="@font/poppins_light"
+        android:text="When a Reservation is not possible?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toEndOf="@+id/logoInsert"
+        app:layout_constraintTop_toBottomOf="@+id/reservingPakigsaBotTxt"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/reservingPakigsaBotTxt3"
+        android:layout_width="261dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:fontFamily="@font/poppins_light"
+        android:text="How do I set times and days of the week when guests can't check in or out?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toEndOf="@+id/logoInsert"
+        app:layout_constraintTop_toBottomOf="@+id/reservingPakigsaBotTxt2"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/reservingPakigsaBotTxt4"
+        android:layout_width="280dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:fontFamily="@font/poppins_light"
+        android:text="How to Set Preparation Time Between Reservations?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toEndOf="@+id/logoInsert"
+        app:layout_constraintTop_toBottomOf="@+id/reservingPakigsaBotTxt3"
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/homeMenuTxt"
-        android:layout_width="176dp"
+        android:layout_width="135dp"
         android:layout_height="18dp"
+        android:layout_marginTop="3dp"
         android:background="@color/white"
         android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
@@ -428,9 +491,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
-        app:layout_constraintTop_toBottomOf="@+id/reservingPakigsaBotTxt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/reservingPakigsaBotTxt4"
+        app:layout_constraintVertical_bias="0.092" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
