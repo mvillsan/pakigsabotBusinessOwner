@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".Chatbot.ChatbotConversation5"
+            android:exported="false" />
+        <activity
+            android:name=".Chatbot.ChatbotConversation4"
+            android:exported="false" />
+        <activity
+            android:name=".Chatbot.ChatbotConversation3"
+            android:exported="false" />
+        <activity
+            android:name=".Chatbot.ChatbotConversation2"
+            android:exported="false" />
+        <activity
             android:name=".Services.EditServiceInternetCafe"
             android:exported="false" />
         <activity
