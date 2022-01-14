@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_chatbot_bg"
-    tools:context=".Chatbot.ChatbotConversation5">
+    tools:context=".Chatbot.ChatbotConversation6">
 
     <ImageView
         android:id="@+id/chatbotImage"
@@ -49,12 +49,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+     <TextView
         android:id="@+id/timeTxt"
         android:layout_width="45dp"
         android:layout_height="15dp"
         android:fontFamily="@font/poppins_light"
-        android:text="10:35 AM"
+        android:text="10:37 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -63,23 +63,23 @@
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pakigsabotSupportTxt"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:id="@+id/message"
-        android:layout_width="95dp"
+        android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_light"
-        android:text="How about Safety?"
+        android:text="How to Use Pakigsa-Bot App?"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeTxt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <ImageView
         android:id="@+id/userImage5"
@@ -100,7 +100,7 @@
         android:layout_height="16dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="10:35 AM"
+        android:text="10:37 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -144,7 +144,7 @@
         android:id="@+id/message2"
         android:layout_width="128dp"
         android:layout_height="16dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:drawableRight="@drawable/ic_arrow_down"
         android:fontFamily="@font/poppins_light"
         android:text="Choose from below "
@@ -160,14 +160,54 @@
 
     <TextView
         android:id="@+id/message3"
-        android:layout_width="205dp"
+        android:layout_width="220dp"
         android:layout_height="22dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="30dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
-        android:text="What are Safety Concerns All About?"
+        android:text="How to Get Started in Pakigsa-Bot App?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/message2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/message4"
+        android:layout_width="170dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
+        android:fontFamily="@font/poppins_light"
+        android:text="How Pakigsa-Bot App Works?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/message3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/message5"
+        android:layout_width="190dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
+        android:fontFamily="@font/poppins_light"
+        android:text="What are the Community Policies?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -175,70 +215,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toEndOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/message2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/message4"
-        android:layout_width="230dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips and Guidelines?"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toEndOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/message3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/message5"
-        android:layout_width="165dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="How about Reporting Issues?"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toEndOf="@+id/logo"
         app:layout_constraintTop_toBottomOf="@+id/message4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <TextView
         android:id="@+id/message6"
-        android:layout_width="240dp"
-        android:layout_height="30dp"
+        android:layout_width="160dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="30dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the Government Travel Restrictions and Advisories?"
+        android:text="What are our Legal Terms?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toEndOf="@+id/logo"
         app:layout_constraintTop_toBottomOf="@+id/message5"
-        app:layout_constraintVertical_bias="0.002" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/homeMenuTxt"
         android:layout_width="130dp"
         android:layout_height="18dp"
+        android:layout_marginTop="8dp"
         android:background="@color/white"
         android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
@@ -253,35 +257,35 @@
         app:layout_constraintTop_toBottomOf="@+id/message6"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/timeTxt3"
         android:layout_width="45dp"
         android:layout_height="15dp"
         android:fontFamily="@font/poppins_light"
-        android:text="10:36 AM"
+        android:text="10:38 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeMenuTxt"
-        app:layout_constraintVertical_bias="0.037" />
-
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/message8"
-        android:layout_width="205dp"
+        android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips and Guidelines?"
+        android:text="How Pakigsa-Bot App Works?"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeTxt3"
         app:layout_constraintVertical_bias="0.0" />
@@ -305,7 +309,7 @@
         android:layout_height="16dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="10:36 AM"
+        android:text="10:38 AM"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -350,7 +354,7 @@
         android:id="@+id/message9"
         android:layout_width="128dp"
         android:layout_height="16dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:drawableRight="@drawable/ic_arrow_down"
         android:fontFamily="@font/poppins_light"
         android:text="Choose from below "
@@ -366,122 +370,50 @@
 
     <TextView
         android:id="@+id/message10"
-        android:layout_width="190dp"
+        android:layout_width="220dp"
         android:layout_height="22dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="30dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the General Safety Tips?"
+        android:text="What is the Contact Info and Feedback?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toEndOf="@+id/logo2"
         app:layout_constraintTop_toBottomOf="@+id/message9"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/message11"
-        android:layout_width="210dp"
-        android:layout_height="30dp"
+        android:layout_width="130dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="30dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
+        android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips for Diners on Restaurants?"
+        android:text="What are the Basics?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toEndOf="@+id/logo2"
         app:layout_constraintTop_toBottomOf="@+id/message10"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/message12"
-        android:layout_width="255dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips for Guests on Resorts? "
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/logo2"
-        app:layout_constraintTop_toBottomOf="@+id/message11"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/message13"
-        android:layout_width="235dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips for Customers on Dental Clinics? "
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toEndOf="@+id/logo2"
-        app:layout_constraintTop_toBottomOf="@+id/message12"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/message14"
-        android:layout_width="255dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips for Customers on Spas and Salons? "
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/logo2"
-        app:layout_constraintTop_toBottomOf="@+id/message13"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/message15"
-        android:layout_width="255dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/ic_safety"
-        android:fontFamily="@font/poppins_light"
-        android:text="What are the Safety Tips for Customers on Internet Cafes? "
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/logo2"
-        app:layout_constraintTop_toBottomOf="@+id/message14"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/homeMenuTxt2CC5"
+        android:id="@+id/homeMenuTxt2"
         android:layout_width="130dp"
         android:layout_height="18dp"
+        android:layout_marginTop="8dp"
         android:background="@color/white"
         android:drawableLeft="@drawable/pakigsabot_logotxt"
         android:fontFamily="@font/poppins_light"
@@ -493,7 +425,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toEndOf="@+id/logo2"
-        app:layout_constraintTop_toBottomOf="@+id/message15"
+        app:layout_constraintTop_toBottomOf="@+id/message11"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
