@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".Chatbot.ChatbotConversation6"
+            android:exported="false" />
+        <activity
             android:name=".Chatbot.ChatbotConversation5"
             android:exported="false" />
         <activity
