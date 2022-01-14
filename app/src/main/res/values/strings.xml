@@ -46,4 +46,7 @@
     <string name="reservationsCalendar">Reservation Calendar</string>
     <string name="agreementTxt">"Pakigsa-Bot is a community where anyone can belong. To ensure this, we're asking you to commit to the following: Pakigsa-Bot Community Commitment - I agree to treat everyone in the Pakigsa-Bot Community regardless of their race, religion, national origin, ethnicity, skin color, disability, sex, gender identity, sexual orientation, or age - with respect, and without judgment or bias."</string>
     <string name="agreeTxt">"Select Agree to Continue"</string>
+    <string name="defaultResponse">Hi, thanks for contacting us. Please send us any questions you may have. We aren\'t here at the moment, but we\'ll get back to you soon! We\'ve received your message and appreciate you reaching out. For faster communication, you have to inquire between 8AM - 6PM. You can also reach us at 032-412-3277 (Telephone) or 0922-643-6559 (Mobile) for faster transaction.</string>
+    <string name="mainMenu">I also believe you might find the answer in our Home Menu. Just tap below to go to the Main Menu</string>
+    <string name="defaultResponse2">Sorry I didn\'t understand you. Simple add @help to your message and we will try to answer you as soon as possible. Is there anything else I can help you with?</string>
 </resources>
