@@ -49,7 +49,7 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_edit_service_resto.xml" value="0.2640625" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_edit_service_spa_salon.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_go_premium_ws.xml" value="0.33" />
-        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_details.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_wt_cancel.xml" value="0.33" />
@@ -62,7 +62,7 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_in.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_splash_screen.xml" value="0.2598958333333333" />
-        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.2640625" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_calendar.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_chatbot.xml" value="0.5" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/fragment_history.xml" value="0.33" />
