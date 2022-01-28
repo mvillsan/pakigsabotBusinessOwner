@@ -136,10 +136,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toTopOf="@+id/whiteRect"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.169" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations11"
@@ -153,10 +153,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations3"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintVertical_bias="0.543" />
 
     <TextView
         android:id="@+id/welcomeUserTxtReservations2"
@@ -216,10 +216,34 @@
         android:src="@drawable/ic_info"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toTopOf="@+id/whiteRect"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.13" />
+
+    <ImageView
+        android:id="@+id/emailBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toEndOf="@+id/infoJan11"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <ImageView
+        android:id="@+id/emailBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/emailBtn1"
+        app:layout_constraintVertical_bias="0.515" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -228,7 +252,7 @@
         android:src="@drawable/ic_info"
         app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect"
-        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations2"
         app:layout_constraintTop_toBottomOf="@+id/infoJan11"
         app:layout_constraintVertical_bias="0.51" />

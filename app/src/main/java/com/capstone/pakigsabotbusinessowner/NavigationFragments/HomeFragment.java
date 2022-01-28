@@ -9,7 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerCancelled;
+import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerResched;
 import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
 import com.capstone.pakigsabotbusinessowner.SignIn;
@@ -71,6 +75,8 @@ public class HomeFragment extends Fragment {
         //References:
         ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
+        ImageView customerCancelled = (ImageView) view.findViewById(R.id.noUpcomingRsrvBtn);
+        TextView customerResched = (TextView) view.findViewById(R.id.upcomingReservesTxt);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +91,21 @@ public class HomeFragment extends Fragment {
                 signOutApp();
             }
         });
+
+        customerCancelled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                customerCancelledR();
+            }
+        });
+
+        customerResched.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                customerReschedR();
+            }
+        });
+
         return view;
     }
 
@@ -97,6 +118,18 @@ public class HomeFragment extends Fragment {
     public void signOutApp(){
         Intent in = new Intent(getActivity(), SignIn.class);
         in.putExtra("signin", "signin");
+        startActivity(in);
+    }
+
+    public void customerCancelledR(){
+        Intent in = new Intent(getActivity(), CustomerCancelled.class);
+        in.putExtra("alertCC", "alertCC");
+        startActivity(in);
+    }
+
+    public void customerReschedR(){
+        Intent in = new Intent(getActivity(), CustomerResched.class);
+        in.putExtra("alertCR", "alertCR");
         startActivity(in);
     }
 }
