@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".ConfirmReservation.ConfirmReservationSuccess"
+            android:exported="false" />
+        <activity
             android:name=".PremiumApp.UpgradeScreen"
             android:exported="false" />
         <activity

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/reservations_details_bg"
-    tools:context=".CancelReservation.CancellationSuccess">
+    tools:context=".ConfirmReservation.ConfirmReservationSuccess">
 
     <ImageView
         android:id="@+id/backBtnCR3"
@@ -65,7 +65,7 @@
         android:layout_width="267dp"
         android:layout_height="152dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Reservation Cancellation Successful!"
+        android:text="Reservation Confirmation Successful!"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"

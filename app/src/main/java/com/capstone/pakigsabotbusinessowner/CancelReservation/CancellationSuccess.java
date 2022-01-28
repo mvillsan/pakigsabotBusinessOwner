@@ -13,7 +13,7 @@ import com.capstone.pakigsabotbusinessowner.Reservations.ReservationWtCancel;
 
 public class CancellationSuccess extends AppCompatActivity {
 
-    ImageView close, detailRect, check, closeImageViewCancelSuccess;
+    ImageView close, detailRect, check, confirmImageView;
     TextView successTxt;
 
     @Override
@@ -30,7 +30,7 @@ public class CancellationSuccess extends AppCompatActivity {
             }
         });
 
-        closeImageViewCancelSuccess.setOnClickListener(new View.OnClickListener() {
+        confirmImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updatedReservations();
@@ -43,7 +43,7 @@ public class CancellationSuccess extends AppCompatActivity {
         detailRect = findViewById(R.id.detail_rectCancelSuccess);
         check = findViewById(R.id.checkImageView);
         successTxt = findViewById(R.id.cancelSuccessTxt);
-        closeImageViewCancelSuccess = findViewById(R.id.closeImageViewCancelSuccess);
+        confirmImageView = findViewById(R.id.confirmImageView);
     }
 
     private void updatedReservations(){
