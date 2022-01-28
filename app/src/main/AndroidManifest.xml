@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".NotificationAlerts.CustomerResched"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationAlerts.CustomerCancelled"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmReservation.ConfirmReservationSuccess"
             android:exported="false" />
         <activity
