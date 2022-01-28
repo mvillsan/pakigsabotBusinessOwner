@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.CancelReservation.CancelReservation;
+import com.capstone.pakigsabotbusinessowner.ConfirmReservation.ConfirmReservationSuccess;
 import com.capstone.pakigsabotbusinessowner.R;
 
 public class ReservationDetails extends AppCompatActivity {
@@ -61,7 +62,7 @@ public class ReservationDetails extends AppCompatActivity {
     }
 
     private void confirmedReservation(){
-        Intent intent = new Intent(getApplicationContext(), ReservationWtConfirmed.class);
+        Intent intent = new Intent(getApplicationContext(), ConfirmReservationSuccess.class);
         startActivity(intent);
     }
 
