@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgreen"
+    tools:context=".Translate.TranslateFilipino">
+
+    <ImageView
+        android:id="@+id/backBtnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="330dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238"
+        app:srcCompat="@drawable/translateundraw" />
+
+    <TextView
+        android:id="@+id/translateTxt"
+        android:layout_width="289dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Translate App to Filipino"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backBtnShare"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/translateTxt2"
+        android:layout_width="290dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Isalin ang Aplikasyon sa Wikang Filipino"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView31"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <Button
+        android:id="@+id/translateBtnFilipino"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/purple"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Isalin sa Filipino"
+        android:textColor="@color/darkgreen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateTxt2"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/cancelTranslateBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/peach"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Huwag Isalin"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateBtnFilipino"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
