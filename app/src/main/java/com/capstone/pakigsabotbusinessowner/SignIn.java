@@ -13,13 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.capstone.pakigsabotbusinessowner.FacialRecog.EnableFacialRecog;
 import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class SignIn extends AppCompatActivity {
 
-    ImageView prev;
+    ImageView prev, facialRecogBtn;
     TextView signup;
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
@@ -53,6 +54,13 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        facialRecogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                facialRecogEnable();
+            }
+        });
+
         //Validations
         passEditTxt.addTextChangedListener(new ValidationTextWatcher(passEditTxt));
         emailAddEditTxt.addTextChangedListener(new ValidationTextWatcher(emailAddEditTxt));
@@ -73,6 +81,7 @@ public class SignIn extends AppCompatActivity {
         passEditTxt = findViewById(R.id.passwordEditTxtSI);
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
+        facialRecogBtn = findViewById(R.id.facialRecogBtn);
     }
 
     public void welcomeScreen(){
@@ -82,6 +91,11 @@ public class SignIn extends AppCompatActivity {
 
     public void signUpScreen(){
         Intent intent = new Intent(getApplicationContext(), SignUp.class);
+        startActivity(intent);
+    }
+
+    public void facialRecogEnable(){
+        Intent intent = new Intent(getApplicationContext(), EnableFacialRecog.class);
         startActivity(intent);
     }
 

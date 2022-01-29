@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".FacialRecog.EnableFacialRecog"
+            android:exported="false" />
+        <activity
+            android:name=".Translate.TranslateFilipino"
+            android:exported="false" />
+        <activity
             android:name=".NotificationAlerts.CustomerResched"
             android:exported="false" />
         <activity
