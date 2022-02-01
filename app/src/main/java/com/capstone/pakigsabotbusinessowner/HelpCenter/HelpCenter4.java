@@ -1,4 +1,4 @@
-package com.capstone.pakigsabotbusinessowner.Chatbot;
+package com.capstone.pakigsabotbusinessowner.HelpCenter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 import com.capstone.pakigsabotbusinessowner.R;
 
-public class ChatbotConversation6 extends AppCompatActivity {
+public class HelpCenter4 extends AppCompatActivity {
 
     TextView homeMenuTxt2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatbot_conversation6);
+        setContentView(R.layout.activity_helpcenter4);
 
         //References:
         refs();
@@ -24,7 +24,7 @@ public class ChatbotConversation6 extends AppCompatActivity {
         homeMenuTxt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                defaultChabotConvo();
+                chatbotConvo5();
             }
         });
     }
@@ -33,8 +33,8 @@ public class ChatbotConversation6 extends AppCompatActivity {
         homeMenuTxt2 = findViewById(R.id.homeMenuTxt2);
     }
 
-    private void defaultChabotConvo(){
-        Intent intent = new Intent(getApplicationContext(), ChatbotDefaultConversation.class);
+    private void chatbotConvo5(){
+        Intent intent = new Intent(getApplicationContext(), HelpCenter5.class);
         startActivity(intent);
     }
 }

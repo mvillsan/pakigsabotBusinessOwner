@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
-import com.capstone.pakigsabotbusinessowner.NavigationFragments.ChatbotFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HelpCenter;
 import com.capstone.pakigsabotbusinessowner.NavigationFragments.HistoryFragment;
 import com.capstone.pakigsabotbusinessowner.NavigationFragments.HomeFragment;
 import com.capstone.pakigsabotbusinessowner.NavigationFragments.ReservationsFragment;
@@ -31,7 +31,7 @@ public class BottomNavigation extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_services));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_history));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_chatbot));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
@@ -58,7 +58,7 @@ public class BottomNavigation extends AppCompatActivity {
                         break;
 
                     case 5: //When id is 5, initialize reservation chatbot fragment
-                        fragment = new ChatbotFragment();
+                        fragment = new HelpCenter();
                         break;
                 }
                 //Load fragment

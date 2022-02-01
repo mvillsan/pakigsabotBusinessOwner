@@ -1,15 +1,16 @@
-package com.capstone.pakigsabotbusinessowner.Chatbot;
+package com.capstone.pakigsabotbusinessowner.HelpCenter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
 import com.capstone.pakigsabotbusinessowner.R;
 
-public class ChatbotDefaultConversation extends AppCompatActivity {
+public class HelpCenter6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatbot_default_conversation);
+        setContentView(R.layout.activity_helpcenter6);
     }
 }
