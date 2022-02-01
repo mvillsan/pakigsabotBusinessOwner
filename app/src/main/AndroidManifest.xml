@@ -31,22 +31,19 @@
             android:name=".PremiumApp.GoPremiumWS"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotDefaultConversation"
+            android:name=".HelpCenter.HelpCenter6"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation6"
+            android:name=".HelpCenter.HelpCenter5"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation5"
+            android:name=".HelpCenter.HelpCenter4"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation4"
+            android:name=".HelpCenter.HelpCenter3"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation3"
-            android:exported="false" />
-        <activity
-            android:name=".Chatbot.ChatbotConversation2"
+            android:name=".HelpCenter.HelpCenter2"
             android:exported="false" />
         <activity
             android:name=".Services.EditServiceInternetCafe"
