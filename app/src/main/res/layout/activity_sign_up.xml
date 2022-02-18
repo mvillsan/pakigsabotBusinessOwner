@@ -15,7 +15,7 @@
         android:text="@string/haveaccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccBtn"
         app:layout_constraintVertical_bias="0.0" />
@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/createAccBtn"
         android:layout_width="186dp"
-        android:layout_height="41dp"
+        android:layout_height="35dp"
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/create"
@@ -32,10 +32,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passInputLayoutSU"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/backBtnSU"
@@ -46,17 +46,18 @@
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.012"
         app:srcCompat="@drawable/back_arrow" />
 
     <TextView
         android:id="@+id/signUpTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="31dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/signup"
         android:textColor="@color/darkbluegreen"
-        android:textSize="30sp"
+        android:textSize="22sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +80,66 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/staffUserNameInputLayout"
+        android:layout_width="296dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:hint="Staff Username"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTxt"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/person_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/staffUNameEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/staffPosInputLayout"
+        android:layout_width="296dp"
+        android:layout_height="70dp"
+        android:hint="Job Title"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staffUserNameInputLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/ic_job">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/staffPosEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/estNameInputLayout"
         android:layout_width="296dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="70dp"
         android:hint="Establishment Name"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
@@ -90,34 +147,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpTxt"
-        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintTop_toBottomOf="@+id/staffPosInputLayout"
+        app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/person_icon">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/estNameEditTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_light"
             android:inputType="textPersonName"
             android:maxLength="30"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <AutoCompleteTextView
         android:id="@+id/estTypeTxtView"
         android:layout_width="294dp"
-        android:layout_height="51dp"
+        android:layout_height="40dp"
         android:completionThreshold="1"
         android:drawableLeft="@drawable/ic_baseline_settings_applications_24"
         android:drawablePadding="20dp"
         android:fontFamily="@font/poppins_light"
         android:hint="Establishment Type"
         android:paddingStart="15dp"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -128,7 +185,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/addressInputLayout"
         android:layout_width="296dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:hint="Address"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
@@ -137,26 +194,26 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mobileInputLayout"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/person_icon">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addressEditTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_light"
             android:inputType="textPersonName"
             android:maxLength="30"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mobileInputLayout"
         android:layout_width="296dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:hint="Phone"
         app:counterEnabled="true"
         app:counterMaxLength="11"
@@ -173,49 +230,49 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mobileEditTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_light"
             android:inputType="phone"
             android:maxLength="12"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailAddInputLayoutSU"
         android:layout_width="296dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:hint="Email Address"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressInputLayout"
-        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/email_icon">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailAddEditTextSU"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_light"
             android:inputType="textEmailAddress"
             android:maxLength="30"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passInputLayoutSU"
         android:layout_width="296dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:layout_marginTop="2dp"
         android:hint="Password"
         app:counterEnabled="true"
@@ -234,14 +291,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passEditTextSU"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_light"
             android:inputType="textPassword"
             android:maxLength="30"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -256,7 +313,19 @@
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/estNameInputLayout"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.0" />
 
+    <ProgressBar
+        android:id="@+id/progressBarSignUp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/createAccBtn"
+        app:layout_constraintTop_toBottomOf="@+id/passInputLayoutSU"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,8 @@
     <string name="email_req">Email Address is REQUIRED.</string>
     <string name="pass_req">Password is REQUIRED.</string>
     <string name="pass_min">Password must have at least 8 characters</string>
+    <string name="staff_uname_req">Staff Username is REQUIRED.</string>
+    <string name="staff_job_req">Staff Job Title is REQUIRED.</string>
     <string name="est_name_req">Establishment Name is REQUIRED.</string>
     <string name="est_type_req">Establishment Type is REQUIRED.</string>
     <string name="phoneNum_req">Phone Number is REQUIRED.</string>
