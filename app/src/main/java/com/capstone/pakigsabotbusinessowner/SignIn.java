@@ -1,22 +1,30 @@
 package com.capstone.pakigsabotbusinessowner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.FacialRecog.EnableFacialRecog;
-import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
+import com.capstone.pakigsabotbusinessowner.FacialRecog.FacialRecog;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignIn extends AppCompatActivity {
 
@@ -25,6 +33,10 @@ public class SignIn extends AppCompatActivity {
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
     Button signInBtn;
+    ProgressBar progressSI;
+    FirebaseAuth fAuth2;
+
+    public static String passwordAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +62,14 @@ public class SignIn extends AppCompatActivity {
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signInCustomer();
+                signInBusinessStaff();
             }
         });
 
         facialRecogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                facialRecogEnable();
+                facialSignIn();
             }
         });
 
@@ -73,6 +85,7 @@ public class SignIn extends AppCompatActivity {
             }
         }
     }
+
     public void refs(){
         prev = findViewById(R.id.backBtnSignIn);
         signup = findViewById(R.id.signUpTxtView);
@@ -82,6 +95,8 @@ public class SignIn extends AppCompatActivity {
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
         facialRecogBtn = findViewById(R.id.facialRecogBtn);
+        progressSI = findViewById(R.id.progressBarSignIn);
+        fAuth2 = FirebaseAuth.getInstance();
     }
 
     public void welcomeScreen(){
@@ -94,14 +109,18 @@ public class SignIn extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void facialRecogEnable(){
-        Intent intent = new Intent(getApplicationContext(), EnableFacialRecog.class);
+    public void facialSignIn(){
+        Intent intent = new Intent(getApplicationContext(), FacialRecog.class);
         startActivity(intent);
     }
 
     //Validations for Signing In on the Application
-    public boolean signInCustomer(){
+    public boolean signInBusinessStaff(){
+
+        //Variables::
         boolean isValid = true;
+        String email = emailAddEditTxt.getText().toString();
+        String pass = passEditTxt.getText().toString();
 
         if(emailAddEditTxt.getText().toString().isEmpty()){
             emailTxtInputL.setError(getString(R.string.email_req));
@@ -133,10 +152,36 @@ public class SignIn extends AppCompatActivity {
             }
         }
 
+        passEditTxt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                boolean handled = false;
+                if(actionId == EditorInfo.IME_ACTION_SEND || keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_DOWN){
+                    passwordAuth = passEditTxt.getText().toString();
+                    handled = true;
+                }else{
+                    Toast.makeText(SignIn.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
+                    passEditTxt.requestFocus();
+                }return handled;
+            }
+        });
+
         if(isValid){
-            Toast.makeText(SignIn.this, R.string.signIn_success, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
-            startActivity(intent);
+            progressSI.setVisibility(View.VISIBLE);
+
+            //Authenticate User::
+            fAuth2.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(SignIn.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), EnableFacialRecog.class));
+                    }else{
+                        Toast.makeText(SignIn.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        progressSI.setVisibility(View.GONE);
+                    }
+                }
+            });
         }
 
         return true;

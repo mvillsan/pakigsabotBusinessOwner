@@ -11,13 +11,16 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.capstone.pakigsabotbusinessowner.MainActivity;
 import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerCancelled;
 import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerResched;
 import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
 import com.capstone.pakigsabotbusinessowner.SignIn;
 import com.capstone.pakigsabotbusinessowner.Translate.TranslateFilipino;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -125,9 +128,12 @@ public class HomeFragment extends Fragment {
     }
 
     public void signOutApp(){
-        Intent in = new Intent(getActivity(), SignIn.class);
+        FirebaseAuth.getInstance().signOut();
+        Toast.makeText(getActivity(),"Signed Out from Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(getActivity(), MainActivity.class);
         in.putExtra("signin", "signin");
         startActivity(in);
+        getActivity().finish();
     }
 
     public void customerCancelledR(){
