@@ -17,8 +17,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.capstone.pakigsabotbusinessowner.FacialRecog.EnableFacialRecog;
-import com.capstone.pakigsabotbusinessowner.FacialRecog.FacialRecog;
+import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
+import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -28,7 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignIn extends AppCompatActivity {
 
-    ImageView prev, facialRecogBtn;
+    ImageView prev;
     TextView signup;
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
@@ -55,7 +55,7 @@ public class SignIn extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signUpScreen();
+                agreementScreen();
             }
         });
 
@@ -63,13 +63,6 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signInBusinessStaff();
-            }
-        });
-
-        facialRecogBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                facialSignIn();
             }
         });
 
@@ -94,7 +87,6 @@ public class SignIn extends AppCompatActivity {
         passEditTxt = findViewById(R.id.passwordEditTxtSI);
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
-        facialRecogBtn = findViewById(R.id.facialRecogBtn);
         progressSI = findViewById(R.id.progressBarSignIn);
         fAuth2 = FirebaseAuth.getInstance();
     }
@@ -104,13 +96,8 @@ public class SignIn extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void signUpScreen(){
-        Intent intent = new Intent(getApplicationContext(), SignUp.class);
-        startActivity(intent);
-    }
-
-    public void facialSignIn(){
-        Intent intent = new Intent(getApplicationContext(), FacialRecog.class);
+    public void agreementScreen(){
+        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
         startActivity(intent);
     }
 
@@ -175,15 +162,18 @@ public class SignIn extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(SignIn.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), EnableFacialRecog.class));
+                        Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        emailAddEditTxt.setText(null);
+                        passEditTxt.setText(null);
                     }else{
+                        passEditTxt.setText(null);
                         Toast.makeText(SignIn.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressSI.setVisibility(View.GONE);
                     }
                 }
             });
         }
-
         return true;
     }
 
@@ -253,7 +243,3 @@ public class SignIn extends AppCompatActivity {
         }
     }
 }
-//end comment
-//end
-//end b Louise
-//end Maryvil
