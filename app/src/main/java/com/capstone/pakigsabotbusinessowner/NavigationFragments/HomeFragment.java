@@ -18,8 +18,6 @@ import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerCancelled
 import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerResched;
 import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.SignIn;
-import com.capstone.pakigsabotbusinessowner.Translate.TranslateFilipino;
 import com.google.firebase.auth.FirebaseAuth;
 
 
@@ -81,7 +79,6 @@ public class HomeFragment extends Fragment {
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
         ImageView customerCancelled = (ImageView) view.findViewById(R.id.noUpcomingRsrvBtn);
         TextView customerResched = (TextView) view.findViewById(R.id.upcomingReservesTxt);
-        ImageView translateBtn = (ImageView) view.findViewById(R.id.translateBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,13 +105,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 customerReschedR();
-            }
-        });
-
-        translateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                translateFil();
             }
         });
 
@@ -145,12 +135,6 @@ public class HomeFragment extends Fragment {
     public void customerReschedR(){
         Intent in = new Intent(getActivity(), CustomerResched.class);
         in.putExtra("alertCR", "alertCR");
-        startActivity(in);
-    }
-
-    public void  translateFil(){
-        Intent in = new Intent(getActivity(), TranslateFilipino.class);
-        in.putExtra("transFil", "transFil");
         startActivity(in);
     }
 }

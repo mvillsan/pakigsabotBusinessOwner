@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.MainActivity;
-import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.R;
 import com.capstone.pakigsabotbusinessowner.SignUp;
 
@@ -29,7 +27,7 @@ public class AgreementScreen extends AppCompatActivity {
         agreeContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                homeScreen();
+                signUpScreen();
             }
         });
 
@@ -43,7 +41,7 @@ public class AgreementScreen extends AppCompatActivity {
         backBtnAgreement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signUpScreen();
+                welcomeScreen();
             }
         });
     }
@@ -52,12 +50,6 @@ public class AgreementScreen extends AppCompatActivity {
         agreeContinueBtn = findViewById(R.id.agreeContinueBtn);
         declineBtn = findViewById(R.id.declineBtn);
         backBtnAgreement = findViewById(R.id.backBtnAgreement);
-    }
-
-    private void homeScreen(){
-        Toast.makeText(AgreementScreen.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
-        startActivity(intent);
     }
 
     private void welcomeScreen(){

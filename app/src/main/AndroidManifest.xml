@@ -15,9 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
-            android:name=".FacialRecog.FacialRecog"
-            android:exported="false" />
-        <activity
             android:name=".FacialRecog.EnableFacialRecog"
             android:exported="false" />
         <activity
