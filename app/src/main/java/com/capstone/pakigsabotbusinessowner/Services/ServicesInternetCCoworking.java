@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.capstone.pakigsabotbusinessowner.R;
 
-public class ServicesInternetCafe extends AppCompatActivity {
+public class ServicesInternetCCoworking extends AppCompatActivity {
 
     ImageView addBtnICServices, editIDPic;
 

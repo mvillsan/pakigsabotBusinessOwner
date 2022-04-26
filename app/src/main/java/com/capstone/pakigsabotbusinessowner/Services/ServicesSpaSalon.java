@@ -60,7 +60,7 @@ public class ServicesSpaSalon extends AppCompatActivity {
     }
 
     private void internetCafeServicesScreen(){
-        Intent intent = new Intent(getApplicationContext(), ServicesInternetCafe.class);
+        Intent intent = new Intent(getApplicationContext(), ServicesInternetCCoworking.class);
         startActivity(intent);
     }
 }

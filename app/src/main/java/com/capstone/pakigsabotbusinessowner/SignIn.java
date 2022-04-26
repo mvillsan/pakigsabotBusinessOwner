@@ -134,7 +134,6 @@ public class SignIn extends AppCompatActivity {
                 requestFocus(passEditTxt);
                 return false;
             }else{
-                passTxtInputL.setEnabled(false);
                 passTxtInputL.setError("");
             }
         }
