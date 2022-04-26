@@ -19,8 +19,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
+import com.capstone.pakigsabotbusinessowner.SignUpRequirement.PaySubscription;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -57,6 +57,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        //References::
         refs();
 
         prev.setOnClickListener(new View.OnClickListener() {
@@ -221,7 +222,7 @@ public class SignUp extends AppCompatActivity {
         }
 
         if(isValid){
-            String defStat = "Classic";
+            String defStat = "Trial";
 
             progressSU.setVisibility(View.VISIBLE);
 
@@ -253,7 +254,9 @@ public class SignUp extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+
+                        //Pay Subscription Page
+                        paymentSubs();
 
                         //Clear Text Fields::
                         estNameEditTxt.setText(null);
@@ -276,6 +279,12 @@ public class SignUp extends AppCompatActivity {
             finish();
         }
         return true;
+    }
+
+    //Pay Subscription::
+    private void paymentSubs(){
+        Intent intent = new Intent(getApplicationContext(), PaySubscription.class);
+        startActivity(intent);
     }
 
     //Setting FOCUS

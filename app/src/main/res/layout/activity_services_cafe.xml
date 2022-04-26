@@ -4,11 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/top_bottombar_bg"
-    tools:context=".Services.ServicesInternetCCoworking">
+    android:background="@drawable/topbar_bg"
+    tools:context=".Services.ServicesCafe">
 
     <ImageView
-        android:id="@+id/backBtnServicesResort"
+        android:id="@+id/addRestoBtnServices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/roomCotsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <ImageView
+        android:id="@+id/backBtnSRestaurant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toEndOf="@+id/backBtnServicesResort"
+        app:layout_constraintStart_toEndOf="@+id/backBtnSRestaurant"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
@@ -51,41 +63,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="Internet Cafe Services"
+        android:text="Cafe Services"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.074" />
+        app:layout_constraintVertical_bias="0.065" />
 
     <ImageView
-        android:id="@+id/addBtnICServices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_add"
+        android:id="@+id/imageView"
+        android:layout_width="331dp"
+        android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
-        app:layout_constraintStart_toEndOf="@+id/roomCotsTxt"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.074" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/white_rect4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/white_rect3" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -94,48 +92,47 @@
         android:src="@drawable/purple_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
+        app:layout_constraintVertical_bias="0.028" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="130dp"
         android:layout_height="34dp"
-        android:layout_marginStart="8dp"
         android:src="@drawable/purple_round_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
+        app:layout_constraintVertical_bias="0.026" />
 
     <ImageView
-        android:id="@+id/editIDPic"
+        android:id="@+id/editIndoorDining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
+        app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
-        android:id="@+id/deleteRoomAzulBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/deleteIndoorBtn"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
         android:layout_marginStart="5dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editIDPic"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintStart_toEndOf="@+id/editIndoorDining"
+        app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
+        app:layout_constraintVertical_bias="0.036" />
 
     <Switch
         android:id="@+id/switch1"
@@ -145,58 +142,74 @@
         android:buttonTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toEndOf="@+id/deleteRoomAzulBtn"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/deleteIndoorBtn"
+        app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
+        app:layout_constraintVertical_bias="0.026" />
 
     <TextView
         android:id="@+id/roomTxt1"
-        android:layout_width="60dp"
+        android:layout_width="74dp"
         android:layout_height="16dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="ID PICTURE"
+        android:text="INDOOR DINING"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.388" />
 
     <TextView
         android:id="@+id/txt1"
-        android:layout_width="105dp"
-        android:layout_height="26dp"
+        android:layout_width="120dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="ID Picture Prices depend on packages"
+        android:text="Opens Sunday - Saturday"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/roomTxt1"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="10AM - 6PM"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/txt1"
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
         android:id="@+id/txt3"
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 75.00"
+        android:text="RF: Php 100.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -206,10 +219,10 @@
         android:src="@drawable/purple_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -218,7 +231,7 @@
         android:src="@drawable/purple_round_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/txt3"
         app:layout_constraintVertical_bias="0.06" />
@@ -227,423 +240,431 @@
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/editIDPic"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintTop_toBottomOf="@+id/editIndoorDining"
+        app:layout_constraintVertical_bias="0.147" />
 
     <ImageView
         android:id="@+id/deleteRoomConsilvaBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
-        app:layout_constraintTop_toBottomOf="@+id/deleteRoomAzulBtn"
+        app:layout_constraintTop_toBottomOf="@+id/deleteIndoorBtn"
         app:layout_constraintVertical_bias="0.147" />
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="46dp"
         android:layout_height="28dp"
+        android:layout_marginTop="10dp"
         android:buttonTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toEndOf="@+id/deleteRoomConsilvaBtn"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/roomTxt2"
-        android:layout_width="120dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="93dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="INTERNET SURFING/GAMING"
+        android:text="OUTDOOR DINING"
         android:textColor="@color/black"
-        android:textSize="8sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView16"
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/txt6"
-        android:layout_width="109dp"
-        android:layout_height="27dp"
+        android:layout_width="120dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Internet Surfing or Online Gaming"
+        android:text="Opens Sunday - Saturday"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/roomTxt2"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintVertical_bias="0.011" />
+
+    <TextView
+        android:id="@+id/txt7"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="10AM - 6PM"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/txt6"
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/txt8"
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 20.00"
+        android:text="RF: Php 15.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/txt6"
+        app:layout_constraintTop_toBottomOf="@+id/txt7"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/restoMenuTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Cafe Food Menu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.063" />
+
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/addRestoFoodBtnServices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/roomCotsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <ImageView
+        android:id="@+id/whiteRect2"
+        android:layout_width="334dp"
+        android:layout_height="227dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/white_rect3" />
+
+    <ImageView
+        android:id="@+id/foodImg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/purple_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.062" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/foodRect1"
         android:layout_width="130dp"
         android:layout_height="34dp"
-        android:layout_marginStart="8dp"
         android:src="@drawable/purple_round_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toBottomOf="@+id/txt8"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toEndOf="@+id/foodImg1"
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.055" />
 
     <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.007"
-        app:layout_constraintStart_toEndOf="@+id/imageView19"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
-        app:layout_constraintVertical_bias="0.17" />
-
-    <ImageView
-        android:id="@+id/deleteRCabanitaBtn"
+        android:id="@+id/editFood1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foodRect1"
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <ImageView
+        android:id="@+id/deleteFood1Btn"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toEndOf="@+id/imageView20"
-        app:layout_constraintTop_toBottomOf="@+id/deleteRoomConsilvaBtn"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toEndOf="@+id/editFood1"
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.066" />
 
     <Switch
         android:id="@+id/switch3"
         android:layout_width="46dp"
         android:layout_height="28dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
         android:buttonTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toEndOf="@+id/deleteRCabanitaBtn"
-        app:layout_constraintTop_toBottomOf="@+id/switch2"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toEndOf="@+id/deleteIndoorBtn"
+        app:layout_constraintTop_toBottomOf="@+id/restoMenuTxt"
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
-        android:id="@+id/roomTxt3"
-        android:layout_width="80dp"
+        android:id="@+id/foodTxt1"
+        android:layout_width="86dp"
         android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="LAMINATING"
+        android:text="CHEESE BURGER"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView19"
-        app:layout_constraintEnd_toEndOf="@+id/imageView19"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintBottom_toBottomOf="@+id/foodRect1"
+        app:layout_constraintEnd_toEndOf="@+id/foodRect1"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/foodRect1"
+        app:layout_constraintTop_toTopOf="@+id/foodRect1" />
 
     <TextView
-        android:id="@+id/txt9"
-        android:layout_width="117dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Document Lamination with Laminating Film"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toBottomOf="@+id/roomTxt3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txt11"
-        android:layout_width="80dp"
+        android:id="@+id/descTxt1"
+        android:layout_width="120dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 25.00"
+        android:text="Price: Php 89.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toBottomOf="@+id/txt9"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/foodImg1"
+        app:layout_constraintTop_toBottomOf="@+id/foodTxt1"
+        app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/foodImg2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:src="@drawable/purple_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintTop_toBottomOf="@+id/foodImg1"
+        app:layout_constraintVertical_bias="0.067" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/foodRect2"
         android:layout_width="130dp"
         android:layout_height="34dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/purple_round_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/txt11"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toEndOf="@+id/foodImg2"
+        app:layout_constraintTop_toBottomOf="@+id/descTxt1"
+        app:layout_constraintVertical_bias="0.097" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/editFood2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foodRect2"
+        app:layout_constraintTop_toBottomOf="@+id/editFood1"
+        app:layout_constraintVertical_bias="0.162" />
 
     <ImageView
-        android:id="@+id/deleteRHacienderoBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:id="@+id/deleteFood2Btn"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toBottomOf="@+id/deleteRCabanitaBtn"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toEndOf="@+id/editFood2"
+        app:layout_constraintTop_toBottomOf="@+id/deleteFood1Btn"
+        app:layout_constraintVertical_bias="0.165" />
 
     <Switch
         android:id="@+id/switch4"
         android:layout_width="46dp"
         android:layout_height="28dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:buttonTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toEndOf="@+id/deleteRHacienderoBtn"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toEndOf="@+id/deleteFood2Btn"
         app:layout_constraintTop_toBottomOf="@+id/switch3"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.146" />
 
     <TextView
-        android:id="@+id/roomTxt4"
-        android:layout_width="110dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="5dp"
+        android:id="@+id/foodTxt2"
+        android:layout_width="74dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="PHOTO EDITING/PRINTING"
+        android:text="YUM BURGER"
         android:textColor="@color/black"
-        android:textSize="9sp"
+        android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
-        app:layout_constraintEnd_toEndOf="@+id/imageView22"
-        app:layout_constraintStart_toStartOf="@+id/imageView22"
-        app:layout_constraintTop_toTopOf="@+id/imageView22"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintBottom_toBottomOf="@+id/foodRect2"
+        app:layout_constraintEnd_toEndOf="@+id/foodRect2"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="@+id/foodRect2"
+        app:layout_constraintTop_toTopOf="@+id/foodRect2"
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
-        android:id="@+id/txt12"
-        android:layout_width="117dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="5dp"
+        android:id="@+id/descTxt2"
+        android:layout_width="120dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Graphic Designs | Glossy and Matte Photo Paper"
+        android:text="Price: Php 49.00"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/foodImg2"
+        app:layout_constraintTop_toBottomOf="@+id/foodTxt2"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <ImageView
+        android:id="@+id/foodImg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/purple_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodImg2"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <ImageView
+        android:id="@+id/foodRect3"
+        android:layout_width="130dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/purple_round_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toEndOf="@+id/foodImg2"
+        app:layout_constraintTop_toBottomOf="@+id/descTxt2"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <ImageView
+        android:id="@+id/editFood3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foodRect3"
+        app:layout_constraintTop_toBottomOf="@+id/editFood2"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <ImageView
+        android:id="@+id/deleteFood3Btn"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toEndOf="@+id/editFood3"
+        app:layout_constraintTop_toBottomOf="@+id/deleteFood2Btn"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="30dp"
+        android:buttonTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toEndOf="@+id/deleteFood3Btn"
+        app:layout_constraintTop_toBottomOf="@+id/switch4"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <TextView
+        android:id="@+id/foodTxt3"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="CHICKEN BURGER"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/foodRect3"
+        app:layout_constraintEnd_toEndOf="@+id/foodRect3"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/foodRect3"
+        app:layout_constraintTop_toTopOf="@+id/foodRect3"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/descTxt3"
+        android:layout_width="120dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Price: Php 59.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/roomTxt4"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <TextView
-        android:id="@+id/txt14"
-        android:layout_width="80dp"
-        android:layout_height="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Php 10.00"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/txt12"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/purple_circle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21"
-        app:layout_constraintVertical_bias="0.207" />
-
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="130dp"
-        android:layout_height="34dp"
-        android:src="@drawable/purple_round_rect"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/txt14"
-        app:layout_constraintVertical_bias="0.076" />
-
-    <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toEndOf="@+id/imageView25"
-        app:layout_constraintTop_toBottomOf="@+id/imageView23"
-        app:layout_constraintVertical_bias="0.275" />
-
-    <ImageView
-        android:id="@+id/deleteCottagesBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toEndOf="@+id/imageView26"
-        app:layout_constraintTop_toBottomOf="@+id/deleteRHacienderoBtn"
-        app:layout_constraintVertical_bias="0.271" />
-
-    <Switch
-        android:id="@+id/switch5"
-        android:layout_width="46dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:buttonTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toEndOf="@+id/deleteCottagesBtn"
-        app:layout_constraintTop_toBottomOf="@+id/switch4"
-        app:layout_constraintVertical_bias="0.253" />
-
-    <TextView
-        android:id="@+id/roomTxt5"
-        android:layout_width="110dp"
-        android:layout_height="14dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="PRINTING/SCANNING"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView25"
-        app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintStart_toStartOf="@+id/imageView25"
-        app:layout_constraintTop_toTopOf="@+id/imageView25"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <TextView
-        android:id="@+id/txt15"
-        android:layout_width="111dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Black and White | Colored"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/roomTxt5"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txt16"
-        android:layout_width="111dp"
-        android:layout_height="18dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Php 3.00 - Php 5.00"
-        android:textColor="@color/black"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintStart_toEndOf="@+id/foodImg3"
+        app:layout_constraintTop_toBottomOf="@+id/foodTxt3"
+        app:layout_constraintVertical_bias="0.104" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

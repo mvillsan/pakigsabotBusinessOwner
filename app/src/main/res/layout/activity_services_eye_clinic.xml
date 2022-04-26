@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/top_bottombar_bg"
-    tools:context=".Services.ServicesInternetCCoworking">
+    tools:context=".Services.ServicesEyeClinic">
 
     <ImageView
         android:id="@+id/backBtnServicesResort"
@@ -51,28 +51,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="Internet Cafe Services"
+        android:text="Procedures"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
         app:layout_constraintVertical_bias="0.074" />
 
     <ImageView
-        android:id="@+id/addBtnICServices"
+        android:id="@+id/addProcBtnServices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toEndOf="@+id/roomCotsTxt"
         app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.074" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -85,7 +85,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roomCotsTxt"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -113,7 +113,7 @@
         app:layout_constraintVertical_bias="0.17" />
 
     <ImageView
-        android:id="@+id/editIDPic"
+        android:id="@+id/editCavityFilling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_edit"
@@ -133,7 +133,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editIDPic"
+        app:layout_constraintStart_toEndOf="@+id/editCavityFilling"
         app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
         app:layout_constraintVertical_bias="0.176" />
 
@@ -152,33 +152,33 @@
 
     <TextView
         android:id="@+id/roomTxt1"
-        android:layout_width="60dp"
+        android:layout_width="74dp"
         android:layout_height="16dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="ID PICTURE"
+        android:text="CAVITY FILLING"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.388" />
 
     <TextView
         android:id="@+id/txt1"
-        android:layout_width="105dp"
-        android:layout_height="26dp"
+        android:layout_width="108dp"
+        android:layout_height="27dp"
         android:fontFamily="@font/poppins_light"
-        android:text="ID Picture Prices depend on packages"
+        android:text="Silver, Cerramic and Cosmetic Fillings"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/roomTxt1"
         app:layout_constraintVertical_bias="0.007" />
@@ -188,7 +188,7 @@
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 75.00"
+        android:text="Php 1,500.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -218,10 +218,10 @@
         android:src="@drawable/purple_round_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/txt3"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -232,7 +232,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/editIDPic"
+        app:layout_constraintTop_toBottomOf="@+id/editCavityFilling"
         app:layout_constraintVertical_bias="0.154" />
 
     <ImageView
@@ -261,33 +261,33 @@
 
     <TextView
         android:id="@+id/roomTxt2"
-        android:layout_width="120dp"
+        android:layout_width="122dp"
         android:layout_height="12dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_light"
-        android:text="INTERNET SURFING/GAMING"
+        android:text="CLEANING AND POLISHING"
         android:textColor="@color/black"
-        android:textSize="8sp"
+        android:textSize="9sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView16"
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <TextView
         android:id="@+id/txt6"
-        android:layout_width="109dp"
-        android:layout_height="27dp"
+        android:layout_width="107dp"
+        android:layout_height="12dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Internet Surfing or Online Gaming"
+        android:text="Clean and Polish Teeth"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/roomTxt2"
         app:layout_constraintVertical_bias="0.013" />
@@ -297,13 +297,13 @@
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 20.00"
+        android:text="Php 1,500.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/txt6"
         app:layout_constraintVertical_bias="0.0" />
@@ -331,7 +331,7 @@
         app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toEndOf="@+id/imageView18"
         app:layout_constraintTop_toBottomOf="@+id/txt8"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.082" />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -375,27 +375,26 @@
 
     <TextView
         android:id="@+id/roomTxt3"
-        android:layout_width="80dp"
+        android:layout_width="111dp"
         android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="LAMINATING"
+        android:text="ORTHODONTIC TREATMENT"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView19"
         app:layout_constraintEnd_toEndOf="@+id/imageView19"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
 
     <TextView
         android:id="@+id/txt9"
-        android:layout_width="117dp"
+        android:layout_width="118dp"
         android:layout_height="25dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Document Lamination with Laminating Film"
+        android:text="Dental Implants, Fixed braces, and Removable Dentures"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -411,7 +410,7 @@
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 25.00"
+        android:text="Php 1,500.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -444,13 +443,13 @@
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/txt11"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -463,11 +462,11 @@
         android:id="@+id/deleteRHacienderoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
         app:layout_constraintTop_toBottomOf="@+id/deleteRCabanitaBtn"
         app:layout_constraintVertical_bias="0.195" />
@@ -487,19 +486,18 @@
 
     <TextView
         android:id="@+id/roomTxt4"
-        android:layout_width="110dp"
+        android:layout_width="99dp"
         android:layout_height="14dp"
-        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="PHOTO EDITING/PRINTING"
+        android:text="TEETH REPLACEMENT"
         android:textColor="@color/black"
-        android:textSize="9sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintEnd_toEndOf="@+id/imageView22"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="@+id/imageView22"
-        app:layout_constraintTop_toTopOf="@+id/imageView22"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintTop_toTopOf="@+id/imageView22" />
 
     <TextView
         android:id="@+id/txt12"
@@ -507,7 +505,7 @@
         android:layout_height="23dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Graphic Designs | Glossy and Matte Photo Paper"
+        android:text="Dental Implants, Fixed Caps, and Removable Dentures"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -523,7 +521,7 @@
         android:layout_width="80dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 10.00"
+        android:text="Php 1,500.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -556,7 +554,7 @@
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
         app:layout_constraintTop_toBottomOf="@+id/txt14"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <ImageView
         android:id="@+id/imageView26"
@@ -599,19 +597,19 @@
 
     <TextView
         android:id="@+id/roomTxt5"
-        android:layout_width="110dp"
+        android:layout_width="99dp"
         android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="PRINTING/SCANNING"
+        android:text="TEETH WHITENING"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView25"
         app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="@+id/imageView25"
         app:layout_constraintTop_toTopOf="@+id/imageView25"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/txt15"
@@ -619,7 +617,7 @@
         android:layout_height="18dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Black and White | Colored"
+        android:text="Whitening and Bleaching"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -635,7 +633,7 @@
         android:layout_width="111dp"
         android:layout_height="18dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 3.00 - Php 5.00"
+        android:text="Php 1,500.00"
         android:textColor="@color/black"
         android:textSize="8sp"
         android:textStyle="bold"
@@ -644,6 +642,6 @@
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
         app:layout_constraintTop_toBottomOf="@+id/imageView25"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

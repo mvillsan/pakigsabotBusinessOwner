@@ -15,6 +15,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
+            android:name=".Profile.ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".Resort.ImgsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResortActivity.ResortImagesAct"
+            android:exported="false" />
+        <activity
+            android:name=".Upload.UploadResortImgDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Services.LoadServices"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ServicesEyeClinic"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ServicesRestaurant"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpRequirement.PaySubscription"
+            android:exported="false" />
+        <activity
             android:name=".FacialRecog.EnableFacialRecog"
             android:exported="false" />
         <activity
@@ -57,7 +81,7 @@
             android:name=".Services.AddServiceInternetCafe"
             android:exported="false" />
         <activity
-            android:name=".Services.ServicesInternetCafe"
+            android:name=".Services.ServicesInternetCCoworking"
             android:exported="false" />
         <activity
             android:name=".Services.EditServiceSpaSalon"

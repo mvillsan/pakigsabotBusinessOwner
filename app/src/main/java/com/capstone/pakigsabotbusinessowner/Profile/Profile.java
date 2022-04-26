@@ -261,7 +261,67 @@ public class Profile extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Failed to Upload Image", Toast.LENGTH_LONG).show();
                     }
                 });
+    }
 
+    //Save Updated Profile Details to Firebase
+    private void saveProfileUpdatedDetails(){
+        String estNameP = estName.getText().toString();
+        String estTypeP = estType.getText().toString();
+        String emailAddP = emailAdd.getText().toString();
+        String mobilePhoneP = mobileNum.getText().toString();
+        String addressP = address.getText().toString();
+
+        //Check whether there are empty fields ::
+        if(estNameP.isEmpty() || estTypeP.isEmpty() || emailAddP.isEmpty() || mobilePhoneP.isEmpty() || addressP.isEmpty()){
+            Toast.makeText(Profile.this, "Some fields are EMPTY.", Toast.LENGTH_SHORT).show();
+        }else{
+            Boolean  isValidEmail = android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddP).matches();
+            Boolean  isValidFName = estNameP.matches("[A-Za-z][A-Za-z ]*+");
+            Boolean  isValidLName = estTypeP.matches("[A-Za-z][A-Za-z ]*+");
+            Boolean  validPhone = mobilePhoneP.matches("^(?:\\d{2}-\\d{3}-\\d{3}-\\d{3}|\\d{11})$");
+
+
+            if(!isValidEmail) {//Validate valid Email Address
+                Toast.makeText(Profile.this, "Invalid Email Address, ex: abc@example.com", Toast.LENGTH_SHORT).show();
+            }else if (!isValidFName) {//Validate valid First name
+                Toast.makeText(Profile.this, "Invalid First Name, ex: John Anthony", Toast.LENGTH_SHORT).show();
+            }else if (!isValidLName) {//Validate valid Last name
+                Toast.makeText(Profile.this, "Invalid Last Name, ex: Doe", Toast.LENGTH_SHORT).show();
+            }else if (!validPhone) {//Validate valid Phone Number
+                Toast.makeText(Profile.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
+            }else{//save the updates on the firebase db
+                user.updateEmail(emailAddP).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        docRef = fStoreProfile.collection("establishments/").document(user.getUid());
+                        Map<String,Object> edited = new HashMap<>();
+                        edited.put("est_email",emailAddP);
+                        edited.put("est_Name",estNameP);
+                        edited.put("est_Type",estTypeP);
+                        edited.put("est_phoneNum",mobilePhoneP);
+                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(Profile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(),Profile.class));
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Profile.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Profile.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }
+    }
     }
 
     //Save Updated Profile Details to Firebase
@@ -324,7 +384,6 @@ public class Profile extends AppCompatActivity {
         }
     }
 
-
     public void onBackPressed(){
         super.onBackPressed();
     }
@@ -365,6 +424,4 @@ public class Profile extends AppCompatActivity {
             }
         });
     }
-
-
 }
