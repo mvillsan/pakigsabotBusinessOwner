@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNumProfileET"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="0.014" />
 
     <Button
-        android:id="@+id/createAccBtn"
+        android:id="@+id/changePassBtn"
         android:layout_width="198dp"
         android:layout_height="42dp"
         android:layout_marginBottom="16dp"
@@ -95,17 +95,17 @@
         android:layout_height="42dp"
         android:layout_marginBottom="16dp"
         android:background="@color/darkbluegreen"
+        android:drawableLeft="@drawable/ic_diamond"
         android:fontFamily="@font/poppins_medium"
         android:text="Go Premium"
-        android:drawableLeft="@drawable/ic_diamond"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toEndOf="@+id/createAccBtn"
+        app:layout_constraintStart_toEndOf="@+id/changePassBtn"
         app:layout_constraintTop_toBottomOf="@+id/addressProfileET"
         app:layout_constraintVertical_bias="0.13" />
 
@@ -156,43 +156,58 @@
         android:id="@+id/profileTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/comfortaa"
         android:text="@string/prof"
         android:textColor="@color/peach"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImageView"
-        android:layout_width="121dp"
-        android:layout_height="115dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/ic_user"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileTxt"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_profile" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPhotoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/darkgreen"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
+        app:layout_constraintStart_toEndOf="@+id/toggle_on_ImageView"
+        app:maxImageSize="23dp"
+        app:srcCompat="@drawable/ic_add_photo" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileTxt"
-        app:layout_constraintVertical_bias="0.109"
+        app:layout_constraintVertical_bias="0.119"
         app:srcCompat="@drawable/ic_add_photo" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/saveProfileBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -277,7 +292,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/mobileNumProfileET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/phone_icon"
