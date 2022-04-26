@@ -1,9 +1,15 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -20,6 +26,7 @@ import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerCancelled
 import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerResched;
 import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -27,13 +34,18 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.concurrent.Executor;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
@@ -194,4 +206,6 @@ public class HomeFragment extends Fragment {
         in.putExtra("alertCR", "alertCR");
         startActivity(in);
     }
+
+
 }
