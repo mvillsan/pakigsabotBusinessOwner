@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +24,6 @@
             android:name=".Resort.ImgsActivity"
             android:exported="false" />
         <activity
-            android:name=".ResortActivity.ResortImagesAct"
-            android:exported="false" />
-        <activity
             android:name=".Upload.UploadResortImgDetails"
             android:exported="false" />
         <activity
@@ -37,12 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".SignUpRequirement.PaySubscription"
-            android:exported="false" />
-        <activity
-            android:name=".FacialRecog.EnableFacialRecog"
-            android:exported="false" />
-        <activity
-            android:name=".Translate.TranslateFilipino"
             android:exported="false" />
         <activity
             android:name=".NotificationAlerts.CustomerResched"
@@ -155,6 +149,9 @@
         <activity
             android:name=".SignIn"
             android:exported="true" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">

@@ -1,6 +1,7 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -127,9 +128,10 @@ public class HomeFragment extends Fragment {
         //Display profile image
         StorageReference profileRef = storageRef.child("business owner/"+userId+"img.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            Context context = getActivity().getApplicationContext();
             @Override
             public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).into(profileBtn);
+                Picasso.with(context).load(uri).into(profileBtn);
             }
         });
 
@@ -206,6 +208,4 @@ public class HomeFragment extends Fragment {
         in.putExtra("alertCR", "alertCR");
         startActivity(in);
     }
-
-
 }

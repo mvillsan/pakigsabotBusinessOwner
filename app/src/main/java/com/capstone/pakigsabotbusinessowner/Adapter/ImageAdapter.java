@@ -1,4 +1,3 @@
-/*
 package com.capstone.pakigsabotbusinessowner.Adapter;
 
 import android.content.Context;
@@ -67,4 +66,3 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         }
     }
 }
-*/
