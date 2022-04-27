@@ -126,8 +126,7 @@ public class AddServiceResort extends AppCompatActivity {
                 && data != null && data.getData() != null){
             resortImageUri = data.getData();
 
-            Picasso.get().load(resortImageUri).into(addRFPicture);
-
+            Picasso.with(this).load(resortImageUri).into(addRFPicture);
         }
     }
 

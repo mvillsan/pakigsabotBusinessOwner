@@ -1,4 +1,3 @@
-/*
 package com.capstone.pakigsabotbusinessowner.Resort;
 
 import androidx.annotation.Nullable;
@@ -94,4 +93,4 @@ public class ImgsActivity extends AppCompatActivity {
                     }
                 });
     }
-}*/
+}
