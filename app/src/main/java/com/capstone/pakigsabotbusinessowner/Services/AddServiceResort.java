@@ -39,7 +39,6 @@ public class AddServiceResort extends AppCompatActivity {
     ImageView backBtnAddRoom, addRFPicture, uploadPicBtn, saveBtn;
     TextInputLayout nameRoomLayout, numOfPersonLayout, descLayout, rateLayout;
     TextInputEditText nameTxt, numOfPersonTxt, descTxt, rateTxt;
-    ProgressBar progressUploadImg;
     Uri resortImageUri;
     StorageReference storageRef;
     FirebaseFirestore firestoreRef;
@@ -95,7 +94,6 @@ public class AddServiceResort extends AppCompatActivity {
         backBtnAddRoom = findViewById(R.id.backBtnAddRoom);
         addRFPicture = findViewById(R.id.addRFPicture);
         uploadPicBtn = findViewById(R.id.uploadPicBtn);
-        progressUploadImg = findViewById(R.id.progressUploadImg);
         saveBtn = findViewById(R.id.saveBtn);
         nameRoomLayout = findViewById(R.id.nameRoomLayout);
         numOfPersonLayout = findViewById(R.id.numOfPersonLayout);
@@ -185,15 +183,6 @@ public class AddServiceResort extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            //Delays the progress bar value so that user can see the 100% progress
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    progressUploadImg.setProgress(0);
-                                }
-                            }, 500);
-
                             Toast.makeText(AddServiceResort.this, "Upload Successful", Toast.LENGTH_SHORT).show();
                             Task<Uri> downloadUri = taskSnapshot.getStorage().getDownloadUrl();
                             UploadResortImgDetails upload = new UploadResortImgDetails(downloadUri.toString(),nameTxtStr, Integer.parseInt(numOfPersonTxtStr), descTxtStr, Integer.parseInt(rateTxtStr));
@@ -207,13 +196,6 @@ public class AddServiceResort extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(AddServiceResort.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                            double progress = (100.0 * snapshot.getBytesTransferred() /  snapshot.getTotalByteCount());
-                            progressUploadImg.setProgress((int) progress);
                         }
                     });
         }else{

@@ -95,7 +95,7 @@
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addRFPicture"
-        app:layout_constraintVertical_bias="0.141"
+        app:layout_constraintVertical_bias="0.069"
         app:startIconDrawable="@drawable/ic_add_room">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -186,15 +186,4 @@
             android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ProgressBar
-        android:id="@+id/progressUploadImg"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="204dp"
-        android:layout_height="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/addRFPicture"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/addRFPicture"
-        app:layout_constraintTop_toTopOf="@+id/addRFPicture"
-        app:layout_constraintVertical_bias="0.358" />
 </androidx.constraintlayout.widget.ConstraintLayout>
