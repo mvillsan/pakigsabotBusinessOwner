@@ -27,7 +27,7 @@ public class AgreementScreen extends AppCompatActivity {
         agreeContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signUpScreen();
+                paySub();
             }
         });
 
@@ -57,8 +57,8 @@ public class AgreementScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void signUpScreen(){
-        Intent intent = new Intent(getApplicationContext(), SignUp.class);
+    private void paySub(){
+        Intent intent = new Intent(getApplicationContext(), PaySubscription.class);
         startActivity(intent);
     }
 }

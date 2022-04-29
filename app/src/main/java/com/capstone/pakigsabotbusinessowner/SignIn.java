@@ -1,8 +1,10 @@
 package com.capstone.pakigsabotbusinessowner;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,21 +23,30 @@ import android.widget.Toast;
 import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignIn extends AppCompatActivity {
 
     ImageView prev;
-    TextView signup;
+    TextView signup, forgotPassTxtView;
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
     Button signInBtn;
     ProgressBar progressSI;
     FirebaseAuth fAuth2;
+    String est_id;
+    FirebaseFirestore fStore;
 
     public static String passwordAuth;
 
@@ -43,6 +55,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        //References::
         refs();
 
         prev.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +76,46 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signInBusinessStaff();
+            }
+        });
+
+        forgotPassTxtView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText resetMail = new EditText(view.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(view.getContext());
+                passwordResetDialog.setTitle("Do you want to Reset Password ?");
+                passwordResetDialog.setMessage("Enter your Email Address to Receive the Reset Password Link");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Extract the email add and send the reset password link
+
+                        String emailAdd = resetMail.getText().toString();
+                        fAuth2.sendPasswordResetEmail(emailAdd).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(SignIn.this, "Reset Link Sent to your Email", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(SignIn.this, "ERROR! Reset Link is NOT SENT " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //close the dialog
+                    }
+                });
+
+                passwordResetDialog.create().show();
             }
         });
 
@@ -88,7 +141,9 @@ public class SignIn extends AppCompatActivity {
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
         progressSI = findViewById(R.id.progressBarSignIn);
+        forgotPassTxtView = findViewById(R.id.forgotPassTxtView);
         fAuth2 = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
     }
 
     public void welcomeScreen(){
@@ -160,9 +215,24 @@ public class SignIn extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(SignIn.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        est_id = fAuth2.getCurrentUser().getUid();
+                        DocumentReference docRef = fStore.collection("establishments").document(est_id);
+                        Map<String,Object> edited = new HashMap<>();
+                        edited.put("est_password", pass);
+                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(SignIn.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        //Clear fields
                         emailAddEditTxt.setText(null);
                         passEditTxt.setText(null);
                     }else{
