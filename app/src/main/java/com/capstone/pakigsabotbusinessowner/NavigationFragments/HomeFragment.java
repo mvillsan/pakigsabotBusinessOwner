@@ -113,7 +113,7 @@ public class HomeFragment extends Fragment {
         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
 
         //Display profile image
-        StorageReference profileRef = storageRef.child("business owner/"+userId+"img.jpg");
+        StorageReference profileRef = storageRef.child("establishments/profile_pictures/"+userId+"img.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             Context context = getActivity().getApplicationContext();
             @Override

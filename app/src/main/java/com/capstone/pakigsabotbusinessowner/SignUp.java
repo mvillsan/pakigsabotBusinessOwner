@@ -223,7 +223,7 @@ public class SignUp extends AppCompatActivity {
         }
 
         if(isValid){
-            String defStat = "Trial";
+            String defStat = "Classic";
 
             progressSU.setVisibility(View.VISIBLE);
 
@@ -235,16 +235,17 @@ public class SignUp extends AppCompatActivity {
                         Toast.makeText(SignUp.this, "Account has been Created Successfully", Toast.LENGTH_SHORT).show();
                         est_id = fAuth.getCurrentUser().getUid();
                         DocumentReference docRef = fStore.collection("establishments").document(est_id);
-                        Map<String,Object> staf = new HashMap<>();
-                        staf.put("est_Name", estNameDB);
-                        staf.put("est_Type", eType);
-                        staf.put("est_phoneNum", phoneNum);
-                        staf.put("est_address", addressDB);
-                        staf.put("est_email", email);
-                        staf.put("est_password", pass);
-                        staf.put("est_status", defStat);
+                        Map<String,Object> est = new HashMap<>();
+                        est.put("est_Name", estNameDB);
+                        est.put("est_Type", eType);
+                        est.put("est_phoneNum", phoneNum);
+                        est.put("est_address", addressDB);
+                        est.put("est_email", email);
+                        est.put("est_password", pass);
+                        est.put("est_status", defStat);
+                        est.put("est_image", "No profile picture");
 
-                        docRef.set(staf).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        docRef.set(est).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 Log.d("SignUp", "onSignUpSuccess: Data is Stored for " + est_id);
