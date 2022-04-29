@@ -236,6 +236,7 @@ public class SignUp extends AppCompatActivity {
                         est_id = fAuth.getCurrentUser().getUid();
                         DocumentReference docRef = fStore.collection("establishments").document(est_id);
                         Map<String,Object> est = new HashMap<>();
+                        est.put("est_id",est_id);
                         est.put("est_Name", estNameDB);
                         est.put("est_Type", eType);
                         est.put("est_phoneNum", phoneNum);
