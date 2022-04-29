@@ -39,24 +39,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/profileBtn"
         app:layout_constraintTop_toBottomOf="@+id/currentDateTxt"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <ImageButton
         android:id="@+id/signoutHomeBtn"
-        android:layout_width="29dp"
-        android:layout_height="59dp"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
         android:layout_marginStart="5dp"
         android:background="@color/darkgreen"
         android:src="@drawable/sign_out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toEndOf="@+id/estNameTxt"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <ImageButton
         android:id="@+id/noUpcomingRsrvBtn"

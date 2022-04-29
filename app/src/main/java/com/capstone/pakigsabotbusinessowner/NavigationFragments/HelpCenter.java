@@ -1,6 +1,5 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,9 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.capstone.pakigsabotbusinessowner.HelpCenter.HelpCenter2;
 import com.capstone.pakigsabotbusinessowner.R;
 
 /**
@@ -66,22 +63,22 @@ public class HelpCenter extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_helpcenter, container, false);
 
-        //References:
-        TextView homeMenuTxt = (TextView) view.findViewById(R.id.homeMenuTxt);
+       /* //References:
+        Button browseBtn = (Button) view.findViewById(R.id.browseBtn);
 
-        homeMenuTxt.setOnClickListener(new View.OnClickListener() {
+        browseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chatbotConversation2();
+                helpCenter();
             }
-        });
+        });*/
 
         return view;
     }
 
-    private void chatbotConversation2(){
-        Intent in = new Intent(getActivity(), HelpCenter2.class);
-        in.putExtra("chatbotConvo2", "chatbotConvo2");
+   /* private void helpCenter(){
+        Intent in = new Intent(getActivity(), HelpCenter1.class);
+        in.putExtra("helpcenter", "helpcenter");
         startActivity(in);
-    }
+    }*/
 }

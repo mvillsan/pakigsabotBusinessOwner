@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.PaySubscription;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -63,7 +64,7 @@ public class SignUp extends AppCompatActivity {
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                agreementScreen();
+                paySub();
             }
         });
 
@@ -114,8 +115,8 @@ public class SignUp extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
     }
 
-    public void agreementScreen(){
-        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
+    public void paySub(){
+        Intent intent = new Intent(getApplicationContext(), PaySubscription.class);
         startActivity(intent);
     }
 
@@ -254,10 +255,8 @@ public class SignUp extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-
-                        //Pay Subscription Page
-                        paymentSubs();
-
+                        //Home Screen
+                        homePage();
                         //Clear Text Fields::
                         estNameEditTxt.setText(null);
                         estType.setText(null);
@@ -281,10 +280,9 @@ public class SignUp extends AppCompatActivity {
         return true;
     }
 
-    //Pay Subscription::
-    private void paymentSubs(){
-        Intent intent = new Intent(getApplicationContext(), PaySubscription.class);
-        startActivity(intent);
+    //Home Fragment::
+    private void homePage(){
+        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
     }
 
     //Setting FOCUS

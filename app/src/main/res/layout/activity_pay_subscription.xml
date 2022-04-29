@@ -33,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/backBtnSU"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <TextView
         android:id="@+id/textView2"
@@ -71,7 +71,7 @@
         android:layout_width="298dp"
         android:layout_height="29dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Subscription  ................................. P100"
+        android:text="Subscription  ................................. P459"
         android:textColor="@color/gray"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -135,7 +135,7 @@
         android:layout_width="59dp"
         android:layout_height="32dp"
         android:fontFamily="@font/poppins_light"
-        android:text="P100"
+        android:text="P459"
         android:textColor="@color/darkbluegreen"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -156,7 +156,7 @@
         app:layout_constraintHorizontal_bias="0.649"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
         android:id="@+id/subscribeBtn"
@@ -173,6 +173,23 @@
         app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agreementCheckBox"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.085" />
+
+    <Button
+        android:id="@+id/notnowBtn"
+        android:layout_width="187dp"
+        android:layout_height="44dp"
+        android:background="@color/darkbluegreen"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Not Now"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subscribeBtn"
+        app:layout_constraintVertical_bias="0.192" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
