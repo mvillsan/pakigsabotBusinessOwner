@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg_white"
+    android:background="@drawable/topbar_bg"
     tools:context=".NavigationFragments.ServicesFragment">
 
     <ImageView
@@ -25,9 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="Setting-Up Services"
+        android:text="Setting-Up Establishment"
         android:textColor="@color/white"
-        android:textSize="26sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
@@ -40,7 +40,7 @@
         android:layout_width="276dp"
         android:layout_height="65dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Set up your Business Establishment"
+        android:text="Set up your Establishment"
         android:textAlignment="center"
         android:textColor="@color/darkgreen"
         android:textSize="20sp"
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.22" />
 
     <Button
-        android:id="@+id/proceedBtn"
+        android:id="@+id/proceedBtnSetUp"
         android:layout_width="198dp"
         android:layout_height="42dp"
         android:background="@color/darkbluegreen"

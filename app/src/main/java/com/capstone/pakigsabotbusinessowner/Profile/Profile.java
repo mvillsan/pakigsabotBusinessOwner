@@ -19,9 +19,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HelpCenterFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HistoryFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.HomeFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.ReservationsFragment;
+import com.capstone.pakigsabotbusinessowner.NavigationFragments.ServicesFragment;
 import com.capstone.pakigsabotbusinessowner.PremiumApp.GoPremiumWS;
 import com.capstone.pakigsabotbusinessowner.R;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -43,7 +50,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Profile extends AppCompatActivity {
-
+    MeowBottomNavigation bottomNavigation;
     ImageView profileImg, prevBtn, saveProfileBtn;
     Button goPremiumBtn, changePasswordBtn;
     FloatingActionButton addPhoto;
@@ -124,7 +131,7 @@ public class Profile extends AppCompatActivity {
         prevBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                fragments();
             }
         });
 
@@ -167,40 +174,6 @@ public class Profile extends AppCompatActivity {
         goPremiumBtn = findViewById(R.id.goPremiumBtn);
         changePasswordBtn = findViewById(R.id.changePassBtn);
     }
-    private void PickImage()
-    {
-        // starts the  picker to get image for cropping and then use the image in cropping activity
-        CropImage.activity().start(this);
-    }
-
-    //checks the permission code to access the device's storage
-    @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.M)
-    private void reqStoragePermission() {
-        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-    }
-
-    //checks the permission code to access the device's camera
-    @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.M)
-    private void reqCameraPermission()
-    {
-        requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-    }
-
-
-    private boolean checkStoragePermission()
-    {
-        boolean result2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-
-        return result2;
-    }
-
-    private boolean checkCameraPermission()
-    {
-        boolean result1 = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
-        boolean result2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-
-        return result1 && result2;
-    }
 
     //Picking image from camera or gallery
     @Override
@@ -238,6 +211,42 @@ public class Profile extends AppCompatActivity {
         }
 
     }
+    private void PickImage()
+    {
+        // starts the  picker to get image for cropping and then use the image in cropping activity
+        CropImage.activity().start(this);
+    }
+
+    //checks the permission code to access the device's storage
+    @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.M)
+    private void reqStoragePermission() {
+        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+    }
+
+    //checks the permission code to access the device's camera
+    @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.M)
+    private void reqCameraPermission()
+    {
+        requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+    }
+
+
+    private boolean checkStoragePermission()
+    {
+        boolean result2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+
+        return result2;
+    }
+
+    private boolean checkCameraPermission()
+    {
+        boolean result1 = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+        boolean result2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+
+        return result1 && result2;
+    }
+
+
 
     //Upload Image to Firebase Storage
     private void uploadImgToFirebase(Uri resultUri) {
@@ -248,16 +257,33 @@ public class Profile extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        Toast.makeText(getApplicationContext(), "Image Uploaded", Toast.LENGTH_LONG).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Failed to Upload Image", Toast.LENGTH_LONG).show();
-                    }
-                });
+                        imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                                public void onSuccess(Uri uri) {
+                                    Picasso.with(getApplicationContext()).load(uri).into(profileImg);
+
+                                    //Save the image to firestore database
+                                    String imgUrl = String.valueOf(uri);
+                                    DocumentReference docRef = fStoreProfile.collection("establishments").document(userId);
+                                    Map<String, Object> est = new HashMap<>();
+                                    est.put("est_image", imgUrl);
+                                    docRef.update(est).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Log.d("PROFILE-IMG SAVED TO DB", "SUCCESS");
+                                        }
+                                    });
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getApplicationContext(), "Failed to Upload Image", Toast.LENGTH_LONG).show();
+                                    }
+                            });
+                }
+        });
     }
+
 
     //Save Updated Profile Details to Firebase
     private void saveProfileUpdatedDetails(){
@@ -319,11 +345,6 @@ public class Profile extends AppCompatActivity {
         }
     }
 
-    public void onBackPressed(){
-        super.onBackPressed();
-    }
-
-
     private void  goPremiumScreen(){
         Intent intent = new Intent(getApplicationContext(), GoPremiumWS.class);
         startActivity(intent);
@@ -351,7 +372,7 @@ public class Profile extends AppCompatActivity {
         });
 
         //Display profile image
-        StorageReference profileRef = storageRef.child("establishments/profile_pictures/"+userId+"img.jpg");
+        StorageReference profileRef = storageRef.child("establishments/profile_pictures/"+ userId +"img.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -361,7 +382,7 @@ public class Profile extends AppCompatActivity {
                 String imgUrl = String.valueOf(uri);
                 DocumentReference docRef = fStoreProfile.collection("establishments").document(userId);
                 Map<String,Object> est = new HashMap<>();
-                est.put("est_image",imgUrl);
+                est.put("est_image", imgUrl);
                 docRef.update(est).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
@@ -370,5 +391,78 @@ public class Profile extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    //Previous Pages::
+    private void fragments(){
+        setContentView(R.layout.activity_bottom_navigation);
+        //Bottom Nav
+        //Assign variable
+        bottomNavigation = findViewById(R.id.bottom_nav);
+
+        //Add menu item
+        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_reserve));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_services));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_history));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
+
+        bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
+            @Override
+            public void onShowItem(MeowBottomNavigation.Model item) {
+                //Initialize fragment
+                Fragment fragment = null;
+
+                //Check condition
+                switch (item.getId()){
+                    case 1: //When id is 1, initialize nearby fragment
+                        fragment = new ReservationsFragment();
+                        break;
+
+                    case 2: //When id is 2, initialize reservations fragment
+                        fragment = new ServicesFragment();
+                        break;
+
+                    case 3: //When id is 3, initialize home fragment
+                        fragment = new HomeFragment();
+                        break;
+
+                    case 4: //When id is 4, initialize favorites fragment
+                        fragment = new HistoryFragment();
+                        break;
+
+                    case 5: //When id is 5, initialize help center fragment
+                        fragment = new HelpCenterFragment();
+                        break;
+                }
+                //Load fragment
+                loadFragment(fragment);
+            }
+        });
+
+        /*//Set notification count
+        bottomNavigation.setCount(3,"10");*/
+        //Set home fragment initially selected
+        bottomNavigation.show(3,true);
+
+        bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+            @Override
+            public void onClickItem(MeowBottomNavigation.Model item) {
+            }
+        });
+
+        bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
+            @Override
+            public void onReselectItem(MeowBottomNavigation.Model item) {
+            }
+        });
+    }
+
+    private void loadFragment(Fragment fragment) {
+        //Replace fragment
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_layout,fragment)
+                .commit();
     }
 }

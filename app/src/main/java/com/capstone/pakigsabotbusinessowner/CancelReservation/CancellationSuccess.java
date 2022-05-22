@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.Reservations.ReservationWtCancel;
 
 public class CancellationSuccess extends AppCompatActivity {
 
@@ -33,7 +32,7 @@ public class CancellationSuccess extends AppCompatActivity {
         confirmImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updatedReservations();
+                /*updatedReservations();*/
             }
         });
     }
@@ -46,10 +45,10 @@ public class CancellationSuccess extends AppCompatActivity {
         confirmImageView = findViewById(R.id.confirmImageView);
     }
 
-    private void updatedReservations(){
+    /*private void updatedReservations(){
         Intent intent = new Intent(getApplicationContext(), ReservationWtCancel.class);
         startActivity(intent);
-    }
+    }*/
     public void onBackPressed(){
         super.onBackPressed();
     }

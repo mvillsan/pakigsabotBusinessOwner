@@ -5,22 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg"
-    tools:context=".Services.AddServiceDentalClinic">
+    tools:context=".DentalClinic.AddServiceDentalClinic">
 
     <ImageView
-        android:id="@+id/addProcPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/procPicture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_add_a_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addRoomTxt"
-        app:layout_constraintVertical_bias="0.124"
-        app:srcCompat="@drawable/ic_add_a_photo" />
+        app:layout_constraintTop_toBottomOf="@+id/addFoodTxt"
+        app:layout_constraintVertical_bias="0.125" />
+
 
     <ImageView
-        android:id="@+id/backBtnAddRoom"
+        android:id="@+id/backBtnAddProc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,12 +40,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toEndOf="@+id/backBtnAddRoom"
+        app:layout_constraintStart_toEndOf="@+id/backBtnAddProc"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/addRoomTxt"
+        android:id="@+id/addFoodTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
@@ -59,20 +60,20 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/saveProcedure"
+        android:id="@+id/saveProcBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
-        app:layout_constraintStart_toEndOf="@+id/addRoomTxt"
+        app:layout_constraintStart_toEndOf="@+id/addFoodTxt"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/ic_save_purple" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameProcLayout"
+        android:id="@+id/procNameLayout"
         android:layout_width="337dp"
         android:layout_height="61dp"
         android:hint="Name of the Procedure"
@@ -82,12 +83,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addProcPicture"
+        app:layout_constraintTop_toBottomOf="@+id/procPicture"
         app:layout_constraintVertical_bias="0.056"
         app:startIconDrawable="@drawable/ic_services">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameProcTxt"
+            android:id="@+id/procNameTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
@@ -97,7 +98,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/descProcLayout"
+        android:id="@+id/procDescLayout"
         android:layout_width="337dp"
         android:layout_height="61dp"
         android:hint="Description"
@@ -107,12 +108,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameProcLayout"
+        app:layout_constraintTop_toBottomOf="@+id/procNameLayout"
         app:layout_constraintVertical_bias="0.056"
         app:startIconDrawable="@drawable/ic_services">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/descProcTxt"
+            android:id="@+id/procDescTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
@@ -122,7 +123,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/priceProcLayout"
+        android:id="@+id/procRateLayout"
         android:layout_width="337dp"
         android:layout_height="61dp"
         android:hint="Rate"
@@ -132,15 +133,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descProcLayout"
+        app:layout_constraintTop_toBottomOf="@+id/procDescLayout"
         app:layout_constraintVertical_bias="0.056"
         app:startIconDrawable="@drawable/ic_fee">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/priceProcTxt"
+            android:id="@+id/procRateTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
+            android:inputType="numberDecimal"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black" />

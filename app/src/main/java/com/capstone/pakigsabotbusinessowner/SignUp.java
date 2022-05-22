@@ -48,9 +48,10 @@ public class SignUp extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String est_id;
+    int numOfReservation = 0;
 
     private static final String[] EST_TYPE = new String[]{
-            "Restaurant", "Cafe", "Resort", "Dental Clinic", "Eye Clinic", "Spa", "Salon", "Internet Cafe", "Coworking Space"
+            "Restaurant", "Cafe", "Resort", "Dental Clinic", "Eye Clinic", "Spa and Salon", "Internet Cafe", "Coworking Space"
     };
 
     @Override
@@ -153,7 +154,7 @@ public class SignUp extends AppCompatActivity {
                 estNameL.setError("");
             }
         }
-        
+
         //Establishment Type Validation
         if (estType.getText().toString().trim().isEmpty()) {
             estType.setError(getString(R.string.est_type_req));
@@ -245,6 +246,7 @@ public class SignUp extends AppCompatActivity {
                         est.put("est_password", pass);
                         est.put("est_status", defStat);
                         est.put("est_image", "No profile picture");
+                        est.put("est_numOfReservation", numOfReservation);
 
                         docRef.set(est).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

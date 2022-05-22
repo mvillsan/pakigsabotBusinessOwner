@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/addressProfileET"
-        android:layout_width="wrap_content"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/person_icon"
         android:drawablePadding="5dp"
@@ -19,7 +19,7 @@
         android:lineSpacingExtra="5sp"
         android:text="@string/address"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
@@ -35,13 +35,13 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/address"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mobileNumProfileET"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -63,51 +63,52 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/estType"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/estNameProfileET"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <Button
         android:id="@+id/changePassBtn"
-        android:layout_width="198dp"
+        android:layout_width="158dp"
         android:layout_height="42dp"
         android:layout_marginBottom="16dp"
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/changePass"
         android:textColor="@color/purple"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressProfileET"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/goPremiumBtn"
-        android:layout_width="140dp"
+        android:layout_width="135dp"
         android:layout_height="42dp"
         android:layout_marginBottom="16dp"
         android:background="@color/darkbluegreen"
         android:drawableLeft="@drawable/ic_diamond"
         android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="5dp"
         android:text="Go Premium"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toEndOf="@+id/changePassBtn"
         app:layout_constraintTop_toBottomOf="@+id/addressProfileET"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.462" />
 
     <TextView
         android:id="@+id/textView7"
@@ -117,13 +118,13 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/mobile"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailAddProfileET"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/textView6"
@@ -132,13 +133,13 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/email"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/estTypeProfileET"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <ImageView
         android:id="@+id/backBtnProfile"
@@ -160,9 +161,9 @@
         android:fontFamily="@font/comfortaa"
         android:text="@string/prof"
         android:textColor="@color/peach"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,10 +176,10 @@
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileTxt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addPhotoFAB"
@@ -220,7 +221,7 @@
 
     <EditText
         android:id="@+id/estNameProfileET"
-        android:layout_width="wrap_content"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/person_icon"
         android:drawablePadding="5dp"
@@ -230,7 +231,7 @@
         android:lineSpacingExtra="5sp"
         android:text="@string/estName"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -239,7 +240,7 @@
 
     <EditText
         android:id="@+id/estTypeProfileET"
-        android:layout_width="wrap_content"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/person_icon"
         android:drawablePadding="5dp"
@@ -249,7 +250,7 @@
         android:lineSpacingExtra="5sp"
         android:text="@string/estType"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -263,17 +264,17 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/estName"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <EditText
         android:id="@+id/emailAddProfileET"
-        android:layout_width="342dp"
+        android:layout_width="310dp"
         android:layout_height="41dp"
         android:drawableStart="@drawable/email_icon"
         android:drawablePadding="5dp"
@@ -283,7 +284,7 @@
         android:lineSpacingExtra="8sp"
         android:text="example@gmail.com"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -293,7 +294,7 @@
 
     <EditText
         android:id="@+id/mobileNumProfileET"
-        android:layout_width="wrap_content"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/phone_icon"
         android:drawablePadding="5dp"
@@ -303,7 +304,7 @@
         android:lineSpacingExtra="8sp"
         android:text="639123456711"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
@@ -315,6 +316,7 @@
         android:id="@+id/toggle_on_ImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"

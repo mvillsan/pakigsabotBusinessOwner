@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg"
-    tools:context=".Services.AddFoodResto">
+    tools:context=".Restaurant.AddFoodResto">
 
-    <ImageView
-        android:id="@+id/addFRestoPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/addFItemPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/peach"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addRoomTxt"
-        app:layout_constraintVertical_bias="0.124"
-        app:srcCompat="@drawable/ic_add_a_photo" />
+        app:layout_constraintTop_toBottomOf="@+id/addFoodTxt"
+        app:layout_constraintVertical_bias="0.092"
+        app:srcCompat="@drawable/ic_add_a_photo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/backBtnAddFoodResto"
@@ -31,50 +33,39 @@
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/ic_arrow_back" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="41dp"
-        android:src="@drawable/ic_services"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toEndOf="@+id/backBtnAddFoodResto"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
     <TextView
-        android:id="@+id/addRoomTxt"
+        android:id="@+id/addFoodTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_light"
         android:text="Add a Food Product"
         android:textColor="@color/white"
-        android:textSize="21sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toEndOf="@+id/backBtnAddFoodResto"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.025" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/saveFoodResto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toEndOf="@+id/addRoomTxt"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/addFoodTxt"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/ic_save_purple" />
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_save_purple"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameFRestoLayout"
-        android:layout_width="337dp"
+        android:id="@+id/foodNameLayout"
+        android:layout_width="320dp"
         android:layout_height="61dp"
         android:hint="Name of the Food Product"
         app:endIconMode="clear_text"
@@ -83,43 +74,141 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addFRestoPicture"
+        app:layout_constraintTop_toBottomOf="@+id/addFItemPic"
         app:layout_constraintVertical_bias="0.056"
         app:startIconDrawable="@drawable/ic_food">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameFRestoTxt"
-            android:layout_width="match_parent"
+            android:id="@+id/fItemNameTxt"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:maxLines="1"
+            android:textSize="14sp"
             android:singleLine="true"
             android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/priceFRestoLayout"
-        android:layout_width="337dp"
+        android:id="@+id/foodCategoryLayout"
+        android:layout_width="320dp"
         android:layout_height="61dp"
-        android:hint="Price"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameFRestoLayout"
-        app:layout_constraintVertical_bias="0.056"
-        app:startIconDrawable="@drawable/ic_days">
+        app:layout_constraintTop_toBottomOf="@+id/foodNameLayout"
+        app:layout_constraintVertical_bias="0.032"
+        app:startIconDrawable="@drawable/ic_edit_pen">
+
+        <AutoCompleteTextView
+            android:id="@+id/fItemCategoryTxt"
+            android:layout_width="310dp"
+            android:layout_height="48dp"
+            android:completionThreshold="1"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Category (Appetizer, etc.)"
+            android:paddingStart="10dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodNameLayout"
+            app:layout_constraintVertical_bias="0.04"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/foodDescLayout"
+        android:layout_width="320dp"
+        android:layout_height="61dp"
+        android:hint="Description"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodCategoryLayout"
+        app:layout_constraintVertical_bias="0.053"
+        app:startIconDrawable="@drawable/ic_services">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/priceFRestoTxt"
-            android:layout_width="match_parent"
+            android:id="@+id/fItemDescTxt"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:maxLines="1"
+            android:textSize="14sp"
             android:singleLine="true"
             android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/foodAvailLayout"
+        android:layout_width="320dp"
+        android:layout_height="61dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodDescLayout"
+        app:layout_constraintVertical_bias="0.053"
+        app:startIconDrawable="@drawable/ic_toggle_on">
+
+        <AutoCompleteTextView
+            android:id="@+id/fItemAvailTxt"
+            android:layout_width="310dp"
+            android:layout_height="48dp"
+            android:completionThreshold="1"
+            android:drawablePadding="1dp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Availability (Available/Not)"
+            android:paddingStart="10dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodDescLayout"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/foodPriceLayout"
+        android:layout_width="320dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="4dp"
+        android:hint="Price"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodAvailLayout"
+        app:startIconDrawable="@drawable/ic_rate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fItemPriceTxt"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -207,7 +207,7 @@
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelSuccess"
         app:layout_constraintTop_toTopOf="@+id/cancelSuccessTxt"
         app:layout_constraintVertical_bias="0.716"
-        app:srcCompat="@drawable/purple_rect" />
+        />
 
     <TextView
         android:id="@+id/seeDetailsBtn"

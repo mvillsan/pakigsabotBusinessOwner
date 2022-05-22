@@ -67,7 +67,7 @@ public class ServicesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_services, container, false);
 
         //References:
-        Button specificEst = (Button) view.findViewById(R.id.proceedBtn);
+        Button specificEst = (Button) view.findViewById(R.id.proceedBtnSetUp);
 
         specificEst.setOnClickListener(new View.OnClickListener() {
             @Override

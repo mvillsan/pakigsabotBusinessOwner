@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/reservations_details_bg"
+    android:background="@drawable/topbar_bg"
     tools:context=".CancelReservation.CancellationReason">
 
     <ImageView
@@ -68,7 +68,7 @@
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/cancelReasonEditTxt"
         app:layout_constraintVertical_bias="0.052"
-        app:srcCompat="@drawable/purple_rect" />
+         />
 
     <TextView
         android:id="@+id/confirmTxtCancelReason"
@@ -107,14 +107,11 @@
         android:layout_width="91dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="rbtt1"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/rIDTxtCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/pesosTxtCancelReason"
         app:layout_constraintVertical_bias="0.017" />
 
@@ -136,10 +133,10 @@
 
     <TextView
         android:id="@+id/terraceTxtCancelReason"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
+        android:layout_width="136dp"
+        android:layout_height="18dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Terrace, Table 1"
+        android:text="Tooth Extraction"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -155,7 +152,7 @@
         android:layout_width="91dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Php 150.00"
+        android:text="Php 100.00"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -247,7 +244,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="Reserved:"
+        android:text="Procedure :"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
         app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
@@ -268,20 +265,6 @@
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/reservedTxtCancelReason"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/rIDTxtCancelReason"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text="Reservation ID:"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/detail_rectCancelReason"
-        app:layout_constraintEnd_toEndOf="@+id/detail_rectCancelReason"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
-        app:layout_constraintTop_toBottomOf="@+id/rfTxtCancelReason"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -322,7 +305,7 @@
         app:layout_constraintStart_toStartOf="@+id/detail_rectCancelReason"
         app:layout_constraintTop_toBottomOf="@+id/submitImageView"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/purple_rect" />
+         />
 
     <TextView
         android:id="@+id/cancelActionTxtCancelReason"

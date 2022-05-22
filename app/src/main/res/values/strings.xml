@@ -28,10 +28,12 @@
     <string name="estType">Establishment Type</string>
     <string-array name="esttype">
         <item>Restaurant</item>
+        <item>Cafe</item>
         <item>Resort</item>
         <item>Dental Clinic</item>
-        <item>Internet Cafe</item>
+        <item>Eye Clinic</item>
         <item>Spa and Salon</item>
+        <item>Internet Cafe / Coworking Space</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="welcomeTxt">Welcome, Owner!</string>
@@ -51,4 +53,19 @@
     <string name="defaultResponse">Hi, thanks for contacting us. Please send us any questions you may have. We aren\'t here at the moment, but we\'ll get back to you soon! We\'ve received your message and appreciate you reaching out. For faster communication, you have to inquire between 8AM - 6PM. You can also reach us at 032-412-3277 (Telephone) or 0922-643-6559 (Mobile) for faster transaction.</string>
     <string name="mainMenu">I also believe you might find the answer in our Home Menu. Just tap below to go to the Main Menu</string>
     <string name="defaultResponse2">Sorry I didn\'t understand you. Simple add @help to your message and we will try to answer you as soon as possible. Is there anything else I can help you with?</string>
+    <string-array name="menuItemCategories">
+        <item>Appetizer</item>
+        <item>Soup</item>
+        <item>Noodles/Rice</item>
+        <item>Dish</item>
+        <item>Dessert/Beverage</item>
+        <item>Drink</item>
+        <item>Meal</item>
+        <item>Rice Meal</item>
+    </string-array>
+    <string-array name="menuItemAvailability">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+
 </resources>

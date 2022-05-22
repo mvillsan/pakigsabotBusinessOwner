@@ -65,7 +65,7 @@ public class CancellationReason extends AppCompatActivity {
         terraceTxtCancelRsrv = findViewById(R.id.terraceTxtCancelReason);
         rfTxtCancelRsrv = findViewById(R.id.rfTxtCancelReason);
         pesosTxtCancelRsrv = findViewById(R.id.pesosTxtCancelReason);
-        rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelReason);
+        /*rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelReason);*/
         idTxtCancelRsrv = findViewById(R.id.idTxtCancelReason);
         confirmTxt = findViewById(R.id.confirmTxtCancelReason);
         cancelTxt = findViewById(R.id.cancelActionTxtCancelReason);

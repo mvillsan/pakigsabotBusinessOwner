@@ -64,8 +64,8 @@ public class CancelReservation extends AppCompatActivity {
         terraceTxtCancelRsrv = findViewById(R.id.terraceTxtCancelRsrv);
         rfTxtCancelRsrv = findViewById(R.id.rfTxtCancelRsrv);
         pesosTxtCancelRsrv = findViewById(R.id.pesosTxtCancelRsrv);
-        rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelRsrv);
-        idTxtCancelRsrv = findViewById(R.id.idTxtCancelRsrv);
+     /*   rIDTxtCancelRsrv = findViewById(R.id.rIDTxtCancelRsrv);
+        idTxtCancelRsrv = findViewById(R.id.idTxtCancelRsrv);*/
         confirmTxt = findViewById(R.id.confirmTxtCancelRsrv);
         cancelTxt = findViewById(R.id.cancelActionTxtCancelRsrv);
     }

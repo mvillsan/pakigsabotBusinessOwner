@@ -17,8 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.MainActivity;
-import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerCancelled;
-import com.capstone.pakigsabotbusinessowner.NotificationAlerts.CustomerResched;
 import com.capstone.pakigsabotbusinessowner.Profile.Profile;
 import com.capstone.pakigsabotbusinessowner.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -151,19 +149,19 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        customerCancelled.setOnClickListener(new View.OnClickListener() {
+       /* customerCancelled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 customerCancelledR();
             }
-        });
+        });*/
 
-        customerResched.setOnClickListener(new View.OnClickListener() {
+     /*   customerResched.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 customerReschedR();
             }
-        });
+        });*/
 
         return view;
     }
@@ -184,15 +182,15 @@ public class HomeFragment extends Fragment {
         getActivity().finish();
     }
 
-    public void customerCancelledR(){
+   /* public void customerCancelledR(){
         Intent in = new Intent(getActivity(), CustomerCancelled.class);
         in.putExtra("alertCC", "alertCC");
         startActivity(in);
-    }
+    }*/
 
-    public void customerReschedR(){
+    /*public void customerReschedR(){
         Intent in = new Intent(getActivity(), CustomerResched.class);
         in.putExtra("alertCR", "alertCR");
         startActivity(in);
-    }
+    }*/
 }
