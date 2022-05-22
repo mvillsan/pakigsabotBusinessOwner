@@ -1,6 +1,7 @@
 package com.capstone.pakigsabotbusinessowner;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.capstone.pakigsabotbusinessowner.MonthlySubscription.PayMonthlySub;
 import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,9 +32,16 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,8 +54,9 @@ public class SignIn extends AppCompatActivity {
     Button signInBtn;
     ProgressBar progressSI;
     FirebaseAuth fAuth2;
-    String est_id;
+    String est_id, expDate, dateToday,status;
     FirebaseFirestore fStore;
+    FirebaseUser user;
 
     public static String passwordAuth;
 
@@ -216,25 +226,56 @@ public class SignIn extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         est_id = fAuth2.getCurrentUser().getUid();
-                        DocumentReference docRef = fStore.collection("establishments").document(est_id);
-                        Map<String,Object> edited = new HashMap<>();
-                        edited.put("est_password", pass);
-                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
-                                finish();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(SignIn.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                        //Clear fields
-                        emailAddEditTxt.setText(null);
-                        passEditTxt.setText(null);
+                        user = fAuth2.getInstance().getCurrentUser();
+
+                        //Email Verification::
+                        if(user.isEmailVerified()){
+                            DocumentReference docRef = fStore.collection("establishments").document(est_id);
+                            Map<String,Object> edited = new HashMap<>();
+                            edited.put("est_password", pass);
+                            docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    //Check if user's account is Free or Premium:
+                                    DocumentReference documentReference = fStore.collection("establishments").document(est_id);
+                                    documentReference.addSnapshotListener(SignIn.this, new EventListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                                            status = documentSnapshot.getString("est_status");
+
+                                            if(status.equalsIgnoreCase("Free")){
+                                                AlertDialog.Builder alert = new AlertDialog.Builder(SignIn.this)
+                                                        .setTitle("Subscription Renewal Alert!")
+                                                        .setMessage("Monthly Subscription has Expired")
+                                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface dialog, int which) {
+                                                                Toast.makeText(SignIn.this, "Pay Monthly Subscription Fee ", Toast.LENGTH_SHORT).show();
+                                                                Intent intent = new Intent(getApplicationContext(), PayMonthlySub.class);
+                                                                startActivity(intent);
+                                                                progressSI.setVisibility(View.GONE);
+                                                            }
+                                                        });
+                                                alert.show();
+                                            }else{
+                                                //Check if monthly subscription has expired::
+                                                checkExpDate();
+                                            }
+                                        }
+                                    });
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(SignIn.this, "Error! Incorrect credentials", Toast.LENGTH_SHORT).show();
+                                    progressSI.setVisibility(View.GONE);
+                                }
+                            });
+                        }else{
+                            user.sendEmailVerification();
+                            Toast.makeText(SignIn.this, "Check your email to verify your account!", Toast.LENGTH_SHORT).show();
+                            progressSI.setVisibility(View.GONE);
+                        }
                     }else{
                         passEditTxt.setText(null);
                         Toast.makeText(SignIn.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -242,6 +283,9 @@ public class SignIn extends AppCompatActivity {
                     }
                 }
             });
+        } else{
+            Toast.makeText(SignIn.this, "Please Input All Fields", Toast.LENGTH_SHORT).show();
+            progressSI.setVisibility(View.GONE);
         }
         return true;
     }
@@ -310,5 +354,72 @@ public class SignIn extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    private void checkExpDate(){
+        //Check if subscription date has expired
+        //Getting the date today.
+        Date date = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        dateToday = df.format(date);
+
+        DocumentReference documentReference = fStore.collection("est-subscriptions").document(est_id);
+        documentReference.addSnapshotListener(SignIn.this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                expDate = documentSnapshot.getString("subs_expDate");
+            }
+        });
+
+        try {
+            Date date1, date2;
+            SimpleDateFormat dates = new SimpleDateFormat("MM/dd/yyyy");
+            date1 = dates.parse(dateToday);
+            date2 = dates.parse(expDate);
+            long difference = date1.getTime() - date2.getTime();
+            if (difference <= 0) {
+                Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                finish();
+                //Clear fields
+                emailAddEditTxt.setText(null);
+                passEditTxt.setText(null);
+            } else {
+                //Update Account Status DB::
+                updateAccountStatusDB();
+                AlertDialog.Builder alert = new AlertDialog.Builder(SignIn.this)
+                        .setTitle("Subscription Renewal Alert!")
+                        .setMessage("Monthly Subscription has Expired")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(SignIn.this, "Pay Monthly Subscription Fee ", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), PayMonthlySub.class);
+                                startActivity(intent);
+                                progressSI.setVisibility(View.GONE);
+                            }
+                        });
+                alert.show();
+            }
+        } catch (Exception exception) {
+            Toast.makeText(SignIn.this, "Tap Sign In Again", Toast.LENGTH_SHORT).show();
+            progressSI.setVisibility(View.GONE);
+        }
+    }
+
+    private void updateAccountStatusDB(){
+        DocumentReference docuRef = fStore.collection("establishments").document(est_id);
+        Map<String,Object> edited = new HashMap<>();
+        edited.put("est_status", "Free");
+        docuRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SignIn.this, "Error!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

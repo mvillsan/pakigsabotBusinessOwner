@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/pakigsabot_logo_official" />
 
     <ImageView
-        android:id="@+id/backBtnAgreement"
+        android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

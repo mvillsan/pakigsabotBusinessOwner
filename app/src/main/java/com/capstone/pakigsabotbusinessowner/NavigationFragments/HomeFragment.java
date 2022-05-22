@@ -118,7 +118,7 @@ public class HomeFragment extends Fragment {
             Context context = getActivity().getApplicationContext();
             @Override
             public void onSuccess(Uri uri) {
-                Picasso.with(context).load(uri).into(profileBtn);
+                Picasso.get().load(uri).into(profileBtn);
             }
         });
 

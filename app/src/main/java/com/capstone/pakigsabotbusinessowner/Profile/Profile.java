@@ -355,7 +355,7 @@ public class Profile extends AppCompatActivity {
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Picasso.with(getApplicationContext()).load(uri).into(profileImg);
+                Picasso.get().load(uri).into(profileImg);
 
                 //Save the image to firestore database
                 String imgUrl = String.valueOf(uri);
