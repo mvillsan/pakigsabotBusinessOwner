@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PakigsaBot Establishment</string>
+    <string name="app_name">PakigsaBot</string>
     <string name="signin">Sign In</string>
     <string name="signup">Sign Up</string>
     <string name="pakigsabot">Pakigsa-Bot</string>
@@ -51,4 +51,15 @@
     <string name="defaultResponse">Hi, thanks for contacting us. Please send us any questions you may have. We aren\'t here at the moment, but we\'ll get back to you soon! We\'ve received your message and appreciate you reaching out. For faster communication, you have to inquire between 8AM - 6PM. You can also reach us at 032-412-3277 (Telephone) or 0922-643-6559 (Mobile) for faster transaction.</string>
     <string name="mainMenu">I also believe you might find the answer in our Home Menu. Just tap below to go to the Main Menu</string>
     <string name="defaultResponse2">Sorry I didn\'t understand you. Simple add @help to your message and we will try to answer you as soon as possible. Is there anything else I can help you with?</string>
+    <string name="subscriptionTerms">The Classic membership will automatically be set and will remain for as long as you pay the monthly subscription fee. Pakigsa-Bot reserves the right to add, modify, reduce, or discontinue the membership or benefits associated with Premium membership if you have failed to Pay the Monthly Subscription fee, violated the Pakigsa-Bot Community Guidelines or at any time.
+                                    You agree and acknowledge that Pakigsa-Bot has the right to immediately terminate such membership if it discovers that you have been in violation of the above paragraph at any time during your membership, and, at Pakigsa-Bot’s discretion, Pakigsa-Bot may take action against you, including, but not limited to, suspending or removing your account from the Application indefinitely.
+    </string>
+    <string name="removal">Your Classic Membership, and privileges may be revoked at any time if you violate these terms, the Pakigsa-Bot Terms of Service or any other Pakigsa-Bot terms and conditions applicable to you.
+                            Continued participation in the membership is at Pakigsa-Bot’s sole and final discretion. The subscription fee is not refundable and will not be refunded if for anytime you wish to discontinue acquiring the Classic Subscription.
+    </string>
+    <string name="disclaimer">
+        If you choose to use the Pakigsa-Bot Application, you do so voluntarily and at your sole risk. The Pakigsa-Bot Application, and Classic membership and any other materials or benefits, are provided “as is”, without warranty of any kind, either express or implied.
+        You agree that you have had whatever opportunity you deem necessary to investigate the Pakigsa-Bot Services, laws, rules, or regulations.
+        The foregoing disclaimers apply to the maximum extent permitted by law. You may have other statutory rights. However, the duration of statutorily required warranties, if any, shall be limited to the maximum extent permitted by law.
+    </string>
 </resources>

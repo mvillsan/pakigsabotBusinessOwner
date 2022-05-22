@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 import com.capstone.pakigsabotbusinessowner.MainActivity;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.SignUp;
 
 public class AgreementScreen extends AppCompatActivity {
 
@@ -49,7 +48,7 @@ public class AgreementScreen extends AppCompatActivity {
     public void refs(){
         agreeContinueBtn = findViewById(R.id.agreeContinueBtn);
         declineBtn = findViewById(R.id.declineBtn);
-        backBtnAgreement = findViewById(R.id.backBtnAgreement);
+        backBtnAgreement = findViewById(R.id.backBtn);
     }
 
     private void welcomeScreen(){

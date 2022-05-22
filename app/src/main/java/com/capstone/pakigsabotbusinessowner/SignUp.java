@@ -33,6 +33,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,6 +51,7 @@ public class SignUp extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String est_id;
+    int numOfReservation = 0;
 
     private static final String[] EST_TYPE = new String[]{
             "Restaurant", "Cafe", "Resort", "Dental Clinic", "Eye Clinic", "Spa", "Salon", "Internet Cafe", "Coworking Space"
@@ -245,6 +249,7 @@ public class SignUp extends AppCompatActivity {
                         est.put("est_password", pass);
                         est.put("est_status", defStat);
                         est.put("est_image", "No profile picture");
+                        est.put("est_numOfReservation", numOfReservation);
 
                         docRef.set(est).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -257,8 +262,46 @@ public class SignUp extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        //Home Screen
-                        homePage();
+
+                        //Getting the date today for transaction date.
+                        Date date = Calendar.getInstance().getTime();
+                        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                        String dateToday = df.format(date);
+
+                        //Getting date after 30 days
+                        Calendar c = Calendar.getInstance();
+                        c.setTime(date);
+                        c.add(Calendar.DATE, 30);
+                        Date expDate = c.getTime();
+                        SimpleDateFormat df2 = new SimpleDateFormat("MM/dd/yyyy");
+                        String expDateStr = df2.format(expDate);
+
+                        String fee = "100";
+
+                        //Save Details to Est Subscription Collection::
+                        DocumentReference docuRef = fStore.collection("est-subscriptions").document(est_id);
+                        Map<String,Object> sub = new HashMap<>();
+                        sub.put("subs_id",est_id);
+                        sub.put("subs_ownerName", estNameDB);
+                        sub.put("subs_status", defStat);
+                        sub.put("subs_fee", fee);
+                        sub.put("subs_date", dateToday);
+                        sub.put("subs_expDate", expDateStr);
+
+                        docuRef.set(sub).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d("Subscription", "onSignUpSuccess: Data is Stored for " + est_id);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("Subscription", "onSignUpFailure: " + e.toString());
+                            }
+                        });
+
+                        //Sign In Screen
+                        signIn();
                         //Clear Text Fields::
                         estNameEditTxt.setText(null);
                         estType.setText(null);
@@ -272,19 +315,16 @@ public class SignUp extends AppCompatActivity {
                     }
                 }
             });
-        }
-
-        //User is Log-in already::
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), SignUp.class));
-            finish();
+        }else{
+            Toast.makeText(SignUp.this, "Please Input All Fields" , Toast.LENGTH_SHORT).show();
+            progressSU.setVisibility(View.GONE);
         }
         return true;
     }
 
-    //Home Fragment::
-    private void homePage(){
-        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+    //Sign In Screen::
+    private void signIn(){
+        startActivity(new Intent(getApplicationContext(), SignIn.class));
     }
 
     //Setting FOCUS
