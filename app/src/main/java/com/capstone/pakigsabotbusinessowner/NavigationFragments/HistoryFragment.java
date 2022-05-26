@@ -1,5 +1,6 @@
 package com.capstone.pakigsabotbusinessowner.NavigationFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.capstone.pakigsabotbusinessowner.R;
+import com.capstone.pakigsabotbusinessowner.ReservationHistory.LoadReservationHistory;
+import com.capstone.pakigsabotbusinessowner.Services.LoadServices;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,8 +67,20 @@ public class HistoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
-        //References:
+        Button estReserveHistory = (Button) view.findViewById(R.id.viewRHistoryBtn);
 
+        estReserveHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadReservationHistory();
+            }
+        });
         return view;
+    }
+
+    private void loadReservationHistory(){
+        Intent in = new Intent(getActivity(), LoadReservationHistory.class);
+        in.putExtra("LoadReservationHistory", "Loading Reservation History");
+        startActivity(in);
     }
 }

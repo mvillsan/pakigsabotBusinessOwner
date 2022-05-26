@@ -4,18 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.Services.AddFoodResto;
-import com.capstone.pakigsabotbusinessowner.Services.AddServiceResto;
-import com.capstone.pakigsabotbusinessowner.Services.EditFoodProdResto;
-import com.capstone.pakigsabotbusinessowner.Services.EditServiceResto;
-import com.capstone.pakigsabotbusinessowner.Services.ServicesResort;
+import com.capstone.pakigsabotbusinessowner.Services.LoadServices;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,81 +62,25 @@ public class ServicesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_services, container, false);
 
         //References:
-        ImageView resortServices = (ImageView) view.findViewById(R.id.imageView6);
-        ImageView addRestoBtnServices = (ImageView) view.findViewById(R.id.addRestoBtnServices);
-        ImageView addRestoFoodBtnServices = (ImageView) view.findViewById(R.id.addRestoFoodBtnServices);
-        ImageView editIndoorDining = (ImageView) view.findViewById(R.id.editIndoorDining);
-        ImageView editFood1 = (ImageView) view.findViewById(R.id.editFood1);
+        Button specificEst = (Button) view.findViewById(R.id.proceedBtnSetUp);
 
-        resortServices.setOnClickListener(new View.OnClickListener() {
+        specificEst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resortServicesScreen();
+                loadServices();
             }
         });
-
-        addRestoBtnServices.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addRestoService();
-            }
-        });
-
-        addRestoFoodBtnServices.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addRestoFood();
-            }
-        });
-
-        editIndoorDining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editIndoorD();
-            }
-        });
-
-        editFood1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editFoodProd();
-            }
-        });
-
         return view;
     }
 
-    private void resortServicesScreen(){
-        Intent in = new Intent(getActivity(), ServicesResort.class);
-        in.putExtra("resortServices", "resortServices");
-        startActivity(in);
-    }
-
-    private void addRestoService(){
-        Intent in = new Intent(getActivity(), AddServiceResto.class);
-        in.putExtra("addResortServices", "addResortServices");
-        startActivity(in);
-    }
-
-    private void addRestoFood(){
-        Intent in = new Intent(getActivity(), AddFoodResto.class);
-        in.putExtra("addRestoFoodBtnServices", "addRestoFoodBtnServices");
-        startActivity(in);
-    }
-
-    private void editIndoorD(){
-        Intent in = new Intent(getActivity(), EditServiceResto.class);
-        in.putExtra("editIndoorD", "editIndoorD");
-        startActivity(in);
-    }
-
-    private void editFoodProd(){
-        Intent in = new Intent(getActivity(), EditFoodProdResto.class);
-        in.putExtra("editFoodProd", "editFoodProd");
+    private void loadServices(){
+        Intent in = new Intent(getActivity(), LoadServices.class);
+        in.putExtra("LoadServices", "Setting up");
         startActivity(in);
     }
 }

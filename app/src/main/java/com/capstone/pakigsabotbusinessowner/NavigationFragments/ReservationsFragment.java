@@ -8,13 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.Button;
 
-import com.capstone.pakigsabotbusinessowner.Profile.Profile;
+import com.capstone.pakigsabotbusinessowner.Reservations.LoadReservations;
+import com.capstone.pakigsabotbusinessowner.Reservations.LoadReservationsDentalClinic;
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.Reservations.ReservationDetails;
-import com.capstone.pakigsabotbusinessowner.SignIn;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,27 +68,19 @@ public class ReservationsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reservations, container, false);
 
         //References:
-        ImageView infoJan11 = (ImageView) view.findViewById(R.id.infoJan11);
+        Button reservationList = (Button) view.findViewById(R.id.viewReserveBtn);
 
-        infoJan11.setOnClickListener(new View.OnClickListener() {
+        reservationList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                reservationDetails();
-                /*FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                // Create and show the dialog.
-                ReservationDetails newFragment = new ReservationDetails ();
-                newFragment.show(ft, "ReservationDetails");*/
-
-              /*  ReservationDetails dialog = new ReservationDetails();
-                dialog.show(getActivity().getSupportFragmentManager(), "ReservationDetails");*/
+                loadReservations();
             }
         });
         return view;
     }
-
-    public void reservationDetails(){
-        Intent in = new Intent(getActivity(), ReservationDetails.class);
-        in.putExtra("rd", "rd");
+    private void loadReservations(){
+        Intent in = new Intent(getActivity(), LoadReservations.class);
+        in.putExtra("LoadReservations", "Loading Reservations");
         startActivity(in);
     }
 }

@@ -13,15 +13,15 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.capstone.pakigsabotbusinessowner.NavBar.BottomNavigation;
 import com.capstone.pakigsabotbusinessowner.SignUpRequirement.AgreementScreen;
+import com.capstone.pakigsabotbusinessowner.SignUpRequirement.PaySubscription;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -33,6 +33,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,16 +44,17 @@ public class SignUp extends AppCompatActivity {
     ImageView prev;
     AutoCompleteTextView estType;
     TextView signin;
-    TextInputLayout staffUNameL,jobTitleL,estNameL, phoneNumL, addressL, emailAddL, passwordL;
-    TextInputEditText staffUNameEditTxt,jobTEditTxt,estNameEditTxt, phoneNumEditTxt, addressEditTxt, editTxtEmailAdd, editTxtPass;
+    TextInputLayout estNameL, phoneNumL, addressL, emailAddL, passwordL;
+    TextInputEditText estNameEditTxt, phoneNumEditTxt, addressEditTxt, editTxtEmailAdd, editTxtPass;
     Button createAccBtnn;
     ProgressBar progressSU;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-    String staff_id;
+    String est_id;
+    int numOfReservation = 0;
 
     private static final String[] EST_TYPE = new String[]{
-            "Restaurant", "Resort", "Dental Clinic", "Internet Cafe", "Spa and Salon"
+            "Restaurant", "Cafe", "Resort", "Dental Clinic", "Eye Clinic", "Spa", "Salon", "Internet Cafe", "Coworking Space"
     };
 
     @Override
@@ -58,12 +62,13 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        //References::
         refs();
 
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                welcomeScreen();
+                paySub();
             }
         });
 
@@ -82,8 +87,6 @@ public class SignUp extends AppCompatActivity {
         });
 
         //Validations
-        staffUNameEditTxt.addTextChangedListener(new ValidationTextWatcher(staffUNameEditTxt));
-        jobTEditTxt.addTextChangedListener(new ValidationTextWatcher(jobTEditTxt));
         estNameEditTxt.addTextChangedListener(new ValidationTextWatcher(estNameEditTxt));
         estType.addTextChangedListener(new ValidationTextWatcher(estType));
         phoneNumEditTxt.addTextChangedListener(new ValidationTextWatcher(phoneNumEditTxt));
@@ -104,10 +107,6 @@ public class SignUp extends AppCompatActivity {
         addressL = findViewById(R.id.addressInputLayout);
         emailAddL = findViewById(R.id.emailAddInputLayoutSU);
         passwordL = findViewById(R.id.passInputLayoutSU);
-        staffUNameL = findViewById(R.id.staffUserNameInputLayout);
-        jobTitleL = findViewById(R.id.staffPosInputLayout);
-        staffUNameEditTxt = findViewById(R.id.staffUNameEditTxt);
-        jobTEditTxt = findViewById(R.id.staffPosEditTxt);
         estNameEditTxt = findViewById(R.id.estNameEditTxt);
         estType = findViewById(R.id.estTypeTxtView);
         phoneNumEditTxt = findViewById(R.id.mobileEditTxt);
@@ -120,8 +119,8 @@ public class SignUp extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
     }
 
-    public void welcomeScreen(){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+    public void paySub(){
+        Intent intent = new Intent(getApplicationContext(), PaySubscription.class);
         startActivity(intent);
     }
 
@@ -138,44 +137,10 @@ public class SignUp extends AppCompatActivity {
         boolean isValid = true;
         String email = editTxtEmailAdd.getText().toString().trim();
         String pass = editTxtPass.getText().toString().trim();
-        String staffUnameDB = staffUNameEditTxt.getText().toString().trim();
-        String jobTitleDB = jobTEditTxt.getText().toString().trim();
         String estNameDB = estNameEditTxt.getText().toString().trim();
         String eType = estType.getText().toString().trim();
         String phoneNum = phoneNumEditTxt.getText().toString().trim();
         String addressDB = addressEditTxt.getText().toString().trim();
-
-        //Staff Username Validation
-        if (staffUNameEditTxt.getText().toString().trim().isEmpty()) {
-            staffUNameL.setError(getString(R.string.staff_uname_req));
-        } else {
-            String staffName = staffUNameEditTxt.getText().toString();
-            Boolean  validStaffUsername = staffName.matches("[A-Za-z][A-Za-z ]*+");
-            if (!validStaffUsername) {
-                staffUNameEditTxt.setError("Invalid Staff Username, ex: mvillsan_pgr");
-                requestFocus(staffUNameEditTxt);
-                return false;
-            } else {
-                staffUNameL.setErrorEnabled(false);
-                staffUNameL.setError("");
-            }
-        }
-
-        //Staff Job Title Validation
-        if (jobTEditTxt.getText().toString().trim().isEmpty()) {
-            jobTitleL.setError(getString(R.string.staff_job_req));
-        } else {
-            String job = jobTEditTxt.getText().toString();
-            Boolean  validStaffJob = job.matches("[A-Za-z][A-Za-z ]*+");
-            if (!validStaffJob) {
-                jobTEditTxt.setError("Invalid Staff Job Title, ex: Front desk clerk");
-                requestFocus(jobTEditTxt);
-                return false;
-            } else {
-                jobTitleL.setErrorEnabled(false);
-                jobTitleL.setError("");
-            }
-        }
 
         //Establishment Name Validation
         if (estNameEditTxt.getText().toString().trim().isEmpty()) {
@@ -262,6 +227,8 @@ public class SignUp extends AppCompatActivity {
         }
 
         if(isValid){
+            String defStat = "Classic";
+
             progressSU.setVisibility(View.VISIBLE);
 
             //Register the user in Firebase::
@@ -270,21 +237,24 @@ public class SignUp extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(SignUp.this, "Account has been Created Successfully", Toast.LENGTH_SHORT).show();
-                        staff_id = fAuth.getCurrentUser().getUid();
-                        DocumentReference docRef = fStore.collection("staff").document(staff_id);
-                        Map<String,Object> staf = new HashMap<>();
-                        staf.put("staff_uname", staffUnameDB);
-                        staf.put("staff_jobTitle",jobTitleDB);
-                        staf.put("staff_estName", estNameDB);
-                        staf.put("staff_estType", eType);
-                        staf.put("staff_phoneNum", phoneNum);
-                        staf.put("staff_address", addressDB);
-                        staf.put("staff_email", email);
-                        staf.put("staff_password", pass);
-                        docRef.set(staf).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        est_id = fAuth.getCurrentUser().getUid();
+                        DocumentReference docRef = fStore.collection("establishments").document(est_id);
+                        Map<String,Object> est = new HashMap<>();
+                        est.put("est_id",est_id);
+                        est.put("est_Name", estNameDB);
+                        est.put("est_Type", eType);
+                        est.put("est_phoneNum", phoneNum);
+                        est.put("est_address", addressDB);
+                        est.put("est_email", email);
+                        est.put("est_password", pass);
+                        est.put("est_status", defStat);
+                        est.put("est_image", "No profile picture");
+                        est.put("est_numOfReservation", numOfReservation);
+
+                        docRef.set(est).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Log.d("SignUp", "onSignUpSuccess: Data is Stored for " + staff_id);
+                                Log.d("SignUp", "onSignUpSuccess: Data is Stored for " + est_id);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -292,22 +262,69 @@ public class SignUp extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        startActivity(new Intent(getApplicationContext(),AgreementScreen.class));
+
+                        //Getting the date today for transaction date.
+                        Date date = Calendar.getInstance().getTime();
+                        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                        String dateToday = df.format(date);
+
+                        //Getting date after 30 days
+                        Calendar c = Calendar.getInstance();
+                        c.setTime(date);
+                        c.add(Calendar.DATE, 30);
+                        Date expDate = c.getTime();
+                        SimpleDateFormat df2 = new SimpleDateFormat("MM/dd/yyyy");
+                        String expDateStr = df2.format(expDate);
+
+                        String fee = "100";
+
+                        //Save Details to Est Subscription Collection::
+                        DocumentReference docuRef = fStore.collection("est-subscriptions").document(est_id);
+                        Map<String,Object> sub = new HashMap<>();
+                        sub.put("subs_id",est_id);
+                        sub.put("subs_ownerName", estNameDB);
+                        sub.put("subs_status", defStat);
+                        sub.put("subs_fee", fee);
+                        sub.put("subs_date", dateToday);
+                        sub.put("subs_expDate", expDateStr);
+
+                        docuRef.set(sub).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d("Subscription", "onSignUpSuccess: Data is Stored for " + est_id);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("Subscription", "onSignUpFailure: " + e.toString());
+                            }
+                        });
+
+                        //Sign In Screen
+                        signIn();
+                        //Clear Text Fields::
+                        estNameEditTxt.setText(null);
+                        estType.setText(null);
+                        phoneNumEditTxt.setText(null);
+                        addressEditTxt.setText(null);
+                        editTxtEmailAdd.setText(null);
+                        editTxtPass.setText(null);
                     }else{
                         Toast.makeText(SignUp.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressSU.setVisibility(View.GONE);
                     }
                 }
             });
+        }else{
+            Toast.makeText(SignUp.this, "Please Input All Fields" , Toast.LENGTH_SHORT).show();
+            progressSU.setVisibility(View.GONE);
         }
-
-        //User is Log-in already::
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), SignUp.class));
-            finish();
-        }
-
         return true;
+    }
+
+    //Sign In Screen::
+    private void signIn(){
+        startActivity(new Intent(getApplicationContext(), SignIn.class));
     }
 
     //Setting FOCUS
@@ -315,44 +332,6 @@ public class SignUp extends AppCompatActivity {
         if (view.requestFocus()) {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
-    }
-
-    //Staff Username Validations
-    private boolean validateStaffUsernameSU() {
-        if (staffUNameEditTxt.getText().toString().trim().isEmpty()) {
-            staffUNameL.setError(getString(R.string.staff_uname_req));
-        } else {
-            String staffUName = staffUNameEditTxt.getText().toString();
-            Boolean  validUName = staffUName.matches("[A-Za-z][A-Za-z ]*+");
-            if (!validUName) {
-                staffUNameL.setError("Invalid Staff Username, ex: mvillsan_pgr");
-                requestFocus(staffUNameEditTxt);
-                return false;
-            } else {
-                staffUNameL.setErrorEnabled(false);
-                staffUNameL.setError("");
-            }
-        }
-        return true;
-    }
-
-    //Staff Job Title Validations
-    private boolean validateStaffJobSU() {
-        if (jobTEditTxt.getText().toString().trim().isEmpty()) {
-            jobTitleL.setError(getString(R.string.staff_job_req));
-        } else {
-            String staffJob = jobTEditTxt.getText().toString();
-            Boolean  validJob = staffJob.matches("[A-Za-z][A-Za-z ]*+");
-            if (!validJob) {
-                jobTitleL.setError("Invalid Staff Job Title, ex: Front desk clerk");
-                requestFocus(jobTEditTxt);
-                return false;
-            } else {
-                jobTitleL.setErrorEnabled(false);
-                jobTitleL.setError("");
-            }
-        }
-        return true;
     }
 
     //Establishment Name Validations
@@ -469,12 +448,6 @@ public class SignUp extends AppCompatActivity {
         }
         public void afterTextChanged(Editable editable) {
             switch (view.getId()) {
-                case R.id.staffUNameEditTxt:
-                    validateStaffUsernameSU();
-                    break;
-                case R.id.staffPosEditTxt:
-                    validateStaffJobSU();
-                    break;
                 case R.id.estNameEditTxt:
                     validateEstablishmentSU();
                     break;

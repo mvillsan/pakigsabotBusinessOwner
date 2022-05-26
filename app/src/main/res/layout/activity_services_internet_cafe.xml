@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/top_bottombar_bg"
-    tools:context=".Services.ServicesInternetCafe">
+    tools:context=".Services.ServicesInternetCCoworking">
 
     <ImageView
         android:id="@+id/backBtnServicesResort"
