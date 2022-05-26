@@ -10,21 +10,20 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:padding="10dp">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imgResort"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:minWidth="100dp"
-            android:minHeight="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:minWidth="70dp"
+            android:minHeight="70dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_imageicon"
             app:riv_border_color="@color/white"
             app:riv_border_width="2dip"
-            app:riv_corner_radius="30dip"
+            app:riv_corner_radius="10dip"
             app:riv_mutate_background="true" />
 
         <TextView
@@ -32,6 +31,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/imgResort"
             android:fontFamily="@font/poppins_light"
             android:text="Name"
@@ -63,8 +63,8 @@
 
         <TextView
             android:id="@+id/resortDescTV"
-            android:layout_width="160dp"
-            android:layout_height="45dp"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/resortRFNameTV"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/imgResort"
@@ -99,7 +99,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/resortRFNameTV"
             app:srcCompat="@drawable/ic_edit" />
 

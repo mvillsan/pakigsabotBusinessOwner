@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.capstone.pakigsabotbusinessowner.R;
 import com.capstone.pakigsabotbusinessowner.Reservations.LoadReservations;
-import com.capstone.pakigsabotbusinessowner.Services.LoadServices;
+import com.capstone.pakigsabotbusinessowner.Reservations.LoadReservationsDentalClinic;
+import com.capstone.pakigsabotbusinessowner.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,20 +68,19 @@ public class ReservationsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reservations, container, false);
 
         //References:
-        Button proceedBtnReservations = (Button) view.findViewById(R.id.proceedBtnReservations);
+        Button reservationList = (Button) view.findViewById(R.id.viewReserveBtn);
 
-        proceedBtnReservations.setOnClickListener(new View.OnClickListener() {
+        reservationList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadServices();
+                loadReservations();
             }
         });
         return view;
     }
-
-    public void loadServices(){
+    private void loadReservations(){
         Intent in = new Intent(getActivity(), LoadReservations.class);
-        in.putExtra("LoadReservations", "Setting up");
+        in.putExtra("LoadReservations", "Loading Reservations");
         startActivity(in);
     }
 }

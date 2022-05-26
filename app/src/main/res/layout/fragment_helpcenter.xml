@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg_white"
-    tools:context=".NavigationFragments.HelpCenter">
+    tools:context=".NavigationFragments.HelpCenterFragment">
 
     <ImageView
         android:id="@+id/chatbotImage"
@@ -28,7 +28,7 @@
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034" />
@@ -44,7 +44,7 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/chatbotImage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -79,7 +79,7 @@
     <Button
         android:id="@+id/browseBtn"
         android:layout_width="230dp"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
         android:text="Browse Help Topics"

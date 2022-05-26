@@ -18,131 +18,103 @@
         android:background="@color/darkgreen"
         android:src="@drawable/ic_user"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/currentDateTxt"
-        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintEnd_toStartOf="@+id/signoutHomeBtn"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
-
-    <TextView
-        android:id="@+id/estNameTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="@string/estName"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/profileBtn"
-        app:layout_constraintTop_toBottomOf="@+id/currentDateTxt"
-        app:layout_constraintVertical_bias="0.041" />
-
-    <ImageButton
-        android:id="@+id/signoutHomeBtn"
-        android:layout_width="30dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:background="@color/darkgreen"
-        android:src="@drawable/sign_out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintStart_toEndOf="@+id/estNameTxt"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
-
-    <ImageButton
-        android:id="@+id/noUpcomingRsrvBtn"
-        android:layout_width="324dp"
-        android:layout_height="173dp"
-        android:background="@color/peach"
-        android:src="@drawable/no_upcoming"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upcomingReservesTxt"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <TextView
-        android:id="@+id/upcomingReservesTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/upcomingR"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileBtn"
-        app:layout_constraintVertical_bias="0.078" />
-
-    <TextView
-        android:id="@+id/donthaveRsrvTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/donthaversrv"
-        android:textColor="@color/black"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintEnd_toEndOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toStartOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintTop_toTopOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintVertical_bias="0.757" />
-
-    <TextView
-        android:id="@+id/selectRsrvTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/checkRsrv"
-        android:textColor="@color/black"
-        android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintEnd_toEndOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="@+id/noUpcomingRsrvBtn"
-        app:layout_constraintTop_toBottomOf="@+id/donthaveRsrvTxt"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <TextView
-        android:id="@+id/currentDateTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="@string/currentDate"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <ImageView
         android:id="@+id/imageView33"
         android:layout_width="16dp"
         android:layout_height="17dp"
         android:src="@drawable/active_status"
+        app:layout_constraintBottom_toBottomOf="@+id/profileBtn"
+        app:layout_constraintEnd_toEndOf="@+id/profileBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profileBtn"
+        app:layout_constraintTop_toTopOf="@+id/profileBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/estNameTxt"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:shadowColor="@color/black"
+        android:shadowDx="6"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/estName"
+        android:textAlignment="center"
+        android:textColor="@color/purple"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.107" />
+
+    <ImageButton
+        android:id="@+id/signoutHomeBtn"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/sign_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toEndOf="@+id/currentDateTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImgView"
+        android:layout_width="429dp"
+        android:layout_height="314dp"
+        android:src="@drawable/reserve_now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estNameTxt"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/acceptRsrvTxt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Reach a wide range of customers, and accept reservations now!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImgView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/currentDateTxt"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:text="@string/currentDate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

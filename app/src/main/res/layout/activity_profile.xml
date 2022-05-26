@@ -102,12 +102,33 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toEndOf="@+id/changePassBtn"
         app:layout_constraintTop_toBottomOf="@+id/addressProfileET"
         app:layout_constraintVertical_bias="0.13" />
+
+    <Button
+        android:id="@+id/premiumAccount"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:background="@color/darkbluegreen"
+        android:drawableLeft="@drawable/ic_diamond"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Premium Account"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/changePassBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addressProfileET"
+        app:layout_constraintVertical_bias="0.112" />
 
     <TextView
         android:id="@+id/textView7"

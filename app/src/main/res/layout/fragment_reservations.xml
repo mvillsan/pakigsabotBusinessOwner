@@ -5,19 +5,18 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg_white"
+    android:background="@drawable/topbar_bg"
     tools:context=".NavigationFragments.ReservationsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="40dp"
         android:layout_height="41dp"
-        android:src="@drawable/ic_reservations"
+        android:src="@drawable/ic_reserve"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026" />
@@ -32,29 +31,28 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImgView"
-        android:layout_width="438dp"
-        android:layout_height="297dp"
-        android:src="@drawable/calendar"
+        android:id="@+id/imageView27"
+        android:layout_width="287dp"
+        android:layout_height="411dp"
+        android:src="@drawable/reservations_gif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
         android:id="@+id/welcomeUserTxt"
-        android:layout_width="276dp"
-        android:layout_height="65dp"
+        android:layout_width="270dp"
+        android:layout_height="69dp"
         android:fontFamily="@font/poppins_light"
-        android:text="View and Set-up Reservations"
+        android:text="View and Accept reservations now!"
         android:textAlignment="center"
         android:textColor="@color/darkgreen"
         android:textSize="20sp"
@@ -63,24 +61,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImgView"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toBottomOf="@+id/servicesTxt"
+        app:layout_constraintVertical_bias="0.678" />
 
     <Button
-        android:id="@+id/proceedBtnReservations"
-        android:layout_width="198dp"
-        android:layout_height="42dp"
+        android:id="@+id/viewReserveBtn"
+        android:layout_width="221dp"
+        android:layout_height="46dp"
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
-        android:text="Proceed"
+        android:text="View reservations"
         android:textColor="@color/purple"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxt"
-        app:layout_constraintVertical_bias="0.14" />
-
+        app:layout_constraintVertical_bias="0.439" />
 </androidx.constraintlayout.widget.ConstraintLayout>

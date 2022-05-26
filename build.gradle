@@ -3,6 +3,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        //added for paypal integration::
+        // This private repository is required to resolve the Cardinal SDK transitive dependency.
+        maven {
+            url  "https://cardinalcommerceprod.jfrog.io/artifactory/android"
+            credentials {
+                // Be sure to add these non-sensitive credentials in order to retrieve dependencies from
+                // the private repository.
+                username mavenUsername
+                password mavenPassword
+            }
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"

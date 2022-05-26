@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -18,61 +20,115 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBotBusinessOwner">
         <activity
-            android:name=".SignUpRequirement.ClassicSubsTerms"
+            android:name=".Resort.AddPolicyResort"
             android:exported="false" />
         <activity
-            android:name=".MonthlySubscription.MonthlySubsTerms"
+            android:name=".Resort.ResortCancellationPol"
             android:exported="false" />
         <activity
-            android:name=".MonthlySubscription.PayMonthlySub"
+            android:name=".Resort.AddRuleResort"
             android:exported="false" />
         <activity
-            android:name=".Reservations.ReservationsICCWS"
+            android:name=".Resort.ResortRules"
             android:exported="false" />
         <activity
-            android:name=".Reservations.ReservationsSpaSalon"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationsEyeClinic"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationsDentalClinic"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationsResort"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationsCafe"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationsRestaurant"
-            android:exported="false" />
+            android:name=".ReservationHistory.ViewReservationHistoryDentalClinic"
+            android:exported="true" />
         <activity
             android:name=".Reservations.LoadReservations"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".Resort.AddFacilityResort"
-            android:exported="false" />
+            android:name=".ReservationHistory.LoadReservationHistory"
+            android:exported="true" />
         <activity
-            android:name=".Resort.ResortFacilities"
-            android:exported="false" />
+            android:name=".ReservationHistory.ViewReservationHistory"
+            android:exported="true" />
+        <activity
+            android:name=".ServiceHours.ServiceHours"
+            android:exported="true" />
+        <activity
+            android:name=".Reservations.LoadReservationsResort"
+            android:exported="true" />
+        <activity
+            android:name=".Reservations.EmailToCustomer"
+            android:exported="true" />
+        <activity
+            android:name=".DentalClinic.Reservations.ReserveConfirmMessageDC"
+            android:exported="true" />
+        <activity
+            android:name=".EmailMessage.EmailMessageLayout"
+            android:exported="true" />
+        <activity
+            android:name=".HelpCenter.HelpCenter"
+            android:exported="true" />
+        <activity
+            android:name=".Cafe.SettingUpEstablishmentCafe"
+            android:exported="true" />
+        <activity
+            android:name=".Cafe.AddPromoAndDealsCafe"
+            android:exported="true" />
+        <activity
+            android:name=".Cafe.PromoAndDeals.PromoAndDealsCafe"
+            android:exported="true" />
+        <activity
+            android:name=".Cafe.AddMenuItemCafe"
+            android:exported="true" />
+        <activity
+            android:name=".Restaurant.SettingUpEstablishmentRestaurant"
+            android:exported="true" />
+        <activity
+            android:name=".Restaurant.AddPromoAndDealsRestaurant"
+            android:exported="true" />
+        <activity
+            android:name=".Restaurant.PromoAndDeals.PromoAndDealsRestaurant"
+            android:exported="true" />
+        <activity
+            android:name=".EyeClinic.SettingUpEstablishmentEyeClinic"
+            android:exported="true" />
+        <activity
+            android:name=".EyeClinic.AddPromoAndDealsEyeClinic"
+            android:exported="true" />
+        <activity
+            android:name=".EyeClinic.PromoAndDeals.PromoAndDealsEyeClinic"
+            android:exported="true" />
+        <activity
+            android:name=".Resort.SettingUpEstablishmentResort"
+            android:exported="true" />
+        <activity
+            android:name=".Resort.AddPromoAndDealsResort"
+            android:exported="true" />
+        <activity
+            android:name=".Resort.PromoAndDealsResort"
+            android:exported="true" />
+        <activity
+            android:name=".DentalClinic.SettingUpEstablishmentDentalClinic"
+            android:exported="true" />
+        <activity
+            android:name=".DentalClinic.AddPromoAndDealsDentalClinic"
+            android:exported="true" />
+        <activity
+            android:name=".DentalClinic.PromoAndDeals.PromoAndDealsDentalClinic"
+            android:exported="true" />
+        <activity
+            android:name=".Reservations.LoadReservationsDentalClinic"
+            android:exported="true" />
+        <activity
+            android:name=".EyeClinic.AddServiceEyeClinic"
+            android:exported="true" />
         <activity
             android:name=".Profile.ChangePassword"
-            android:exported="false" />
-        <activity
-            android:name=".Resort.ResortRoomModel"
             android:exported="false" />
         <activity
             android:name=".Services.LoadServices"
             android:exported="false" />
         <activity
+            android:name=".Services.ServicesEyeClinic"
+            android:exported="false" />
+        <activity
+            android:name=".Restaurant.MenuRestaurant"
+            android:exported="false" />
+        <activity
             android:name=".SignUpRequirement.PaySubscription"
-            android:exported="false" />
-        <activity
-            android:name=".NotificationAlerts.CustomerResched"
-            android:exported="false" />
-        <activity
-            android:name=".NotificationAlerts.CustomerCancelled"
             android:exported="false" />
         <activity
             android:name=".ConfirmReservation.ConfirmReservationSuccess"
@@ -84,31 +140,16 @@
             android:name=".PremiumApp.GoPremiumWS"
             android:exported="false" />
         <activity
-            android:name=".HelpCenter.HelpCenter6"
+            android:name=".Services.ServicesDentalClinic"
             android:exported="false" />
         <activity
-            android:name=".HelpCenter.HelpCenter5"
+            android:name=".DentalClinic.AddServiceDentalClinic"
             android:exported="false" />
         <activity
-            android:name=".HelpCenter.HelpCenter4"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter3"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter2"
+            android:name=".Restaurant.AddFoodResto"
             android:exported="false" />
         <activity
             android:name=".Services.ServicesResort"
-            android:exported="false" />
-        <activity
-            android:name=".Resort.AddRoomResort"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationWtConfirmed"
-            android:exported="false" />
-        <activity
-            android:name=".Reservations.ReservationWtCancel"
             android:exported="false" />
         <activity
             android:name=".SignUpRequirement.AgreementScreen"
@@ -123,13 +164,40 @@
             android:name=".CancelReservation.CancelReservation"
             android:exported="false" />
         <activity
-            android:name=".Reservations.ReservationDetails"
-            android:exported="false" />
-        <activity
             android:name=".Profile.Profile"
             android:exported="false" />
         <activity
             android:name=".NavBar.BottomNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpRequirement.ClassicSubsTerms"
+            android:exported="false" />
+        <activity
+            android:name=".MonthlySubscription.MonthlySubsTerms"
+            android:exported="false" />
+        <activity
+            android:name=".MonthlySubscription.PayMonthlySub"
+            android:exported="false" />
+        <activity
+            android:name=".Resort.AddFacilityResort"
+            android:exported="false" />
+        <activity
+            android:name=".Resort.ResortFacilities"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationAlerts.CustomerResched"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationAlerts.CustomerCancelled"
+            android:exported="false" />
+        <activity
+            android:name=".Resort.AddRoomResort"
+            android:exported="false" />
+        <activity
+            android:name=".Reservations.ReservationWtConfirmed"
+            android:exported="false" />
+        <activity
+            android:name=".Reservations.ReservationWtCancel"
             android:exported="false" />
         <activity
             android:name=".SignUp"

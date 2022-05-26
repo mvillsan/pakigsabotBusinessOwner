@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/restoFItemImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_imageicon"
+            app:civ_border_color="@color/purple"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/restoRVName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/restoFItemImg"
+            android:fontFamily="@font/poppins_light"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/restoRVCategory"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restoRVName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/restoFItemImg"
+            android:text="Category"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/restoRVDesc"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restoRVCategory"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/restoFItemImg"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/restoRVAvailability"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restoRVName"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/restoRVCategory"
+            android:text="Availability"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/restoFIPriceLbl"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restoRVDesc"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/restoFItemImg"
+            android:text="Price: Php "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/restoRVPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restoRVDesc"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/restoFIPriceLbl"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/restoUpdateBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="41dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/restoRVName"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/restoDeleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/restoUpdateBtn"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/restoRVName"
+            app:srcCompat="@drawable/ic_delete" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -4,18 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.capstone.pakigsabotbusinessowner.R;
-import com.capstone.pakigsabotbusinessowner.Services.ServicesResort;
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.capstone.pakigsabotbusinessowner.Resort.Adapters.ResortFacilityAdapter;
+import com.capstone.pakigsabotbusinessowner.Resort.Models.ResortFacilityModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -44,6 +44,8 @@ public class ResortFacilities extends AppCompatActivity {
     FirebaseUser user;
     String userID;
     ProgressDialog progressDialog;
+
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,10 +77,19 @@ public class ResortFacilities extends AppCompatActivity {
         // below line is use to get the data from Firebase Firestore.
         getResortFacilityList();
 
+        //Refresh the recyclerview::
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getResortFacilityList();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
         backBtnFaciResort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resortRoomsList();
+                settingUp();
             }
         });
 
@@ -93,6 +104,7 @@ public class ResortFacilities extends AppCompatActivity {
     private void refs(){
         addFaciBtnServices = findViewById(R.id.addFaciBtnServices);
         backBtnFaciResort = findViewById(R.id.backBtnFaciResort);
+        swipeRefreshLayout = findViewById(R.id.swipeRefresh);
     }
 
     private void addRoom(){
@@ -100,8 +112,8 @@ public class ResortFacilities extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void resortRoomsList(){
-        Intent intent = new Intent(getApplicationContext(), ServicesResort.class);
+    private void settingUp(){
+        Intent intent = new Intent(getApplicationContext(), SettingUpEstablishmentResort.class);
         startActivity(intent);
     }
 

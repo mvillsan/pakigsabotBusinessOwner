@@ -54,7 +54,7 @@ public class SignIn extends AppCompatActivity {
     Button signInBtn;
     ProgressBar progressSI;
     FirebaseAuth fAuth2;
-    String est_id, expDate, dateToday,status;
+    String est_id, expDate, dateToday,status, expDatePremium;
     FirebaseFirestore fStore;
     FirebaseUser user;
 
@@ -371,32 +371,85 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        DocumentReference docRef = fStore.collection("premium-subscriptions").document(est_id);
+        docRef.addSnapshotListener(SignIn.this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                expDatePremium = documentSnapshot.getString("subs_expDate");
+            }
+        });
+
         try {
-            Date date1, date2;
+            Date date1, date2, date3;
             SimpleDateFormat dates = new SimpleDateFormat("MM/dd/yyyy");
             date1 = dates.parse(dateToday);
             date2 = dates.parse(expDate);
+            date3 = dates.parse(expDatePremium);
             long difference = date1.getTime() - date2.getTime();
-            if (difference <= 0) {
-                Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
-                finish();
-                //Clear fields
-                emailAddEditTxt.setText(null);
-                passEditTxt.setText(null);
-            } else {
+            long difference2 = date1.getTime() - date3.getTime();
+
+            if(difference2 <= 0){
+                Toast.makeText(SignIn.this, "Premium Subscription Active", Toast.LENGTH_SHORT).show();
+                //Check Monthly Subscription::
+                if (difference <= 0) {
+                    Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                    finish();
+                    //Clear fields
+                    emailAddEditTxt.setText(null);
+                    passEditTxt.setText(null);
+                } else {
+                    //Update Account Status DB::
+                    updateAccountStatusDB();
+                    AlertDialog.Builder alert = new AlertDialog.Builder(SignIn.this)
+                            .setTitle("Subscription Renewal Alert!")
+                            .setMessage("Monthly Subscription has Expired")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(SignIn.this, "Pay Monthly Subscription Fee ", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), PayMonthlySub.class);
+                                    startActivity(intent);
+                                    progressSI.setVisibility(View.GONE);
+                                }
+                            });
+                    alert.show();
+                }
+            }else {
                 //Update Account Status DB::
-                updateAccountStatusDB();
+                updateAccountStatusPremiumDB();
+                Toast.makeText(SignIn.this, "Go to Profile to Subscribe Premium", Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alert = new AlertDialog.Builder(SignIn.this)
                         .setTitle("Subscription Renewal Alert!")
-                        .setMessage("Monthly Subscription has Expired")
+                        .setMessage("Premium Subscription has Expired")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(SignIn.this, "Pay Monthly Subscription Fee ", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), PayMonthlySub.class);
-                                startActivity(intent);
-                                progressSI.setVisibility(View.GONE);
+                                //Check Monthly Subscription::
+                                if (difference <= 0) {
+                                    Toast.makeText(SignIn.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                                    finish();
+                                    //Clear fields
+                                    emailAddEditTxt.setText(null);
+                                    passEditTxt.setText(null);
+                                } else {
+                                    //Update Account Status DB::
+                                    updateAccountStatusDB();
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(SignIn.this)
+                                            .setTitle("Subscription Renewal Alert!")
+                                            .setMessage("Monthly Subscription has Expired")
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    Toast.makeText(SignIn.this, "Pay Monthly Subscription Fee ", Toast.LENGTH_SHORT).show();
+                                                    Intent intent = new Intent(getApplicationContext(), PayMonthlySub.class);
+                                                    startActivity(intent);
+                                                    progressSI.setVisibility(View.GONE);
+                                                }
+                                            });
+                                    alert.show();
+                                }
                             }
                         });
                 alert.show();
@@ -411,6 +464,22 @@ public class SignIn extends AppCompatActivity {
         DocumentReference docuRef = fStore.collection("establishments").document(est_id);
         Map<String,Object> edited = new HashMap<>();
         edited.put("est_status", "Free");
+        docuRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SignIn.this, "Error!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void updateAccountStatusPremiumDB(){
+        DocumentReference docuRef = fStore.collection("establishments").document(est_id);
+        Map<String,Object> edited = new HashMap<>();
+        edited.put("est_status", "Classic");
         docuRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
