@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/topbar_gray_bg"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    tools:context=".DentalAndEyeClinics.EyeClinicReservation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DentalAndEyeClinics.DentalDetailsRCalendar">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/dentalEstIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:minWidth="53dp"
+            android:minHeight="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_imageicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toEndOf="@+id/imgBackBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.013"
+            app:riv_border_color="@color/darkgreen"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius="5dip"
+            app:riv_mutate_background="true" />
+
+        <ImageView
+            android:id="@+id/imgBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.037" />
+
+        <TextView
+            android:id="@+id/lblDentalClinic"
+            android:layout_width="180dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="name of dental clinic"
+            android:textColor="@color/darkgreen"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintStart_toEndOf="@+id/dentalEstIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <TextView
+            android:id="@+id/lblAddress"
+            android:layout_width="180dp"
+            android:layout_height="28dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="address"
+            android:textColor="@color/darkgreen"
+            android:textSize="9sp"
+            android:layout_marginStart="3dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toEndOf="@+id/dentalEstIcon"
+            app:layout_constraintTop_toBottomOf="@+id/lblDentalClinic"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/favoriteBtn"
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/lightgray"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.593"
+            app:layout_constraintStart_toEndOf="@+id/lblDentalClinic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027" />
+
+        <TextView
+            android:id="@+id/getDirectionsTxt"
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Get Directions"
+            android:textColor="@color/gray"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/favoriteBtn"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <ImageView
+            android:id="@+id/gmapBtn"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/getDirectionsTxt"
+            app:layout_constraintTop_toBottomOf="@+id/favoriteBtn"
+            app:layout_constraintVertical_bias="0.051"
+            app:srcCompat="@drawable/map_icon" />
+
+        <TextView
+            android:id="@+id/lblContactNum"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="contact"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="9sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toEndOf="@+id/dentalEstIcon"
+            app:layout_constraintTop_toBottomOf="@+id/lblAddress"
+            app:layout_constraintVertical_bias="0.003" />
+
+        <TextView
+            android:id="@+id/proceduresTxt"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Procedures"
+            android:textColor="@color/darkgreen"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.120"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dentalEstIcon"
+            app:layout_constraintVertical_bias="0.075" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/proceduresRecyclerView"
+            android:layout_width="320dp"
+            android:layout_height="230dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proceduresTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/promosTxt"
+            android:layout_width="150dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Promo and Deals"
+            android:textColor="@color/darkgreen"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proceduresRecyclerView"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/promoDealsRecyclerView"
+            android:layout_width="330dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promosTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/policyTxt"
+            android:layout_width="120dp"
+            android:layout_height="21dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Policies / Rules"
+            android:textColor="@color/darkgreen"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promoDealsRecyclerView"
+            app:layout_constraintVertical_bias="0.165" />
+
+        <TextView
+            android:id="@+id/cancelTxt"
+            android:layout_width="155dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Cancellation Policy"
+            android:textColor="@color/darkgreen"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/policyTxt"
+            app:layout_constraintVertical_bias="0.025" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

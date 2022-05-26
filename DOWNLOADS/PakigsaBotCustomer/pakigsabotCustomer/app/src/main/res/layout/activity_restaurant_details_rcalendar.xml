@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/topbar_gray_bg"
+    tools:layout_editor_absoluteX="1dp"
+    tools:context=".RestaurantAndCafe.RestaurantDetailsRCalendar"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DentalAndEyeClinics.DentalDetailsRCalendar.ResortDetailsRCalendar">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/dentalEstIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:minWidth="53dp"
+            android:minHeight="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_imageicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toEndOf="@+id/imgBackBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.013"
+            app:riv_border_color="@color/darkgreen"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius="5dip"
+            app:riv_mutate_background="true" />
+
+        <ImageView
+            android:id="@+id/imgBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/lblDentalClinic"
+            android:layout_width="180dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="name of dental clinic"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toEndOf="@+id/dentalEstIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <TextView
+            android:id="@+id/lblAddress"
+            android:layout_width="176dp"
+            android:layout_height="28dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="address"
+            android:textColor="@color/darkgreen"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toEndOf="@+id/dentalEstIcon"
+            app:layout_constraintTop_toBottomOf="@+id/lblDentalClinic"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/favoriteBtn"
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/lightgray"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.155"
+            app:layout_constraintStart_toEndOf="@+id/lblDentalClinic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.017" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dentalEstIcon"
+            app:layout_constraintVertical_bias="0.013"
+            app:srcCompat="@drawable/idea_icon" />
+
+        <TextView
+            android:id="@+id/noteTxt"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Please make reservation at least 3 days prior to your preferred date."
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dentalEstIcon"
+            app:layout_constraintVertical_bias="0.012" />
+
+        <TextView
+            android:id="@+id/getDirectionsTxt"
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Get Directions"
+            android:textColor="@color/gray"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/noteTxt"
+            app:layout_constraintTop_toBottomOf="@+id/favoriteBtn"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <ImageView
+            android:id="@+id/gmapBtn"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/getDirectionsTxt"
+            app:layout_constraintTop_toBottomOf="@+id/lblAddress"
+            app:layout_constraintVertical_bias="0.011"
+            app:srcCompat="@drawable/map_icon" />
+
+        <TextView
+            android:id="@+id/lblContactNum"
+            android:layout_width="88dp"
+            android:layout_height="33dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="contact"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintStart_toEndOf="@+id/noteTxt"
+            app:layout_constraintTop_toBottomOf="@+id/gmapBtn"
+            app:layout_constraintVertical_bias="0.003" />
+
+        <TextView
+            android:id="@+id/proceduresTxt"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Procedures"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTxt"
+            app:layout_constraintVertical_bias="0.008" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/proceduresRecyclerView"
+            android:layout_width="332dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proceduresTxt"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <TextView
+            android:id="@+id/promosTxt"
+            android:layout_width="150dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Promo and Deals"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proceduresRecyclerView"
+            app:layout_constraintVertical_bias="0.021" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/promoDealsRecyclerView"
+            android:layout_width="332dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promosTxt"
+            app:layout_constraintVertical_bias="0.013" />
+
+        <TextView
+            android:id="@+id/policyTxt"
+            android:layout_width="120dp"
+            android:layout_height="21dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Policies / Rules"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promoDealsRecyclerView"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <TextView
+            android:id="@+id/cancelTxt"
+            android:layout_width="155dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Cancellation Policy"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/policyTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/procToAvailTV"
+            android:layout_width="155dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Reservation Date: "
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cancelTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/roomEditText"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_info"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Enter procedure to avail here ... "
+            android:textColor="@color/darkgreen"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/procToAvailTV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/notesTxt"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Note/s: "
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomEditText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/notesEditTxt"
+            android:layout_width="280dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="start"
+            android:hint="Type your Personal Note/s Here ... "
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minLines="3"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notesTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/reservationDateTV"
+            android:layout_width="150dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Reservation Date: "
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notesEditTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/selectReservationDateTV"
+            android:layout_width="220dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Tap here to select date"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservationDateTV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/reservationTimeTV"
+            android:layout_width="150dp"
+            android:layout_height="23dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="> Reservation Time: "
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.203"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectReservationDateTV"
+            app:layout_constraintVertical_bias="0.024" />
+
+
+        <ImageView
+            android:id="@+id/timeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintBottom_toTopOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservationTimeTV"
+            app:layout_constraintVertical_bias="0.826">
+
+        </ImageView>
+
+        <Spinner
+            android:id="@+id/timeSlotSpinner"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:elevation="10dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.425 "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservationTimeTV"></Spinner>
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="300dp"
+            android:layout_height="224dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.439"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeSlotSpinner"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/white_rect3" />
+
+        <TextView
+            android:id="@+id/whoseTxt"
+            android:layout_width="150dp"
+            android:layout_height="37dp"
+            android:fontFamily="@font/comforta"
+            android:text="Who's coming?"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintHorizontal_bias="0.293"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.074" />
+
+        <TextView
+            android:id="@+id/adultsTxt"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:fontFamily="@font/comforta"
+            android:text="(13 above) Adults"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/whoseTxt"
+            app:layout_constraintVertical_bias="0.279" />
+
+        <TextView
+            android:id="@+id/infantsTxt"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:fontFamily="@font/comforta"
+            android:text="(2-under) Infants"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/childrenTxt"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <EditText
+            android:id="@+id/infantsPax"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/darkgreen"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toEndOf="@+id/infantsTxt"
+            app:layout_constraintTop_toBottomOf="@+id/childPax"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/petsTxt"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:fontFamily="@font/comforta"
+            android:text="Pets "
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toBottomOf="@+id/infantsTxt"
+            app:layout_constraintVertical_bias="0.521" />
+
+        <EditText
+            android:id="@+id/petsPax"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/darkgreen"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toEndOf="@+id/petsTxt"
+            app:layout_constraintTop_toBottomOf="@+id/infantsPax"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/adultPax"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/darkgreen"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toEndOf="@+id/adultsTxt"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.306" />
+
+        <TextView
+            android:id="@+id/childrenTxt"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:fontFamily="@font/comforta"
+            android:text="(2-12) Children   "
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/adultsTxt"
+            app:layout_constraintVertical_bias="0.302" />
+
+        <EditText
+            android:id="@+id/childPax"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/darkgreen"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toEndOf="@+id/childrenTxt"
+            app:layout_constraintTop_toBottomOf="@+id/adultPax"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/toPayTxt"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comforta"
+            android:text="> To Pay (Transaction Fee)"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.366"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/amounttoPayTxt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comforta"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toEndOf="@+id/toPayTxt"
+            app:layout_constraintTop_toBottomOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/bulbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.191"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toPayTxt"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/idea_icon" />
+
+
+        <TextView
+            android:id="@+id/notePaymentTxt"
+            android:layout_width="232dp"
+            android:layout_height="53dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="To Protect Payment never transfer money or communicate outside of the Pakigsa-Bot App."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toEndOf="@+id/bulbicon"
+            app:layout_constraintTop_toBottomOf="@+id/toPayTxt"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <Button
+            android:id="@+id/reserveBtnDC"
+            android:layout_width="118dp"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/darkgreen"
+            android:fontFamily="@font/poppins_medium"
+            android:text="RESERVE"
+            android:textColor="@color/lemongreen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notePaymentTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/messageTxt"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reserveBtnDC"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

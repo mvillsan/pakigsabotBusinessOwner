@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="9dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="7dp">
+
+
+        <TextView
+            android:id="@+id/promoDealsRVName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/promoDealsStartDateLbl"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoDealsRVDesc"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:text="Start Date:"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/promoDealsRVStartDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoDealsRVDesc"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/promoDealsStartDateLbl"
+            android:text="Start Date"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/promoDealsEndDateLbl"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoDealsRVDesc"
+            android:layout_marginStart="70dp"
+            android:layout_toRightOf="@id/promoDealsStartDateLbl"
+            android:text="End Date:"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/promoDealsRVEndDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoDealsRVDesc"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/promoDealsEndDateLbl"
+            android:text="End Date"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/promoDealsRVDesc"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoDealsRVName"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="9.5sp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
