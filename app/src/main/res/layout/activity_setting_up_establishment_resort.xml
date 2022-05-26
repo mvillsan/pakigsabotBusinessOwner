@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".Resort.SettingUpEstablishmentResort">
+
+
+    <ImageView
+        android:id="@+id/backBtnSetUpEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:src="@drawable/ic_services"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backBtnSetUpEst"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/setUpEstTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Set up Establishment"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImgView"
+        android:layout_width="325dp"
+        android:layout_height="233dp"
+        android:src="@drawable/serviceload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setUpEstTxt"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <Button
+        android:id="@+id/roomsBtn"
+        android:layout_width="130dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/darkgreen"
+        android:drawableLeft="@drawable/ic_facility"
+        android:text="ROOMS"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImgView"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/facilitiesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/darkgreen"
+        android:text="FACILITIES"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_facilities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toEndOf="@+id/roomsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/gifImgView"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/rulesPolicyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/darkgreen"
+        android:text="ESTABLISHMENT RULES"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_facilities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImgView"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <Button
+        android:id="@+id/cancellationPolicyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/darkgreen"
+        android:text="CANCELLATION POLICY"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_facilities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rulesPolicyBtn"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <Button
+        android:id="@+id/setUpPromoAndDealsBtn"
+        android:layout_width="227dp"
+        android:layout_height="52dp"
+        android:backgroundTint="@color/darkgreen"
+        android:drawableLeft="@drawable/ic_facilities"
+        android:text="PROMO and DEALS"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancellationPolicyBtn"
+        app:layout_constraintVertical_bias="0.088" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

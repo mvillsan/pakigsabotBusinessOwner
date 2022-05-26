@@ -62,4 +62,20 @@
         You agree that you have had whatever opportunity you deem necessary to investigate the Pakigsa-Bot Services, laws, rules, or regulations.
         The foregoing disclaimers apply to the maximum extent permitted by law. You may have other statutory rights. However, the duration of statutorily required warranties, if any, shall be limited to the maximum extent permitted by law.
     </string>
+
+    <string-array name="menuItemCategories">
+        <item>Appetizer</item>
+        <item>Soup</item>
+        <item>Noodles/Rice</item>
+        <item>Dish</item>
+        <item>Dessert/Beverage</item>
+        <item>Drink</item>
+        <item>Meal</item>
+        <item>Rice Meal</item>
+    </string-array>
+    <string-array name="menuItemAvailability">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+
 </resources>

@@ -32,8 +32,11 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/drawable/ic_wolimits.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_facility_resort.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_food_resto.xml" value="0.2640625" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_policy_resort.xml" value="0.2640625" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_room_resort.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_rule_resort.xml" value="0.23177083333333334" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_service_dental_clinic.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_service_eye_clinic.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_service_food_resto.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_service_internet_cafe.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_add_service_resort.xml" value="0.278125" />
@@ -61,6 +64,7 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_edit_service_resort.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_edit_service_resto.xml" value="0.2640625" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_edit_service_spa_salon.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_email_message_layout.xml" value="0.1" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_enable_facial_recog.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_facial_recog.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_go_premium_ws.xml" value="0.33" />
@@ -79,6 +83,7 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_pay_subscription.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_recycler_view_resort.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reschedule_reservation.xml" value="0.1" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_details.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_wt_cancel.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservation_wt_confirmed.xml" value="0.33" />
@@ -90,8 +95,11 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservations_resort.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservations_restaurant.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_reservations_spa_salon.xml" value="0.2640625" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_resort_cancellation_pol.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_resort_facilities.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_resort_images.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_resort_rules.xml" value="0.23177083333333334" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_service_hours.xml" value="0.1" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_cafe.xml" value="0.2640625" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_dental_clinic.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_eye_clinic.xml" value="0.278125" />
@@ -100,6 +108,7 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_restaurant.xml" value="0.5" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_restaurant_cafe.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_services_spa_salon.xml" value="0.25" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_setting_up_establishment_resort.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_in.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/activity_splash_screen.xml" value="0.2598958333333333" />
@@ -120,15 +129,21 @@
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/list_item_help.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/monthly_subs_term.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/reservation_details.xml" value="0.33" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/reservation_history_details_popup.xml" value="0.24583333333333332" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_canpol_items.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_facility_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_list_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_rf_item.xml" value="0.33" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_room_item.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/resort_rules_item.xml" value="0.24583333333333332" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_cancelpol_popup.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_promo_and_deals_items_popup.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_resort_facility_popup.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_resort_rf_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_resort_rf_popup.xml" value="0.278125" />
         <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_resort_room_popup.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBotBusinessOwner/app/src/main/res/layout/update_rule_popup.xml" value="0.24583333333333332" />
       </map>
     </option>
   </component>
