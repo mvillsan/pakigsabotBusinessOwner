@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/cafeFItemImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_imageicon"
+            app:civ_border_color="@color/purple"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/cafeRVName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cafeFItemImg"
+            android:fontFamily="@font/poppins_light"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/cafeRVCategory"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafeRVName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cafeFItemImg"
+            android:text="Category"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/cafeRVAvailability"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafeRVName"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/cafeRVCategory"
+            android:text="Availability"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cafeFIPriceLbl"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafeRVCategory"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/cafeFItemImg"
+            android:text="Price: Php "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cafeRVPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafeRVCategory"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/cafeFIPriceLbl"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/cafeUpdateBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="41dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/cafeRVName"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/cafeDeleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/cafeUpdateBtn"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/cafeRVName"
+            app:srcCompat="@drawable/ic_delete" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

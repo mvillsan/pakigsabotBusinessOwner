@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gold2"
+    tools:context=".PremiumApp.UpgradeScreen">
+
+    <ImageView
+        android:id="@+id/backBtnProfile"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/pakigsabot_logo" />
+
+    <TextView
+        android:id="@+id/txt17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Pakigsa-Bot Premium"
+        android:textColor="@color/gold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/upgradePriceTxt"
+        android:layout_width="254dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Upgrade to Pakigsa-Bot Premium for just"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt17"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/upgradePriceTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Php 459 a month"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/upgradePriceTxt"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/featuresTxt"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="• Daily / Weekly Postings of Promotional Ads "
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upgradePriceTxt"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/featuresTxt2"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="• Monthly Reservations / Sales Report"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/featuresTxt"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/featuresTxt3"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="• Priority Concern Service Badge (PCS)"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/featuresTxt2"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/agreeContinueBtn"
+        android:layout_width="230dp"
+        android:layout_height="43dp"
+        android:background="@color/gold"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Pay by Mobile"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/featuresTxt3"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/termsTxt"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Subscription Terms"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agreeContinueBtn"
+        app:layout_constraintVertical_bias="0.068" />
+</androidx.constraintlayout.widget.ConstraintLayout>

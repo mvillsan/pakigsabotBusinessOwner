@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".Reservations.Adapter.RescheduledReservation">
+
+    <TextView
+        android:id="@+id/reschedReserveTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Reschedule Reservation "
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextView
+        android:id="@+id/reschedDate"
+        android:layout_width="262dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="64dp"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Tap Here to Select a Date"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reschedReserveTxt" />
+
+    <TextView
+        android:id="@+id/reschedTime"
+        android:layout_width="262dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_time"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Tap Here to Select a Time"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reschedDate" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="258dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reschedTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

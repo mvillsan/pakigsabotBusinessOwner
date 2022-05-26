@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgResort"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_imageicon"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="10dip"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/resortRFNameTV"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgResort"
+            android:fontFamily="@font/poppins_light"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resortCapacLbl"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resortDescTV"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgResort"
+            android:text="Capacity:"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/resortCapacTV"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resortDescTV"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/resortCapacLbl"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/resortDescTV"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resortRFNameTV"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgResort"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/resortRateLbl"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resortCapacTV"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgResort"
+            android:text="Rate: Php "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/resortRateTV"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resortCapacTV"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/resortRateLbl"
+            android:text="Rate"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/resortUpdateBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/resortRFNameTV"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/resortDeleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/resortUpdateBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/resortRFNameTV"
+            app:srcCompat="@drawable/ic_delete" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
